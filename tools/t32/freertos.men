@@ -1,0 +1,18 @@
+add
+menu
+(
+  popup "&FreeRTOS"
+  (
+    default
+    menuitem "Display &Tasks"
+	(	
+		DODECRYPT   "ENCRYPTDO" ./task_info.t32
+
+	)
+	menuitem "Display &Heap"
+	(	
+		DODECRYPT   "ENCRYPTDO" ./heap.t32
+
+	)
+  )
+)

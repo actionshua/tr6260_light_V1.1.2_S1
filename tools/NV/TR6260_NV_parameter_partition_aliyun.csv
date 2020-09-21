@@ -1,0 +1,5 @@
+NV分区信息,key,type,Length（Byte）,value,备注
+,cpu1,data,20,"0x4000,0x98000",
+,data_ota,data,20,"0x9C000,0x5E000",
+,nv_usr,data,15,"0xFB000,0x3000",
+,nv_amt,data,20,"0xFE000,0x2000",

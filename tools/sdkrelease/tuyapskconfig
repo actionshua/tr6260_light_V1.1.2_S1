@@ -1,0 +1,1 @@
+build_tr6260_lib.sh:build_app.sh demos/demo_led tr6260_led5 1.0.0:TR6260_partition_tuya_1M_diff_0x6000.bin

@@ -1,0 +1,35 @@
+<root>
+<global>
+<magic>FotaPKG</magic>
+<patchver>1</patchver>
+<softverf>TR6260_IoTVB1</softverf>
+<softverb>TR6260_IoTVB2</softverb>
+</global>
+<boot order="0">
+<addrf>0</addrf>
+<addrb>0</addrb>
+<partsize>0</partsize>
+<method>total</method>
+<compress>lzma</compress>
+<oldname></oldname>
+<newname>boot_new.bin</newname>
+</boot>
+<cpu1 order="1">
+<addrf>28672</addrf>
+<addrb>28672</addrb>
+<partsize>20480</partsize>
+<method>diff</method>
+<compress>lzma</compress>
+<oldname>tr6260_old.bin</oldname>
+<newname>tr6260_new.bin</newname>
+</cpu1>
+<nvram order="2">
+<addrf>1028096</addrf>
+<addrb>1028096</addrb>
+<partsize>0</partsize>
+<method>total</method>
+<compress>lzma</compress>
+<oldname></oldname>
+<newname>nvram_new.bin</newname>
+</nvram>
+</root>

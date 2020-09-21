@@ -1,0 +1,63 @@
+; --------------------------------------------------------------------------------
+; @Title: uC/OS-II Demo for TRACE32 OS Awareness
+; @Description:
+;   This batchfile loads all necessary files to demonstrate
+;   the OS Awareness for uC/OS-II.
+; @Keywords: awareness
+; @Author: DIE
+; @Board: Leopard
+; @Chip: N12
+; @Copyright: (C) 1989-2014 Lauterbach GmbH, licensed for use with TRACE32(R) only
+; --------------------------------------------------------------------------------
+; $Id: ucos.cmm 13145 2018-09-13 08:12:22Z mschaeffner $
+
+
+; power on board and press SW2
+; run the script
+
+
+SCREEN.ON
+AREA.RESet
+WinPAGE.RESet
+WinCLEAR
+WinPOS 10. 0. 150. 100. 0. 0. W006
+;AREA.view
+
+CD.PEDIT freertos.cmm
+
+; Debugger reset
+
+ PRINT "resetting..."
+ RESet
+
+; Initializing Debugger
+ PRINT "initializing..."
+ SYStem.JtagClock 20MHz
+ SYStem.CPU D1088
+ SYStem.Up
+
+ Register.RESet
+
+
+
+data.load.elf .\standalone_tr6260s1_at.elf
+data.load.binary .\xip.bin 0x40C07010 /noclear
+data.load.binary .\rom.bin 0x1000 /noclear
+data.load.binary .\ilm.bin 0x10000 /noclear
+data.load.binary .\dlm.bin 0x200000 /noclear
+data.load.binary .\iram.bin 0x240000 /noclear
+
+; initialize RTOS support
+ PRINT "initializing uC/OS-II support..."
+
+ MENU.ReProgram freertos.men      ; load ucos specific menu (ucos.men)
+
+
+ PRINT "load complete."
+
+
+ PRINT "done."
+
+ DODECRYPT   "ENCRYPTDO" ./tcb_process.t32 0
+
+ ENDDO

@@ -1,0 +1,138 @@
+NV分区信息,key,type,Length（Byte）,value,备注
+产品信息,ModelSms,data,20,TR6260_IoT,产品型号
+,VendorInfo,data,20,Transa,厂商信息
+,VersionInner,data,20,TR6260V0.0.1B02,内部版本号
+,VersionExt,data,20,TR6260V1.0.0B02,外部版本号
+,HardVer,data,15,TR6260HWV0.1,硬件版本号
+,DeviceId,data,,,设备ID，IoT常用用户区分节点
+,DevicePin,,,,
+,,,,,
+,,,,,
+,,,,,
+系统信息,PsmFlag,data,1,1,"省电开关
+0：关闭省电；1：打开省电"
+,WtdFlag,data,1,0,"异常重启开关
+0：关闭异常重启；1：打开异常重启"
+,OTAAdd,data,1,,0：Add0     1：Add1
+,DlFlag,data,3,15,"0：close DL   1~255：open DL,  控制DL等待时长d，unit：s"
+,DlPeriod,data,3,15,1~255，
+,,,,,
+MQTT,MqttSrvAdd,file,string,,
+,MqttSrvCA,file,string,,
+,MqttConTextId,,,,
+,MqttConTextType,,,,
+,MqttConTextKeepLiveTime,,,,
+,MqttConTextSubTopic,,,,
+,,,,,
+SNTP,SntpTimeZone,data,2,8,时区
+,SntpUpdatePeriod,data,u32,3600000,周期更新时长，unit：ms
+,SntpServer,data,string,pool.ntp.org,服务器
+,,,,,
+WTD,,,,,
+,WtdIntrPeriod,data,u8,10,周期更新时长，unit：s，取值范围1~1000
+,,,,,
+WIFI,WifiMode,data,u8,,
+,MAC,file,hex2bin,,"WIFI MAC地址,unsigned char mac[6]"
+,ApSSID,data,string,,SSID
+,ApSSIDLen,,,,
+,ApPW,data,string,,SSID对应密码
+,ApPWLen,,,,
+,StaSSID,data,string,,SSID
+,StaSSIDLen,,,,
+,StaPW,data,string,,SSID对应密码
+,StaPWLen,,,,
+,CountryCode,data,2,CN,"CN
+JP
+EU
+US"
+,WirelessMode,data,u8,0,"0: legacy 11b/g mixed
+1: legacy 11B only
+2: 11N only in 2.4G
+  0: 11BGN mixed
+ 1: legacy 11b only
+ 2: legacy 11g only
+ 3: 11N only in 2.4G"
+,BeaconPeriod,data,u32,,Beacon period setting (It is SoftAP only)
+,DtimPeriod,data,u32,,
+,TxPower,data,u32,,
+,11b TxPower,data,u32,,"0: 0dBm 11b output power
+1: 20dBm 11b output power
+2:17dBm 11b output power"
+,HideSSID,data,u8,,0: disable       1: enable
+,MaxStaNum,data,u8,,Configure Maximun numbder of station that could connect with this SoftAP
+,PMK,file,hex2bin,,unsigned char psk[32]
+,AuthMode,data,u8,,"OPEN Open system
+SHARED  Shared key system
+WEPAUTO  Auto switch between OPEN and SHARED
+WPAPSK  WPA Pre-Shared Key (Infra)
+WPA2PSK  WPA2 Pre-Shared Key (Infra)
+WPAPSKWPA2PSK  WPAPSK/WPA2PSK mixed mode (Infra)
+WPA  WPA Enterprise mode (Need wpa_supplicant)
+WPA2 WPA2 Enterprise mode (Need wpa_supplicant)
+WPA1WPA2  WPA/WPA2 mixed mode (Need wpa_supplicant)"
+,RTSThreshold,data,,,Value: 1~2347
+,PktAggregate,,,,"Value: 
+PktAggregate=0 
+0: disable 
+1: enable"
+,TxPreamble,,,,"Value: 
+ TxPreamble=1 
+0: disable 
+1: enable "
+,ShortSlot,,,,"Value: 
+ShortSlot=1 
+0: disable 
+1: enable"
+,HT_HTC,,,,"Value: 0
+HT_HTC=0 
+0: disable 
+1: enable"
+,HT_OpMode,,,,"Value: 0 
+HT_OpMode=0 
+0: HT mixed mode 
+1: HT Greenfield mode"
+,HT_BW,,,,"Value: 
+HT_BW=1 
+0: 20 MHz 
+1: 20/40 MHz"
+,HT Primary Select,,,,"Value：
+0：Primary
+1：Secondary"
+,HT_GI,,,,"Value: 
+HT_GI=1 
+0: Long guard interval 
+1: short guard interval"
+,HT_MCS ,,,,"Value: 
+HT_MCS=7 
+0 ~7
+7~33: extend"
+,HT_STBC,,,,"Value: 
+HT_STBC=0 
+0: disable 
+1: enable "
+,HT_LDPC ,,,,"Value: 
+HT_LDPC=0 
+0: disable 
+1: enable "
+,AFC initial parameter,,,,"Value：
+0~0xF"
+,BandWidth,,,0,"0:20M
+1:40M
+2:AUTO"
+,,,,,
+校准信息,MainLDO,data,4bit,,
+,MainLDOFlag,data,1,,"1：MainLDO有效
+0：MainLDO无效"
+,BUCK1V45,data,4bit,,
+,BUCK1V45Flag,data,1,,"1：BUCK1V45有效
+0：BUCK1V45无效"
+Aliyun,AliyunPdKey,,,,阿里云四元组
+,AliyunPdSecret,,,,
+,AliyunDevName,,,,
+,AliyunDevSecret,,,,
+,AliyunServerLocation,,2,CN,"CN
+SG"
+,AliyunLightData,,,,
+,AliyunLightRebootCnt,,,3,3:表示开关三次即可进入配网模式。
+SSL,SslAuthenticationType,,2048,0,"0：单向
+1：双向"
