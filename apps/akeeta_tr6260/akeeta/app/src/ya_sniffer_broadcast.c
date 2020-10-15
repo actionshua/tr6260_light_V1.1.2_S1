@@ -148,7 +148,7 @@ static void ya_snifer_broadcast_task(void *param)
 
 	ya_printf(C_LOG_INFO, "ya_udp_server ok\n");
 
-	while(count < 120)
+	while(count < 60)
 	{
 		if(ya_get_app_status() != YA_APP_CONNECTED)
 			goto out;

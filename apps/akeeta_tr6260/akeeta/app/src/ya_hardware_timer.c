@@ -165,6 +165,8 @@ int32_t device_add_list_timer(device_common_timer_t *device_common_timer_node)
 		ya_printf(C_LOG_ERROR, "timer num is max\n");
 		return -1;
 	}
+
+	ya_printf(C_LOG_INFO, "timer num: %d\n", index_timer);
 	
 	add_node = (device_common_timer_t *)ya_hal_os_memory_alloc(sizeof(device_common_timer_t));
 	if(!add_node)
@@ -767,13 +769,13 @@ int32_t device_handle_severtime_set(uint8_t *data_buf, uint8_t data_len)
 
 void sys_abstime_init(void)
 {
-	sys_time.year = 2019;
-	sys_time.month = 12;
-	sys_time.day = 2;
+	sys_time.year = 2000;
+	sys_time.month = 1;
+	sys_time.day = 1;
 	sys_time.hour = 0;
 	sys_time.minute = 0;
 	sys_time.second = 0;
-	sys_time.week = 1;
+	sys_time.week = 6;
 }
 
 void ya_hardware_timer_init(void)

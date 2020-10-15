@@ -57,6 +57,16 @@ static sys_err_t tr_wifi_event_handler(void *ctx, system_event_t *event)
 
 int32_t ya_hal_wlan_start(ya_hal_wlan_event_handler_t event_handler)
 {	
+	uint8_t device_mac[6];
+	ya_hal_wlan_get_mac_address(device_mac);
+	ya_printf(C_LOG_INFO, "device mac is: %02x:%02x:%02x:%02x:%02x:%02x\n", device_mac[0],device_mac[1],device_mac[2], device_mac[3],device_mac[4],device_mac[5]);
+	if(device_mac[0] == 0x0 && device_mac[1] == 0x91 && device_mac[2] == 0x19  
+	&& device_mac[3] == 0x10 && device_mac[4] == 0x22 && device_mac[5] == 0x21)	
+	{
+		ya_os_get_random(device_mac,6);
+		ya_hal_wlan_set_mac_address(device_mac);
+		ya_printf(C_LOG_INFO, "radom device mac is: %02x:%02x:%02x:%02x:%02x:%02x\n", device_mac[0],device_mac[1],device_mac[2], device_mac[3],device_mac[4],device_mac[5]);
+	}
 	while (!wifi_is_ready()){
 		system_printf("err! set AP/STA information must after wifi initialized!\n");
 		vTaskDelay(pdMS_TO_TICKS(5));
@@ -257,36 +267,32 @@ int32_t ya_hal_wlan_scan_obj_ssid(ya_obj_ssid_result_t *obj_scan_ssid, uint8_t n
 	int ret = -1;
 	uint8_t index = 0;
 	ya_obj_ssid_result_t *p = NULL;
-	
 	if (0 != wifi_scan_start(1,NULL))
 	{
 		return ret;
 	}
-
 	int wifi_ap_num = wpa_get_scan_num();
-	ya_printf(C_LOG_INFO, "wpa_get_scan_num = %d\r\n", wifi_ap_num);
+	ya_printf(C_AT_CMD, "wpa_get_scan_num = %d,obj_scan_ssid->scan_ssid==%s\r\n", wifi_ap_num,obj_scan_ssid->scan_ssid);
 	if (wifi_ap_num > 0)
 	{
 		wifi_info_t wifi_inf = {0};
-		for (i = 0; i < wifi_ap_num; ++i) 
-		{
-			memset(&wifi_inf, 0, sizeof(wifi_inf));
-			wpa_get_scan_result(i, &wifi_inf);
-
-			ya_printf(C_LOG_INFO, "scan result: ssid:%s, rssi:%d\r\n", wifi_inf.ssid, wifi_inf.rssi);
-
-			p = obj_scan_ssid;
-			for	(index = 0; index < num; index++)
+		p = obj_scan_ssid;
+		for	(index = 0; index < num; index++)
+		{			
+			for (i = 0; i < wifi_ap_num; ++i) 
 			{
+				memset(&wifi_inf, 0, sizeof(wifi_inf));
+				wpa_get_scan_result(i, &wifi_inf);
+				ya_printf(C_AT_CMD, "scan result: ssid:%s, rssi:%d, p->scan_ssid===%s\r\n", wifi_inf.ssid, wifi_inf.rssi, p->scan_ssid);
 				if(strcmp(wifi_inf.ssid, p->scan_ssid) == 0)
-				{
+				{	
 					p->scan_result = 1;
 					p->rssi = wifi_inf.rssi;
 					ret = 0;
+					break;
 				}
-				p++;
 			}
-				
+			p++;
 		}
 	}
 	return ret;

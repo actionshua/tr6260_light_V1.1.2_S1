@@ -722,7 +722,7 @@ int ya_aws_cloud_connect(AWS_IoT_Client* client)
 		return rc;
 	}
 
-	connectParams.keepAliveIntervalInSec = 60;  
+	connectParams.keepAliveIntervalInSec = 40;  
 	connectParams.isCleanSession = true;
 	connectParams.MQTTVersion = MQTT_3_1_1;
 	connectParams.pClientID = ya_get_client_id();

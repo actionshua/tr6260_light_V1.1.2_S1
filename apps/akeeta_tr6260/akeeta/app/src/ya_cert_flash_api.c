@@ -710,4 +710,22 @@ int ya_check_cn_license_exit(void)
 	return ya_aliyun_para_init();
 }
 
+int ya_check_us_license_exit_internal(void)
+{
+	if (aws_certificateBuff == NULL || aws_privateKeyBuff == NULL || 
+		aws_client_id == NULL || aws_thing_type == NULL)
+		return -1;
+
+	return 0;
+}
+
+int ya_check_cn_license_exit_internal(void)
+{
+	if (aliyun_productkey == NULL || aliyun_deviceid == NULL || aliyun_productsecret == NULL)
+		return -1;
+
+	return 0;
+}
+
+
 

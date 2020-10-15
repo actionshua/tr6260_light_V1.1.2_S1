@@ -353,7 +353,8 @@ int ya_http_body_handle(http_file_para_t *ya_http_file, int socket_id, uint8_t *
 			ya_http_file->body_cur_pos += ya_http_file->body_read_len;
 		}
 	}
-
+	else
+		ya_http_file->header_len = 0;
 	if(ya_http_file->body_cur_pos >= ya_http_file->file_len)
 		return 1;
 

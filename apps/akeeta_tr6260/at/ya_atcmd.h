@@ -23,6 +23,7 @@
 /*****如果uart驱动一次只返回一个数据，需要打开UART_POLLING_DATA宏*****/
 //#define UART_POLLING_DATA   
 extern int ya_atcmd_handler(char *cmd);
-
+extern void at_cmd_log_ON(void);
+extern void at_cmd_log_OFF(void);
 #endif
 

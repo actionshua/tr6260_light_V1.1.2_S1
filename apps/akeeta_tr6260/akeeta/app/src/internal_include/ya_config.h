@@ -112,7 +112,7 @@
 #endif
 
 
-#define 	WIF_SDK_VERSION			"akeeta.sdk.206"
+#define 	WIF_SDK_VERSION			"akeeta.sdk.207"
 typedef enum{
 	WIFI_CN = 0,
 	WIFI_US,

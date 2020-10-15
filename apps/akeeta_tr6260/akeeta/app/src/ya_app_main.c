@@ -49,6 +49,7 @@ typedef enum
 	YA_CHANGE_SNIFFER_MODE,
 
 	YA_CHANGE_IDLE_NEXT_REBOOT,
+	YA_SET_SCAN_RSSI,
 	
 	YA_FACTORY_MODE,
 }ya_app_main_queue_type_t;
@@ -63,6 +64,8 @@ typedef struct{
 	uint8_t cloud_select;
 	uint8_t server_ip_len;
 	uint8_t server_ip[6];
+	uint8_t factory_get_rssi_flag;
+	uint8_t factory_get_rssi_name[33];
 }ya_user_data_t;
 
 typedef enum{
@@ -234,6 +237,42 @@ int32_t ya_read_user_data(void)
 
 	return 0;
 }
+int32_t ya_set_factory_rssi_info(uint8_t *rssi_name)
+{
+
+	int32_t ret = -1;
+	msg_t msg;
+	uint8_t *pbuf = NULL;
+	memset(&msg, 0, sizeof(msg_t));
+	msg.type = YA_SET_SCAN_RSSI;
+	pbuf = ya_hal_os_memory_alloc(strlen(rssi_name) + 1);
+	memset(pbuf, 0, strlen(rssi_name) + 1);
+	strcpy(pbuf, rssi_name);
+	msg.addr = pbuf;
+	msg.len = strlen(rssi_name) + 1;
+	ret = ya_hal_os_queue_send(&ya_main_msg_queue, &msg, 100);
+	
+	if(ret != C_OK)
+	{
+		ya_printf(C_LOG_ERROR,"ya_hardware_set_toggle_mode error\n");
+		return C_ERROR;
+	}
+
+	return C_OK;
+}
+
+void ya_set_factory_rssi_info_internal(uint8_t *buf)
+{
+	ya_user_data.factory_get_rssi_flag = 1;
+	memset(ya_user_data.factory_get_rssi_name, 0, 33);
+	memcpy(ya_user_data.factory_get_rssi_name, buf, strlen(buf));
+	ya_save_user_data();
+	ya_printf(C_AT_CMD,"\nreboot to get rssi mode!!\n");
+	ya_delay(50);
+	ya_hal_sys_reboot();
+}
+
+
 
 int32_t ya_check_cloud_support(uint8_t save_cloud_type)
 {
@@ -301,7 +340,7 @@ int32_t ya_wifi_cloud_support(void)
 			ya_wifiCloud += (1 << WIFI_CN);
 
 		if (ya_aws_get_thing_type() && ya_aws_get_client_id())
-			ya_wifiCloud += AWS_DOMAIN_SUPPORT;;
+			ya_wifiCloud += AWS_DOMAIN_SUPPORT;
 	}
 	return 0;
 }
@@ -753,14 +792,53 @@ ya_app_status_t ya_get_app_status(void)
 {
 	return ya_app_state;
 }
-
+int ya_enter_scan_specific_ssid_rssi_mode(void)
+{
+	static uint8_t scan_specific_ssid_flag = 0;
+	int ret = -1;
+	ya_obj_ssid_result_t scan_ssid[1];
+	uint8_t resend_tick;
+Rescan:
+	memset(scan_ssid, 0, sizeof(ya_obj_ssid_result_t));
+	memcpy(scan_ssid[0].scan_ssid, ya_user_data.factory_get_rssi_name,strlen(ya_user_data.factory_get_rssi_name));
+	ret = ya_hal_wlan_scan_obj_ssid(scan_ssid, 1);
+	if (ret == 0)
+	{
+		if (scan_ssid[0].scan_result == 1)
+		{
+			uint8_t response_buf[50] = {0};
+			memcpy(response_buf,"rsp:",strlen("rsp:"));
+			uint32_t abs_rssi = -scan_ssid[0].rssi;
+			response_buf[4] = '-';
+			memcpy(response_buf+5,ya_int_to_string(abs_rssi),strlen(ya_int_to_string(abs_rssi)));
+			for(resend_tick=0;resend_tick<2;resend_tick++)
+			{
+				ya_printf(C_AT_CMD,"\n%s\n", response_buf);
+				ya_delay(100);
+			}
+			clear_enter_get_rssi_mode();
+			return 0;
+		}
+	}
+	else
+	{
+		scan_specific_ssid_flag++;
+		if(scan_specific_ssid_flag < 5)
+			goto Rescan;
+		else
+			ya_printf(C_AT_CMD,"\nrsp:ERROR\n");
+	}
+	scan_specific_ssid_flag = 0;
+	return -1;
+}
 int ya_check_enter_factory_mode(void)
 {
 	int32_t data[4];
 	int ret = -1;
 	uint8_t index = 0;	
 	ya_obj_ssid_result_t obj_scan_ssid[2];
-
+	if(check_enter_get_rssi_mode())
+		return -1;
 	for(index = 0; index < 2; index++)
 	{
 		memset(&(obj_scan_ssid[index]), 0, sizeof(ya_obj_ssid_result_t));
@@ -833,6 +911,22 @@ void ya_app_main(void *arg)
 	
 	//init softap para. Only need init one time
 	ya_app_ap_start_para_init(&softap_param);
+	
+	//init wifi event callback
+	ya_hal_wlan_start(ya_app_wlan_event_callback);
+	ya_printf(C_AT_CMD,"\nya_user_data.factory_get_rssi_flag====%d\n",ya_user_data.factory_get_rssi_flag);
+	if(ya_user_data.factory_get_rssi_flag == 1)
+	{
+		at_cmd_log_OFF();
+		ya_app_main_para_obj.enable_factory_router_scan = 0;
+		ya_enter_scan_specific_ssid_rssi_mode();
+		ya_user_data.factory_get_rssi_flag = 0;
+		memset(ya_user_data.factory_get_rssi_name,0,sizeof(ya_user_data.factory_get_rssi_name));
+		ya_save_user_data();
+		ya_delay(500);
+		at_cmd_log_ON();
+	}
+
 
 	//init other para
 	ya_start_other_apps();
@@ -855,10 +949,7 @@ void ya_app_main(void *arg)
 	if(ya_app_state == YA_APP_TO_CONNECT || ya_app_main_para_obj.enable_debind == 0)
 		ya_debind_disable();
 	else
-		ya_debind_enable();
-	
-	//init wifi event callback
-	ya_hal_wlan_start(ya_app_wlan_event_callback);
+		ya_debind_enable();	
 
 	ya_clear_randomnum();
 
@@ -1058,6 +1149,10 @@ void ya_app_main(void *arg)
 					ya_app_state = YA_APP_TO_CONNECT;
 					link_connect = 0;
 				}
+				break;
+
+				case YA_SET_SCAN_RSSI:
+					ya_set_factory_rssi_info_internal(ms_msg.addr);
 				break;
 
 				default:

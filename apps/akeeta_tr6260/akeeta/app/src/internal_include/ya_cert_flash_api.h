@@ -212,6 +212,19 @@ extern int ya_aliyun_para_init(void);
  */
 extern int ya_aliyun_para_free(void);
 
+/**
+ * @brief: check us license exit
+ *
+ * @return 0: sucess, -1: failed
+ */
+extern int ya_check_us_license_exit_internal(void);
+
+/**
+ * @brief: check cn license exit
+ *
+ * @return 0: sucess, -1: failed
+ */
+extern int ya_check_cn_license_exit_internal(void);
 
 #endif
 

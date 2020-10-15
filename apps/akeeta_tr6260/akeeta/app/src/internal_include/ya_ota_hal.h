@@ -73,7 +73,15 @@ int32_t ya_http_prefile_header_init(void);
 */
 int32_t ya_http_prefile_header_handle(http_file_para_t *ya_http_file, int socket_id, uint8_t *buf);
 
+
+/*此函数针对8710bx芯片，只需要返回0即可
+*/
 int32_t ya_get_download_whole_file_finish(void);
+
+/*此函数释放ota过程中hal的资源，目前亮牛芯片需要使用；
+*/
+void ya_ota_hal_free(void);
+
 /*擦除ota区域的数据
 * 0：成功，非0：失败
 */

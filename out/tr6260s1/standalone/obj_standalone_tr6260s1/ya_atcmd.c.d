@@ -69,4 +69,8 @@
  ../apps/akeeta_tr6260/./akeeta/app/inc/ya_mode_api.h \
  ../apps/akeeta_tr6260/./akeeta/app/src/internal_include/ya_cert_flash_api.h \
  ../apps/akeeta_tr6260/./user/ya_api_thing_uer_define.h \
- ../apps/akeeta_tr6260/./at/ya_atcmd.h
+ ../apps/akeeta_tr6260/./at/ya_atcmd.h \
+ ../apps/akeeta_tr6260/./akeeta/app/src/internal_include/ya_common_func.h \
+ ../apps/akeeta_tr6260/./akeeta/csdk3.0.1/eng/include/infra_defs.h \
+ ../apps/akeeta_tr6260/./akeeta/csdk3.0.1/eng/include/infra_types.h \
+ ../apps/akeeta_tr6260/./akeeta/csdk3.0.1/eng/include/infra_config.h

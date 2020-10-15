@@ -41,6 +41,8 @@ extern "C" {
 
 #include "aws_iot_mqtt_client_common_internal.h"
 #include "ya_config_platform.h"
+#include "ya_common.h"
+
 /**
   * This is for the case when the aws_iot_mqtt_internal_send_packet Fails.
   */

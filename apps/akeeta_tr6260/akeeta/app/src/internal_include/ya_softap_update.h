@@ -47,6 +47,8 @@ enum
 
 #define ENABLE_FACTORY_TEST	
 
+#define ENABLE_LICENSE_ONE_WRITE
+
 int32_t ya_start_softap(softap_param_st * p_softap_param);
 
 #endif

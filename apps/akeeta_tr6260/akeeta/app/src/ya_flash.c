@@ -164,7 +164,7 @@ int32_t ya_read_flash_with_var_len(uint32_t flash_addr, uint8_t *data, uint32_t 
 		return -1;
 	}
 
-	printf("header %02x, %02x, %02x, %02x\n", header[0], header[1], header[2], header[3]);
+	ya_printf(C_LOG_INFO, "header %02x, %02x, %02x, %02x\n", header[0], header[1], header[2], header[3]);
 	
 	if(header[0] != 0xAA)
 	{

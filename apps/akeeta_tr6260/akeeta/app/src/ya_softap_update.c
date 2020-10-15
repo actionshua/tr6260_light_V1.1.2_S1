@@ -809,6 +809,28 @@ static void ya_softap_update(void *param)
 	int fd = -1, ret = -1, ret1 = -1;
 	uint32_t package_data_len;
 	Ya_Timer ya_soft_ap_timer;
+
+	#ifdef ENABLE_LICENSE_ONE_WRITE
+	uint8_t enable_license_write = 0;
+
+	if (g_softap_param.cloud_support_type == AKEETA_CN)
+	{
+		if (ya_check_cn_license_exit_internal() != 0)
+			enable_license_write = 1;
+	} else if (g_softap_param.cloud_support_type == AKEETA_OVERSEA)
+	{
+		if (ya_check_us_license_exit_internal() != 0)
+			enable_license_write = 1;
+	} else 
+	{
+		if (ya_check_cn_license_exit_internal() != 0 || ya_check_us_license_exit_internal() != 0)
+			enable_license_write = 1;
+	}
+
+	if (enable_license_write)
+		ya_printf(C_LOG_INFO, "no license in it, enable write\r\n");
+	#endif
+	
 	ret = softap_set_ap(g_softap_param.ap_ssid, g_softap_param.ap_password);
 	if (ret < 0)
 		goto out; 
@@ -883,6 +905,9 @@ static void ya_softap_update(void *param)
 			#ifdef ENABLE_FACTORY_TEST
 			else 
 			{
+				#ifdef ENABLE_LICENSE_ONE_WRITE
+				if (enable_license_write)
+				#endif
 				ya_softap_factory_license_parse((char *)ya_softap_rece_buf, SOFTAP_BUF_SIZE);
 			}
 			#endif
@@ -890,6 +915,9 @@ static void ya_softap_update(void *param)
 		#ifdef ENABLE_FACTORY_TEST
 		else
 		{
+			#ifdef ENABLE_LICENSE_ONE_WRITE
+			if (enable_license_write)
+			#endif
 			ya_softap_factory_license_parse(ya_softap_rece_buf, SOFTAP_BUF_SIZE);
 		}		
 		#endif
