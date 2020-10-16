@@ -213,7 +213,7 @@ int util_cmd_run_command(char *cmd)
 {
 	char *argv[NRC_MAX_ARGV] = {NULL, };
 	int argc;
-	int rc = 0;
+	int rc = -1;
 
 	if (!cmd || *cmd == '\0')
 		goto ret_fail;
@@ -240,7 +240,7 @@ int util_cmd_run_command(char *cmd)
 		}			
 	}
 	rc = ya_atcmd_handler(cmd);
-	if(rc == 3)
+	if(rc >= 0)
 		ya_atcmd_start_flag = 1;
 	if(ya_atcmd_start_flag == 0)
 	{

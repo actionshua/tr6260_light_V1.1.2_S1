@@ -63,7 +63,7 @@ Section Headers:
        PROGBITS        00000000 74c6a4 04e332 01   0   0  1
        [00000030]: MERGE, STRINGS
   [13] .debug_loc
-       PROGBITS        00000000 79a9d6 11f087 00   0   0  1
+       PROGBITS        00000000 79a9d6 11f089 00   0   0  1
        [00000000]: 
   [14] .debug_ranges
        PROGBITS        00000000 8b9a60 012610 00   0   0  8

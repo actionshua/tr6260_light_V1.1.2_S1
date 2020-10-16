@@ -27248,7 +27248,7 @@ LOAD ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_sniffer.c.o
  .debug_str     0x0004e282       0xb0 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_sniffer.c.o
                                0x3a1d (size before relaxing)
 
-.debug_loc      0x00000000   0x11f087
+.debug_loc      0x00000000   0x11f089
  *(.debug_loc)
  .debug_loc     0x00000000     0x1466 ../lib/libwifi.a(hal_phy_tr6260.c.o)
  .debug_loc     0x00001466     0x2f73 ../lib/libwifi.a(hal_rf_tr6260.c.o)
@@ -27472,67 +27472,67 @@ LOAD ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_sniffer.c.o
  .debug_loc     0x000d9c73      0x2ac ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cli_freertos.c.o
  .debug_loc     0x000d9f1f     0x134a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
  .debug_loc     0x000db269      0x35b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
- .debug_loc     0x000db5c4     0x16a6 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
- .debug_loc     0x000dcc6a     0x2404 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
- .debug_loc     0x000df06e      0x664 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/notify.c.o
- .debug_loc     0x000df6d2     0x1dda ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
- .debug_loc     0x000e14ac     0x3258 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/common.c.o
- .debug_loc     0x000e4704      0xac3 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpabuf.c.o
- .debug_loc     0x000e51c7      0xdf8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/os_freeRTOS.c.o
- .debug_loc     0x000e5fbf     0x1708 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/eloop_freeRTOS.c.o
- .debug_loc     0x000e76c7     0x3894 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa.c.o
- .debug_loc     0x000eaf5b      0xa51 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_ie.c.o
- .debug_loc     0x000eb9ac     0x2498 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
- .debug_loc     0x000ede44      0x82c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/l2_packet_freeRTOS.c.o
- .debug_loc     0x000ee670     0x16b7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ap.c.o
- .debug_loc     0x000efd27     0x2155 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hostapd.c.o
- .debug_loc     0x000f1e7c      0xcd9 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth_glue.c.o
- .debug_loc     0x000f2b55      0x899 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ap_config.c.o
- .debug_loc     0x000f33ee     0x159e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sta_info.c.o
- .debug_loc     0x000f498c      0x329 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ap_mlme.c.o
- .debug_loc     0x000f4cb5     0x2c49 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ap_drv_ops.c.o
- .debug_loc     0x000f78fe      0xe27 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/beacon.c.o
- .debug_loc     0x000f8725      0x899 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ieee802_11_ht.c.o
- .debug_loc     0x000f8fbe     0x1297 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_ap.c.o
- .debug_loc     0x000fa255     0x26c4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ieee802_11.c.o
- .debug_loc     0x000fc919     0x1165 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hw_features.c.o
- .debug_loc     0x000fda7e     0x4c4a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
- .debug_loc     0x001026c8     0x1194 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth_ie.c.o
- .debug_loc     0x0010385c      0x272 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal.c.o
- .debug_loc     0x00103ace      0x552 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal-dec.c.o
- .debug_loc     0x00104020      0x23d ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-unwrap.c.o
- .debug_loc     0x0010425d      0x2a3 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-wrap.c.o
- .debug_loc     0x00104500      0x3ad ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal-enc.c.o
- .debug_loc     0x001048ad      0x396 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/md5.c.o
- .debug_loc     0x00104c43      0x92a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/md5-internal.c.o
- .debug_loc     0x0010556d      0x5c4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/rc4.c.o
- .debug_loc     0x00105b31     0x1802 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface.c.o
- .debug_loc     0x00107333      0xe16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
- .debug_loc     0x00108149     0x1825 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sme.c.o
- .debug_loc     0x0010996e     0x184e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ieee802_11_common.c.o
- .debug_loc     0x0010b1bc      0xc3f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hw_features_common.c.o
- .debug_loc     0x0010bdfb      0x396 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1.c.o
- .debug_loc     0x0010c191      0x1f0 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1-prf.c.o
- .debug_loc     0x0010c381      0xfe3 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1-internal.c.o
- .debug_loc     0x0010d364      0x34b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1-pbkdf2.c.o
- .debug_loc     0x0010d6af      0x5fe ../out/tr6260s1/standalone/obj_standalone_tr6260s1/driver_common.c.o
- .debug_loc     0x0010dcad     0x4abc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
- .debug_loc     0x00112769     0x1ebb ../out/tr6260s1/standalone/obj_standalone_tr6260s1/events.c.o
- .debug_loc     0x00114624     0x12eb ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpas_glue.c.o
- .debug_loc     0x0011590f     0x1a21 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/scan.c.o
- .debug_loc     0x00117330       0xcc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/main_freeRTOS.c.o
- .debug_loc     0x001173fc      0x15c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/main.c.o
- .debug_loc     0x00117558       0x70 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/standalone.c.o
- .debug_loc     0x001175c8      0xc71 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
- .debug_loc     0x00118239      0x750 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
- .debug_loc     0x00118989     0x2db7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
- .debug_loc     0x0011b740      0x94a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_lwip.c.o
- .debug_loc     0x0011c08a      0xfa7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
- .debug_loc     0x0011d031      0x291 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_loop.c.o
- .debug_loc     0x0011d2c2      0x408 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_default_handlers.c.o
- .debug_loc     0x0011d6ca      0x2ca ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_debug.c.o
- .debug_loc     0x0011d994     0x12ee ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
- .debug_loc     0x0011ec82      0x405 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_sniffer.c.o
+ .debug_loc     0x000db5c4     0x16a8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+ .debug_loc     0x000dcc6c     0x2404 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
+ .debug_loc     0x000df070      0x664 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/notify.c.o
+ .debug_loc     0x000df6d4     0x1dda ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
+ .debug_loc     0x000e14ae     0x3258 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/common.c.o
+ .debug_loc     0x000e4706      0xac3 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpabuf.c.o
+ .debug_loc     0x000e51c9      0xdf8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/os_freeRTOS.c.o
+ .debug_loc     0x000e5fc1     0x1708 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/eloop_freeRTOS.c.o
+ .debug_loc     0x000e76c9     0x3894 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa.c.o
+ .debug_loc     0x000eaf5d      0xa51 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_ie.c.o
+ .debug_loc     0x000eb9ae     0x2498 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
+ .debug_loc     0x000ede46      0x82c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/l2_packet_freeRTOS.c.o
+ .debug_loc     0x000ee672     0x16b7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ap.c.o
+ .debug_loc     0x000efd29     0x2155 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hostapd.c.o
+ .debug_loc     0x000f1e7e      0xcd9 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth_glue.c.o
+ .debug_loc     0x000f2b57      0x899 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ap_config.c.o
+ .debug_loc     0x000f33f0     0x159e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sta_info.c.o
+ .debug_loc     0x000f498e      0x329 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ap_mlme.c.o
+ .debug_loc     0x000f4cb7     0x2c49 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ap_drv_ops.c.o
+ .debug_loc     0x000f7900      0xe27 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/beacon.c.o
+ .debug_loc     0x000f8727      0x899 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ieee802_11_ht.c.o
+ .debug_loc     0x000f8fc0     0x1297 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_ap.c.o
+ .debug_loc     0x000fa257     0x26c4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ieee802_11.c.o
+ .debug_loc     0x000fc91b     0x1165 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hw_features.c.o
+ .debug_loc     0x000fda80     0x4c4a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+ .debug_loc     0x001026ca     0x1194 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth_ie.c.o
+ .debug_loc     0x0010385e      0x272 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal.c.o
+ .debug_loc     0x00103ad0      0x552 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal-dec.c.o
+ .debug_loc     0x00104022      0x23d ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-unwrap.c.o
+ .debug_loc     0x0010425f      0x2a3 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-wrap.c.o
+ .debug_loc     0x00104502      0x3ad ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal-enc.c.o
+ .debug_loc     0x001048af      0x396 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/md5.c.o
+ .debug_loc     0x00104c45      0x92a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/md5-internal.c.o
+ .debug_loc     0x0010556f      0x5c4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/rc4.c.o
+ .debug_loc     0x00105b33     0x1802 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface.c.o
+ .debug_loc     0x00107335      0xe16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
+ .debug_loc     0x0010814b     0x1825 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sme.c.o
+ .debug_loc     0x00109970     0x184e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ieee802_11_common.c.o
+ .debug_loc     0x0010b1be      0xc3f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hw_features_common.c.o
+ .debug_loc     0x0010bdfd      0x396 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1.c.o
+ .debug_loc     0x0010c193      0x1f0 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1-prf.c.o
+ .debug_loc     0x0010c383      0xfe3 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1-internal.c.o
+ .debug_loc     0x0010d366      0x34b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1-pbkdf2.c.o
+ .debug_loc     0x0010d6b1      0x5fe ../out/tr6260s1/standalone/obj_standalone_tr6260s1/driver_common.c.o
+ .debug_loc     0x0010dcaf     0x4abc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
+ .debug_loc     0x0011276b     0x1ebb ../out/tr6260s1/standalone/obj_standalone_tr6260s1/events.c.o
+ .debug_loc     0x00114626     0x12eb ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpas_glue.c.o
+ .debug_loc     0x00115911     0x1a21 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/scan.c.o
+ .debug_loc     0x00117332       0xcc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/main_freeRTOS.c.o
+ .debug_loc     0x001173fe      0x15c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/main.c.o
+ .debug_loc     0x0011755a       0x70 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/standalone.c.o
+ .debug_loc     0x001175ca      0xc71 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+ .debug_loc     0x0011823b      0x750 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
+ .debug_loc     0x0011898b     0x2db7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+ .debug_loc     0x0011b742      0x94a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_lwip.c.o
+ .debug_loc     0x0011c08c      0xfa7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+ .debug_loc     0x0011d033      0x291 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_loop.c.o
+ .debug_loc     0x0011d2c4      0x408 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_default_handlers.c.o
+ .debug_loc     0x0011d6cc      0x2ca ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_debug.c.o
+ .debug_loc     0x0011d996     0x12ee ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+ .debug_loc     0x0011ec84      0x405 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_sniffer.c.o
 
 .debug_macinfo
  *(.debug_macinfo)
