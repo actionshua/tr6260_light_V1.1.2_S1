@@ -4,11 +4,8 @@
 #include "ya_smartconfig.h"
 #include "ya_common_func.h"
 #include "ya_aes_md5.h"
-
 //#define SMART_DEBUG
-
 uint32_t channel_lock_time = 0;
-
 ya_hal_os_thread_t smart_config_task;
 ROUTER_INFO *info_head = NULL;
 SCONFIG_INFO *sconfig_info = NULL;
@@ -40,17 +37,36 @@ static const uint8_t len_fixed_offset[ENC_TYPE_MAX + 1][2] = {
     }
 };
 
+
+
+	  //{15,12,8,2},
+	    //S2
+	  //S3
+	  //S4
+	  //S5
+	  //S6
+	  //S7
+	  //S8
+
+
+
 static void sconfig_init(void)
 {
     info_head = (ROUTER_INFO *)ya_hal_os_memory_alloc(sizeof(ROUTER_INFO));
     info_head->next = NULL;
 
     sconfig_info = (SCONFIG_INFO *)ya_hal_os_memory_alloc(sizeof(SCONFIG_INFO));
+
     sconfig_info->switchChannel = CHANNEL_SEARCH_START;
     sconfig_info->findPhone = NOT_ACTIVE;
     sconfig_info->delay = 60;
+    //sconfig_info->channel_bits = 0;
+
 }
 
+/**
+ * 将info加到链表尾部
+ */
 static int add_node_info(ROUTER_INFO *info)
 {
     ROUTER_INFO *head = info_head;
@@ -74,11 +90,23 @@ static void free_node_info(void)
     info_head->next = NULL;  
 }
 
+/**
+ * @brief  set_channel
+ * 
+ * @author songcf (2020/04/01)
+ *
+ */
 static int set_channel( int ch)
 {
 	return ya_hal_wlan_set_channel(ch);
 }
 
+/**
+ * @brief  get_ap_info
+ * 
+ * @author songcf (2020/04/01)
+ *
+ */
 static ROUTER_INFO  *get_ap_info(uint8_t *bssid)
 {
 	struct router_info *info  = info_head; // router 链表head
@@ -118,6 +146,14 @@ static int get_ap_info_key(uint8_t *bssid)
 	return 0;
 }
 
+
+
+/**
+ * @brief  auth_privacy_string
+ * 
+ * @author songcf (2020/04/01)
+ *
+ */
 static  char *auth_privacy_string(uint8_t auth)
 {
     char *sec;
@@ -155,6 +191,13 @@ static  char *auth_privacy_string(uint8_t auth)
     return sec;
 }
 
+
+/**
+ * @brief  cipher_privacy_string
+ * 
+ * @author songcf (2020/04/01)
+ *
+ */
 static  char *cipher_privacy_string(uint8_t cipher)
 {
     char *sec;
@@ -185,6 +228,12 @@ static  char *cipher_privacy_string(uint8_t cipher)
     return sec;
 }
 
+/**
+ * @brief  save_aplist
+ * 
+ * @author songcf (2020/04/01)
+ *
+ */
 static int save_aplist (uint8_t *ssid, uint8_t *bssid, uint8_t channel, uint8_t auth,
                      uint8_t pairwise_cipher, uint8_t group_cipher )
 {
@@ -237,19 +286,53 @@ static int save_aplist (uint8_t *ssid, uint8_t *bssid, uint8_t channel, uint8_t 
     return 0;
 }
 
-static void smartconfig_finish(int result_status)
-{
-	if(smartconfig_gobal.get_result_callback != NULL)
-	{
-		smnt_result.smnt_result_status = result_status;
-		smartconfig_gobal.get_result_callback(&smnt_result);	
-	}
-}
 
+
+/**
+ * 数据加解密函数
+ */
+
+
+
+/**
+ * 返回pkt类型
+ * 000：key
+ * 001：ssid
+ *
+ * @author songcf
+ *
+ * @param temp
+ *
+ * @return uint8_t
+ */
+
+
+
+
+
+
+
+
+
+
+static void smartconfig_finish(int result_status)
+	
+		{
+			//key error, 退出task
+	if(smartconfig_gobal.get_result_callback != NULL)
+
+{
+			smnt_result.smnt_result_status = result_status;
+		smartconfig_gobal.get_result_callback(&smnt_result);
+		/*连接路由器*/
+		}
+	}
+	
 typedef struct 
 {
 	uint8_t  key[80]; 
 	uint8_t  key_flag[80];
+
 	uint8_t  key_len;
 	uint8_t  key_cur_index;
 	uint8_t  key_checksum;
@@ -287,24 +370,24 @@ void ya_parse_multicast(uint8_t *bssid,uint8_t *ds_mac,uint8_t *sa_mac, int len,
     {
 	    if( (0 != memcmp(sa_mac, sconfig_info->srcmac, 6) ) || (0 != memcmp(sconfig_info->bssid, bssid, 6) ) )
 			return;
-    }
+	    }
 
 	ds_mac[0] = (ds_mac[0]&0x7F);
-
-	//ya_printf(C_LOG_INFO, "%02x:%02x:%02x\r\n", ds_mac[0], ds_mac[1], ds_mac[2]);
+    
 
 	tmp = ds_mac[0] + ds_mac[1] + ds_mac[2];
 	tmp_len_check = tmp  + 1;
+    
+    //crc校验
+    //类型校验
 
-	//ya_printf(C_LOG_INFO, "%d, %d\r\n", len, tmp_len_check);
-
+	//密码长度检验
 	if (sconfig_info->switchChannel == CHANNEL_SEARCH_START)
 	{
 		if (len == tmp_len_check)
 			ya_parse_m->count_num++;
 		else
 			ya_parse_m->count_num = 0;
-
 		if (ya_parse_m->count_num > 1)
 		{
 			sconfig_info->switchChannel = CHANNEL_SEARCH_END;
@@ -315,14 +398,14 @@ void ya_parse_multicast(uint8_t *bssid,uint8_t *ds_mac,uint8_t *sa_mac, int len,
 		}
 
 	}else
-	{
+		{
+
 		if (len != tmp_len_check)
 			return;
 	
 		if (ds_mac[0] == 0x20 && (ds_mac[1] == ds_mac[2]))
 		{
 			channel_lock_time = ya_hal_os_ticks_to_msec();
-			
 			if (ds_mac[1] >= 8 && ds_mac[1] <= 128)
 				ya_parse_m->key_len = ds_mac[1];
 			else
@@ -330,7 +413,6 @@ void ya_parse_multicast(uint8_t *bssid,uint8_t *ds_mac,uint8_t *sa_mac, int len,
 		}else if(ds_mac[0] & 0x40)
 		{
 			channel_lock_time = ya_hal_os_ticks_to_msec();
-		
 			tmp = ds_mac[0] & 0x3F;
 			ya_parse_m->key[tmp*2] = ds_mac[1];
 			ya_parse_m->key[tmp*2 + 1] = ds_mac[2];
@@ -338,20 +420,19 @@ void ya_parse_multicast(uint8_t *bssid,uint8_t *ds_mac,uint8_t *sa_mac, int len,
 			ya_parse_m->key_flag[tmp*2] = 1;
 			ya_parse_m->key_flag[tmp*2 + 1] = 1;
 		}else if(ds_mac[0] == 0x01 && (ds_mac[1] == ds_mac[2]))
-		{
+	{
 			channel_lock_time = ya_hal_os_ticks_to_msec();
-
 			ya_parse_m->key_checksum = ds_mac[1];
 			ya_parse_m->key_checksum_flag = 1;
 		}else
 		{
 			return;
 		}
-
+	//channel_times = PRE_TIMES;
 		if (ya_parse_m->key_checksum_flag && ya_parse_m->key_len)
-		{
+	{
 			for (index = 0; index < ya_parse_m->key_len; index++)
-			{
+		{
 				if (ya_parse_m->key_flag[index] == 0)
 					break;
 
@@ -359,26 +440,30 @@ void ya_parse_multicast(uint8_t *bssid,uint8_t *ds_mac,uint8_t *sa_mac, int len,
 			}
 
 			if (index == ya_parse_m->key_len)
-			{
+	{
 				if (ya_parse_m->key_checksum == check_cacul)
-				{
+		{
 					ya_printf(C_LOG_INFO,"=======finish multicast=======\r\n");
 					sconfig_info->findPhone = OK_KEY;
 					ya_parse_m->finish = 1;
 				}else
 				{
 					ya_printf(C_LOG_INFO,"checksum error, %d, %d\r\n", check_cacul, ya_parse_m->key_checksum);
-				}
-			}			
+			}
 		}
 	}
 	
+
+		}
+	
 }
+
 
 static void ya_parse_broadcast(uint8_t *bssid, uint8_t *sa_mac, int len, ya_parse_para_broadcast_t *ya_parse_b, uint8_t flag)
 {	
 	uint8_t index = 0;
 	uint8_t check_cacul = 0;
+	ROUTER_INFO *ap_info;
 
 	if (sconfig_info->findPhone == OK_KEY)
 		return;
@@ -395,6 +480,8 @@ static void ya_parse_broadcast(uint8_t *bssid, uint8_t *sa_mac, int len, ya_pars
 	else
 		ya_printf(C_LOG_INFO, "f-%d\r\n", len);
 	#endif
+		//sconfig_info->band20_40 = 1;
+		//memcpy(sconfig_info->bssid_band, bssid, 6);			  
 
 	if (sconfig_info->switchChannel == CHANNEL_SEARCH_START)
 	{
@@ -406,69 +493,67 @@ static void ya_parse_broadcast(uint8_t *bssid, uint8_t *sa_mac, int len, ya_pars
 				sconfig_info->switchChannel = CHANNEL_SEARCH_END;
 				ya_printf(C_LOG_INFO,"broadcast lock!!!\r\n");
 				ya_printf(C_LOG_INFO,"sa mac=("MAC_FMT") bssid=("MAC_FMT")\r\n", MAC_ARG(sa_mac),MAC_ARG(bssid));
-
 				memcpy(sconfig_info->srcmac, sa_mac, 6);
-				memcpy(sconfig_info->bssid, bssid,6);
-
+				memcpy(sconfig_info->bssid,bssid,6);
 				ya_parse_b->status = SCONFIG_INDEX;
 				memset(ya_parse_b, 0, sizeof(ya_parse_para_broadcast_t));
 			}
-		} else
+		} 
+		else
 		{
 			ya_parse_b->count_num = 0;
 		}
-
-	}else 
+	}
+	else
 	{
-		if (len == 1)
+		if (len == 1)//check the ssid
 		{
 			channel_lock_time = ya_hal_os_ticks_to_msec();
 			ya_parse_b->status = SCONFIG_LEN;
 			ya_parse_b->key_cur_index = 0xff;
-		}else if (len == 3)
+		}
+		else if (len == 3)
 		{
 			channel_lock_time = ya_hal_os_ticks_to_msec();
 			ya_parse_b->status = SCONFIG_INDEX;
 			ya_parse_b->key_cur_index = 0xff;
-		}else if (len == 5)
+		}
+		else if (len == 5)
 		{
 			channel_lock_time = ya_hal_os_ticks_to_msec();
 			ya_parse_b->status = SCONFIG_CHK;
 			ya_parse_b->key_cur_index = 0xff;
-		}else 
+		}
+		else 
 		{
 			switch (ya_parse_b->status)
 			{
 				case SCONFIG_LEN:
 					if (len < 6 || len > 80)
-						return;
-
+						return ;
 					ya_parse_b->key_len = len;
 					ya_parse_b->key_cur_index = 0xff;
 					ya_parse_b->status = SCONFIG_IDLE;
 				break;
-
+				
 				case SCONFIG_INDEX:
 					if (len < 7 || len > 87)
-						return;
-
-					ya_parse_b->key_cur_index = len - 7;
+						return ;
+					ya_parse_b->key_cur_index = len - 7;			
 					ya_parse_b->status = SCONFIG_KEY;
-
 				break;
+				
 				case SCONFIG_KEY:
-					if (len < 100 || len > (255 + 100))
-						return;	
-
+					if (len < 100 || len > (255 + 100))//1,密码接收完成 进入SCONFIG_ETX	
+						return ;
 					ya_parse_b->key[ya_parse_b->key_cur_index] = len - 100;
 					ya_parse_b->key_flag[ya_parse_b->key_cur_index] = 1;
 					ya_parse_b->status = SCONFIG_IDLE;
 				break;
-
+				
 				case SCONFIG_CHK:
 					if (len < 100 || len > (255 + 100))
-						return; 
-
+						return ;
 					ya_parse_b->key_checksum = len - 100;
 					ya_parse_b->key_checksum_flag = 1;
 					ya_parse_b->status = SCONFIG_IDLE;
@@ -476,34 +561,34 @@ static void ya_parse_broadcast(uint8_t *bssid, uint8_t *sa_mac, int len, ya_pars
 				default:
 					break;
 			}
-
 			if (ya_parse_b->key_checksum_flag && ya_parse_b->key_len)
 			{
 				for (index = 0; index < ya_parse_b->key_len; index++)
 				{
 					if (ya_parse_b->key_flag[index] == 0)
 						break;
-
 					check_cacul += ya_parse_b->key[index];
-				}
-
+				}			
 				if (index == ya_parse_b->key_len)
-				{
+				{	
 					if (ya_parse_b->key_checksum == check_cacul)
 					{
-						ya_parse_b->finish = 1;
-						sconfig_info->findPhone = OK_KEY;
-						ya_printf(C_LOG_INFO,"=======finish broadcast=======: %d\r\n", ya_parse_b->key_len);
-					}else
+						ap_info = get_ap_info(sconfig_info->bssid);
+						if(strlen(ap_info->ssid))
+						{
+							ya_parse_b->finish = 1;
+							sconfig_info->findPhone = OK_KEY;
+							ya_printf(C_LOG_INFO,"=======finish broadcast=======: %d\r\n", ya_parse_b->key_len);						
+						}
+					}
+					else
 					{
 						ya_printf(C_LOG_INFO,"checksum error, %d, %d\r\n", check_cacul, ya_parse_b->key_checksum);
 					}
 				}
 			}
 		}
-
 	}
-	
 }
 
 
@@ -553,6 +638,7 @@ static void easyjoin_callback(uint8_t* userdata, int data_len)
 	uint8_t tods = 0, fromds = 0, encry = ENC_TYPE_INVALID;;
 	ROUTER_INFO *ap_info;
 	int hdrlen ,fc,len;
+
 
 	fc = hdr->frame_control;
 
@@ -625,17 +711,17 @@ static void easyjoin_callback(uint8_t* userdata, int data_len)
 
 	if (wifi_80211_is_retry(fc))
 		return;
-
 	if (!memcmp(da_mac, broadcast_mac, 6)) 
 	{
-	#if 1
+		#if 1
 		if (tods == 1 )
 			ya_parse_broadcast(bssid_mac, sa_mac, len, ya_parse_to_ds, 0);
 		else if (fromds == 1 )
 			ya_parse_broadcast(bssid_mac, sa_mac, len, ya_parse_from_ds, 1);
-	#endif	
+		#endif	
     }
-	else if (!memcmp(da_mac, multicast_mac, 3)){
+	else if (!memcmp(da_mac, multicast_mac, 3))
+	{
 		#if 1
 		ya_parse_multicast(bssid_mac, da_mac+3, sa_mac, len, ya_parse_mul);
 		#endif
@@ -652,30 +738,21 @@ int ya_smartconfig_decode(void)
 	uint8_t iv[16] = {0};
 	uint8_t index = 0, calu = 0, pos = 0;
 	uint8_t randA = 0, randB = 0;
-
 	ROUTER_INFO *ap_info;
-
 	memset(aes, 0, sizeof(aes));
 	ya_mbedtls_md5(AES_KEY_SMARTCONFIG_STRING, aes, strlen(AES_KEY_SMARTCONFIG_STRING));
-	
 	memcpy(iv, aes, 16); 
-
 	#ifdef SMART_DEBUG
 	ya_printf(C_LOG_INFO,"aes is: \r\n");
 	for (index = 0; index < 16; index++)
 	{
 		ya_printf(C_LOG_INFO," %02x", aes[index]);
 	}
-
 	ya_printf(C_LOG_INFO,"\r\n");
 	#endif
-
-
 	buf = (uint8_t *)ya_hal_os_memory_alloc(128);
 	if (!buf) return -1;
-	
 	memset(buf, 0, 128);
-
 	if (ya_parse_to_ds->finish == 1)
 	{
 		p = ya_parse_to_ds->key;
@@ -692,12 +769,9 @@ int ya_smartconfig_decode(void)
 	{
 		goto err;
 	}
-
 	if (in_len == 0)
 		goto err;
-	
 	out_len = AES_CFB_NoPadding_decrypt(aes,iv, p, buf, in_len);
-
 	#ifdef SMART_DEBUG
 	ya_printf(C_LOG_INFO,"in data: %d\r\n", out_len);
 	for (index = 0; index < in_len; index++ )
@@ -705,19 +779,14 @@ int ya_smartconfig_decode(void)
 		ya_printf(C_LOG_INFO," %02x", p[index]);
 	}
 	#endif
-	
 	ya_printf(C_LOG_INFO,"\r\n out data: \r\n");
 	for (index = 0; index < out_len; index++ )
 	{
 		ya_printf(C_LOG_INFO," %02x", buf[index]);
 	}
-	
 	ya_printf(C_LOG_INFO,"\r\n");
-
 	for (index = 0; index < (out_len - 1); index++ )
 		calu += buf[index];
-
-
 	if(calu == buf[index])
 	{
 		ya_printf(C_LOG_INFO, "decode ok\r\n");
@@ -725,9 +794,7 @@ int ya_smartconfig_decode(void)
 	{
 		goto err;
 	}
-
 	ap_info = get_ap_info(sconfig_info->bssid);
-
 	memset(&smnt_result, 0, sizeof(smnt_result_t));
 	if (ya_parse_mul->finish == 1)
 	{	
@@ -735,59 +802,42 @@ int ya_smartconfig_decode(void)
 			goto err;
 		else
 			smnt_result.ssid_len = buf[0];
-
 		if (out_len < (1 + buf[0] + 1))
 			goto err;
-
 		memcpy(smnt_result.ssid, buf+1, smnt_result.ssid_len);
 		pos = 1 + smnt_result.ssid_len;
-
 		if (out_len < (1 + pos + buf[pos] + 1))
 			goto err;
-
 		if (buf[pos] > 64)
 			goto err;
-
 		smnt_result.password_len = buf[pos];
 		memcpy(smnt_result.password, buf + pos + 1, smnt_result.password_len);
-
 		pos += 1 + smnt_result.password_len;
-	
 		if (out_len < (1 + pos + buf[pos] + 1))
 			goto err;
-
 		if (buf[pos] < 3)
 			goto err;
-
 		pos++;
 		smnt_result.cloud_select = buf[pos++];
 		randA = buf[pos++];
 		randB = buf[pos++];
-
 	}else 
 	{	
 		pos = 0;
-
 		if (buf[pos] > 64)
 			goto err;
-
 		smnt_result.password_len = buf[pos];
 		memcpy(smnt_result.password, buf + pos + 1, smnt_result.password_len);
-
 		pos += 1 + smnt_result.password_len;
-	
 		if (out_len < (1 + pos + buf[pos] + 1))
 			goto err;
-
 		if (buf[pos] < 3)
 			goto err;
-
 		pos++;
 		smnt_result.cloud_select = buf[pos++];
 		randA = buf[pos++];
 		randB = buf[pos++];
 	}
-
 	memcpy(smnt_result.bssid, sconfig_info->bssid, 6);
 	if (ap_info != NULL)
 	{
@@ -802,41 +852,34 @@ int ya_smartconfig_decode(void)
 		if (smnt_result.ssid[0] == 0)
 			goto err;
 	}
-
 	memset(tmp, 0, 72);
 	strcpy(tmp, smnt_result.password);
 	HexArrayToString(&randA, 1, tmp + smnt_result.password_len);
 	HexArrayToString(&randB, 1, tmp + smnt_result.password_len + 2);
-
 	#ifdef SMART_DEBUG
 	ya_printf(C_LOG_INFO,"before md5: %s\r\n", tmp);
 	#endif
-
 	ya_mbedtls_md5((uint8_t *)tmp, aes, strlen(tmp));
 	HexArrayToString(aes, 16, smnt_result.rand);
-
 	#ifdef SMART_DEBUG
 	ya_printf(C_LOG_INFO,"after md5: %s\r\n", smnt_result.rand);
 	#endif
-	
-	ya_printf(C_LOG_INFO,"ssid: %d, %s, pwd: %d, %s\r\n", smnt_result.ssid_len, smnt_result.ssid, smnt_result.password_len, smnt_result.password);	
+	ya_printf(C_LOG_INFO,"ssid: %d, %s, pwd: %d, %s\r\n", smnt_result.ssid_len, smnt_result.ssid, smnt_result.password_len, smnt_result.password);
 	ya_hal_os_memory_free(buf);
 	return 0;
-
 	err:
 	if(buf)
 		ya_hal_os_memory_free(buf);
-
 	return -1;
 }
-
 void smartconfig_task(void *param)
 {
 	uint32_t start_time = 0, first_time = 0, current_time = 0;    
 	uint8_t fix_channel_flag = 0, fix_channel = 0;
-	int channel = 0;		
+	int channel = 0;		// 信道
 	int ret = 0;
 
+	//开启混杂模式
 	ya_wifi_start_monitor(easyjoin_callback);
 
 	start_time = ya_hal_os_ticks_to_msec();
@@ -846,7 +889,7 @@ void smartconfig_task(void *param)
 	memset(ya_parse_to_ds, 0, sizeof(ya_parse_para_broadcast_t));
 	memset(ya_parse_from_ds, 0, sizeof(ya_parse_para_broadcast_t));
 	memset(ya_parse_mul, 0, sizeof(ya_parse_para_multicast_t));
-	
+
 	while(1)
 	{
 		ya_delay(10);   
@@ -872,15 +915,17 @@ void smartconfig_task(void *param)
 				fix_channel_flag = 0;
 			}else
 			{
+			/* 通过组播或广播方式获取到pwd*/
 				ya_wifi_stop_monitor();
 				smartconfig_finish(smnt_result_ok);
-				goto ejoin_out;
-			}			
-		}else {
+					goto ejoin_out;
+				}
+			}else{
 			if (sconfig_info->switchChannel == CHANNEL_SEARCH_START)
 			{
 				channel_lock_time = ya_hal_os_ticks_to_msec();
 			
+			/* 捕获channel中*/
 				if( (current_time - start_time) >= sconfig_info->delay )
 				{
 					if(channel > 12) 
@@ -896,7 +941,6 @@ void smartconfig_task(void *param)
 				if( (current_time - channel_lock_time) > (8*1000) )
 				{
 					channel_lock_time = ya_hal_os_ticks_to_msec();
-
 					memset(ya_parse_to_ds, 0, sizeof(ya_parse_para_broadcast_t));
 					memset(ya_parse_from_ds, 0, sizeof(ya_parse_para_broadcast_t));
 					memset(ya_parse_mul, 0, sizeof(ya_parse_para_multicast_t));
@@ -904,7 +948,6 @@ void smartconfig_task(void *param)
 					sconfig_info->findPhone = NOT_ACTIVE;
 					fix_channel_flag = 0;
 				}
-
 			}
 		}
 
@@ -916,25 +959,21 @@ void smartconfig_task(void *param)
 				fix_channel_flag = 1;
 				ya_printf(C_LOG_INFO,"\r\n fix channel: %d\n",fix_channel);
 				set_channel(fix_channel);
-			}
+			}	
 		}
 	}
 ejoin_out:
-	run_smartconfig = 0;
+	run_smartconfig=0;
 	free_node_info();
-
 	if(sconfig_info != NULL)
 		ya_hal_os_memory_free(sconfig_info);
 
 	if(ya_parse_to_ds != NULL)
 		ya_hal_os_memory_free(ya_parse_to_ds);
-
 	if(ya_parse_from_ds != NULL)
 		ya_hal_os_memory_free(ya_parse_from_ds);
-
 	if(ya_parse_mul != NULL)
 		ya_hal_os_memory_free(ya_parse_mul);
-
 	info_head = NULL;
 	sconfig_info = NULL;
 	smartconfig_gobal.get_result_callback=NULL;
@@ -942,6 +981,15 @@ ejoin_out:
 }
 
 
+/**
+ * @brief  启动smartConfig配网 内部函数，用户调用
+ * 
+ * @param  param 结构体，结果输出的回调函数
+ * 
+ * @author songcf (2020/04/01)
+ *
+ * @return 0 成功 -1失败
+ */
 int start_smnt(smnt_param_t param)
 {
 	ya_printf(C_LOG_INFO,"%s|%d----------\r\n",__FUNCTION__,__LINE__);
@@ -959,13 +1007,10 @@ int start_smnt(smnt_param_t param)
 
 	if(!ya_parse_to_ds)
 		ya_parse_to_ds = (ya_parse_para_broadcast_t *)ya_hal_os_memory_alloc(sizeof(ya_parse_para_broadcast_t));
-
 	if(!ya_parse_from_ds)
 		ya_parse_from_ds = (ya_parse_para_broadcast_t *)ya_hal_os_memory_alloc(sizeof(ya_parse_para_broadcast_t));
-
 	if(!ya_parse_mul)
 		ya_parse_mul = (ya_parse_para_multicast_t *)ya_hal_os_memory_alloc(sizeof(ya_parse_para_multicast_t));
-
 	sconfig_init();
  
 	if(ya_hal_os_thread_create(&smart_config_task, "smartconfig", smartconfig_task, 0, (1024*2), 7) != C_OK)
@@ -976,6 +1021,17 @@ int start_smnt(smnt_param_t param)
 	return 0;
 }
 
+
+
+/**
+ * @brief  停止smartconfig配网 内部函数，用户调用
+ * 
+ * @param  None
+ * 
+ * @author songcf (2020/04/01)
+ *
+ * @return 0 成功 -1失败
+ */
 int stop_smnt(void)
 {
 	if(!run_smartconfig)
@@ -991,13 +1047,10 @@ int stop_smnt(void)
 
 	if(ya_parse_to_ds != NULL)
 		ya_hal_os_memory_free(ya_parse_to_ds);
-
 	if(ya_parse_from_ds != NULL)
 		ya_hal_os_memory_free(ya_parse_from_ds);
-
 	if(ya_parse_mul != NULL)
 		ya_hal_os_memory_free(ya_parse_mul);
-
 	info_head = NULL;
 	sconfig_info = NULL;
 	smartconfig_gobal.get_result_callback=NULL;

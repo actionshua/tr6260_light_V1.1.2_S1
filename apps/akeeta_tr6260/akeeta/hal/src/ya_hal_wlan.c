@@ -289,7 +289,7 @@ int32_t ya_hal_wlan_scan_obj_ssid(ya_obj_ssid_result_t *obj_scan_ssid, uint8_t n
 					p->scan_result = 1;
 					p->rssi = wifi_inf.rssi;
 					ret = 0;
-					break;
+					return ret;
 				}
 			}
 			p++;
