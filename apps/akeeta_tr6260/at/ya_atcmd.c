@@ -27,6 +27,7 @@
 #include "ya_atcmd.h"
 #include "ya_common_func.h"
 #include "infra_defs.h"
+#include "cloud.h"
 
 
 typedef enum{
@@ -40,7 +41,10 @@ typedef enum{
 #define RESP_OK 		"rsp:OK"
 #define GET_MAC_BACK 	"getmac"
 #define RESP_NO_LICENSE "rsp:0,0,0"
-
+#define OTA_URL_CN 		"http://device-open.oss-cn-shanghai.aliyuncs.com/index/top/"
+#define OTA_URL_OVERSEA "http://oemapp-panel-us.s3.us-west-2.amazonaws.com/OtaFirmware/"
+extern int32_t ya_set_enter_ota_test_mode(uint8_t *ota_test_url);
+extern int32_t ya_set_exit_ota_test_mode(void);
 #define CMD_BUFFER_SIZE  (8*1024)
 static uint8_t *pcmd_buffer = NULL;
 static uint32_t pcmd_buffer_index = 0;
@@ -71,7 +75,7 @@ uint8_t license_md5_string(uint8_t *md5_string)
 {
 	if(!md5_string)
 	{	
-		ya_printf(C_LOG_ERROR,"md5_string error\n");
+		ya_printf(C_AT_CMD,"md5_string error\n");
 		return C_ERROR;
 	}
 	if(get_md5_string_flag == 1)
@@ -82,14 +86,14 @@ uint8_t license_md5_string(uint8_t *md5_string)
 	license_key_US = cJSON_CreateObject();
 	if(!license_key_US)
 	{	
-		ya_printf(C_LOG_ERROR,"cJSON_CreateObject license_key_US error\n");
+		ya_printf(C_AT_CMD,"cJSON_CreateObject license_key_US error\n");
 		return_ret =  C_ERROR;
 		goto exit;
 	}
 	license_US_info = cJSON_CreateObject();
 	if(!license_US_info)
 	{
-		ya_printf(C_LOG_ERROR,"cJSON_CreateObject license_US_info error\n");
+		ya_printf(C_AT_CMD,"cJSON_CreateObject license_US_info error\n");
 		return_ret =  C_ERROR;
 		goto exit;
 	}
@@ -97,14 +101,14 @@ uint8_t license_md5_string(uint8_t *md5_string)
 	license_key_CN = cJSON_CreateObject();
 	if(!license_key_CN)
 	{	
-		ya_printf(C_LOG_ERROR,"cJSON_CreateObject license_key_CN error\n");
+		ya_printf(C_AT_CMD,"cJSON_CreateObject license_key_CN error\n");
 		return_ret =  C_ERROR;
 		goto exit;
 	}
 	license_CN_info = cJSON_CreateObject();
 	if(!license_CN_info)
 	{
-		ya_printf(C_LOG_ERROR,"cJSON_CreateObject license_CN_info error\n");
+		ya_printf(C_AT_CMD,"cJSON_CreateObject license_CN_info error\n");
 		return_ret =  C_ERROR;
 		goto exit;
 	}
@@ -120,7 +124,7 @@ uint8_t license_md5_string(uint8_t *md5_string)
 	}
 	else
 	{	
-		ya_printf(C_LOG_ERROR,"license_key_US not exit\n");
+		ya_printf(C_AT_CMD,"license_key_US not exit\n");
 		return_ret =  C_ERROR;
 		goto exit;
 	}
@@ -135,7 +139,7 @@ uint8_t license_md5_string(uint8_t *md5_string)
 	}
 	else
 	{	
-		ya_printf(C_LOG_ERROR,"get_productKey_ret <= 0\n");
+		ya_printf(C_AT_CMD,"get_productKey_ret <= 0\n");
 		return_ret =  C_ERROR;
 		goto exit;
 	}
@@ -147,7 +151,7 @@ uint8_t license_md5_string(uint8_t *md5_string)
 	}
 	else
 	{	
-		ya_printf(C_LOG_ERROR,"get_deviceID_ret <= 0\n");
+		ya_printf(C_AT_CMD,"get_deviceID_ret <= 0\n");
 		return_ret =  C_ERROR;
 		goto exit;
 	}
@@ -160,7 +164,7 @@ uint8_t license_md5_string(uint8_t *md5_string)
 	}	
 	else
 	{	
-		ya_printf(C_LOG_ERROR,"get_device_secret_ret <= 0\n");
+		ya_printf(C_AT_CMD,"get_device_secret_ret <= 0\n");
 		return_ret =  C_ERROR;
 		goto exit;
 	}
@@ -172,7 +176,7 @@ uint8_t license_md5_string(uint8_t *md5_string)
 	buf_all = (uint8_t *)ya_hal_os_memory_alloc(strlen(buf_CN)+strlen(buf_US)+1);
 	if(!buf_all)
 	{
-		ya_printf(C_LOG_ERROR,"ya_hal_os_memory_alloc error\n");
+		ya_printf(C_AT_CMD,"ya_hal_os_memory_alloc error\n");
 		return_ret =  C_ERROR;
 		goto exit;
 	}
@@ -416,31 +420,35 @@ int ya_data_atcmd_handler(void)
 					}
 					else
 					{
-						ya_printf(C_LOG_ERROR,"get_license_md5_ret error \r\n");
+						ya_printf(C_AT_CMD,"get_license_md5_ret error \r\n");
 						at_response(RESP_NO_LICENSE);
 						goto END;
 					}					
 				}
 				else
 				{
-					ya_printf(C_LOG_ERROR,"get_productKey_ret error \r\n");
+					ya_printf(C_AT_CMD,"get_productKey_ret error \r\n");
 					at_response(RESP_NO_LICENSE);
 					goto END;
 				}							
 			}
 			else
 			{
-				ya_printf(C_LOG_ERROR,"get_deviceID_ret error \r\n");
+				ya_printf(C_AT_CMD,"get_deviceID_ret error \r\n");
 				at_response(RESP_NO_LICENSE);
 				goto END;
 			}	
 		}
 		else
 		{
-			ya_printf(C_LOG_ERROR,"license not exit \r\n");
+			ya_printf(C_AT_CMD,"license not exit \r\n");
 			at_response(RESP_NO_LICENSE);
 			goto END;
 		}		
+	}
+	else if(strcmp(pcmd_buffer, "ya_ota_exit") == 0)
+	{
+		ya_set_exit_ota_test_mode();
 	}
 	else if(strstr(pcmd_buffer, "getrssi ") > 0)
 	{
@@ -448,14 +456,14 @@ int ya_data_atcmd_handler(void)
 		
 		if(check_enter_get_rssi_mode())
 		{
-			ya_printf(C_LOG_ERROR,"enter_get_rssi_mode \r\n");
+			ya_printf(C_AT_CMD,"enter_get_rssi_mode \r\n");
 			at_cmd_ret = ya_CMD_RET_FAILURE;
 			goto END;
 		}
 		uint8_t getrssi_name_len = strlen(pcmd_buffer)-strlen("getrssi ");
 		if(getrssi_name_len <= 0 || getrssi_name_len > 32)
 		{
-			ya_printf(C_LOG_ERROR,"rssi_name_len error \r\n");
+			ya_printf(C_AT_CMD,"rssi_name_len error \r\n");
 			at_cmd_ret = ya_CMD_RET_FAILURE;
 			goto END;
 		}
@@ -464,10 +472,116 @@ int ya_data_atcmd_handler(void)
 		memcpy(getrssi_name,pcmd_buffer+strlen("getrssi "),strlen(pcmd_buffer)-strlen("getrssi "));
 		ya_set_factory_rssi_info(getrssi_name);
 	}
-	else if (strstr(pcmd_buffer, "wrcert") > 0||strstr(pcmd_buffer, "setmac") > 0)
+	else if (strstr(pcmd_buffer, "wrcert") > 0 || strstr(pcmd_buffer, "setmac") > 0 || strstr(pcmd_buffer, "ya_ota_test") > 0)
 	{
 		token = mystrtok(pcmd_buffer, " ");
-		if(token && (strcmp(token, "wrcert") == 0))
+		if(token && (strcmp(token, "ya_ota_test") == 0))
+		{
+			at_cmd_ret = CMD_RET_SUCCESS; 
+			token = mystrtok(NULL, " ");
+			if(token != NULL)
+			{
+				uint8_t ota_name[100]={0};
+				memcpy(ota_name,token,strlen(token));
+				ya_printf(C_AT_CMD,"ota_name==%s\r\n",ota_name);
+				token = mystrtok(NULL, " ");
+				if(token != NULL)
+				{
+					uint8_t ota_size[20]={0};
+					memcpy(ota_size,token,strlen(token));
+					ya_printf(C_AT_CMD,"ota_size==%s\r\n",ota_size);
+					token = mystrtok(NULL, " ");
+					if(token != NULL)
+					{
+						uint8_t ota_ver_new[100]={0};
+						memcpy(ota_ver_new,token,strlen(token));
+						ya_printf(C_AT_CMD,"ota_ver_new==%s\r\n",ota_ver_new);
+						token = mystrtok(NULL, " ");
+						if(token != NULL)
+						{
+							uint8_t cloud_type = atoi(token);
+							ya_printf(C_AT_CMD,"cloud_type==%d\r\n",cloud_type);
+							if(cloud_type > 1)
+							{
+								ya_printf(C_AT_CMD,"ya_ota_test cmd format error %s,%d\r\n",__FUNCTION__,__LINE__);
+								at_cmd_ret = CMD_RET_FAILURE;
+								goto END;
+							}	
+							token = mystrtok(NULL, " ");
+							if(token != NULL)
+							{
+								uint8_t ota_md5[33]={0};
+								memcpy(ota_md5,token,strlen(token));
+								ya_printf(C_AT_CMD,"ota_md5==%s\r\n",ota_md5);
+								cJSON *ota_cmd = NULL, *ota_cmd_data = NULL;
+								ota_cmd = cJSON_CreateObject();
+								if(!ota_cmd)
+								{	
+									ya_printf(C_AT_CMD,"cJSON_CreateObject ota_cmd error\n");
+									at_cmd_ret = CMD_RET_FAILURE;
+									goto END;
+								}
+								ota_cmd_data = cJSON_CreateObject();
+								if(!ota_cmd_data)
+								{
+									ya_printf(C_AT_CMD,"cJSON_CreateObject ota_cmd_data error\n");
+									at_cmd_ret = CMD_RET_FAILURE;
+									goto END;
+								}
+								cJSON_AddItemToObject(ota_cmd, "data", ota_cmd_data);	
+								cJSON_AddStringToObject(ota_cmd_data, "failRetryInternal", "0");
+								cJSON_AddStringToObject(ota_cmd_data, "failRetryTimes", "3");
+								cJSON_AddStringToObject(ota_cmd_data, "firmwareType", "module");
+								cJSON_AddStringToObject(ota_cmd_data, "md5sum", ota_md5);
+								cJSON_AddStringToObject(ota_cmd_data, "size", ota_size);
+								cJSON_AddStringToObject(ota_cmd_data, "type", "wifi");
+								uint8_t ota_url[200]={0};
+								if(cloud_type == 0)//CN
+								{
+									memcpy(ota_url,OTA_URL_CN,strlen(OTA_URL_CN));
+									memcpy(ota_url+strlen(OTA_URL_CN),ota_name,strlen(ota_name));
+								}
+								else//OVERSEA
+								{
+									memcpy(ota_url,OTA_URL_OVERSEA,strlen(OTA_URL_OVERSEA));
+									memcpy(ota_url+strlen(OTA_URL_OVERSEA),ota_name,strlen(ota_name));
+								}
+								cJSON_AddStringToObject(ota_cmd_data, "url", ota_url);
+								cJSON_AddStringToObject(ota_cmd_data, "version", ota_ver_new);
+								cJSON_AddStringToObject(ota_cmd, "method", "thing.service.device.upgrade");
+								uint8_t *ota_cmd_string = cJSON_PrintUnformatted(ota_cmd);
+								ya_set_enter_ota_test_mode(ota_cmd_string);
+							}
+						}
+						else
+						{
+							ya_printf(C_AT_CMD,"ya_ota_test cmd format error %s,%d\r\n",__FUNCTION__,__LINE__);
+							at_cmd_ret = CMD_RET_FAILURE;
+							goto END;
+						}
+					}
+					else
+					{
+						ya_printf(C_AT_CMD,"ya_ota_test cmd format error %s,%d\r\n",__FUNCTION__,__LINE__);
+						at_cmd_ret = CMD_RET_FAILURE;
+						goto END;
+					}
+				}
+				else
+				{
+					ya_printf(C_AT_CMD,"ya_ota_test cmd format error %s,%d\r\n",__FUNCTION__,__LINE__);
+					at_cmd_ret = CMD_RET_FAILURE;
+					goto END;
+				}
+			}
+			else
+			{
+				ya_printf(C_AT_CMD,"ya_ota_test cmd format error %s,%d\r\n",__FUNCTION__,__LINE__);
+				at_cmd_ret = CMD_RET_FAILURE;
+				goto END;
+			}		
+		}
+		else if(token && (strcmp(token, "wrcert") == 0))
 		{
 			arg1_len = strlen("wrcert");
 			token = mystrtok(NULL, " ");
@@ -476,7 +590,7 @@ int ya_data_atcmd_handler(void)
 				arg2_len = strlen(token);
 				for(i=0;i<strlen(token);i++)
 					json_len += at_cmd_hex2num(token[i])<<(4*(strlen(token)-i-1));
-				ya_printf(C_LOG_INFO,"json_len = 0x%x\r\n", json_len);
+				ya_printf(C_AT_CMD,"json_len = 0x%x\r\n", json_len);
 				if(json_len > 0)
 				{
 					token = mystrtok(NULL, " ");
@@ -485,17 +599,17 @@ int ya_data_atcmd_handler(void)
 					if(crc16_arg)
 					{
 						crc16_cal = crc_check(pcmd_buffer+arg1_len+arg2_len+arg3_len+3, json_len);
-						ya_printf(C_LOG_INFO,"crc16_cal==%x,crc16_arg==%x\n",crc16_cal,crc16_arg);
+						ya_printf(C_AT_CMD,"crc16_cal==%x,crc16_arg==%x\n",crc16_cal,crc16_arg);
 						if (crc16_cal != crc16_arg)
 						{
-							ya_printf(C_LOG_ERROR,"crc16_cal error \r\n");
+							ya_printf(C_AT_CMD,"crc16_cal error \r\n");
 							at_cmd_ret = ya_CMD_RET_FAILURE;
 							goto END;
 						}
 						JSObject = cJSON_Parse(pcmd_buffer+arg1_len+arg2_len+arg3_len+3);
 						if (NULL == JSObject)
 						{
-							ya_printf(C_LOG_ERROR,"cJSON_Parse ERROR\r\n");
+							ya_printf(C_AT_CMD,"cJSON_Parse ERROR\r\n");
 							at_cmd_ret = ya_CMD_RET_FAILURE;
 							goto END;
 						}
@@ -510,7 +624,7 @@ int ya_data_atcmd_handler(void)
 						}
 						else
 						{
-							ya_printf(C_LOG_ERROR,"get server obj error\r\n");
+							ya_printf(C_AT_CMD,"get server obj error\r\n");
 							at_cmd_ret = ya_CMD_RET_FAILURE;
 							goto END;
 						}
@@ -519,7 +633,7 @@ int ya_data_atcmd_handler(void)
 							license_ojb = cJSON_GetObjectItem(JSObject, "license");
 							if (NULL == license_ojb)
 							{
-								ya_printf(C_LOG_ERROR,"get license obj error\r\n");
+								ya_printf(C_AT_CMD,"get license obj error\r\n");
 								at_cmd_ret = ya_CMD_RET_FAILURE;
 								goto END;
 							}
@@ -543,7 +657,7 @@ int ya_data_atcmd_handler(void)
 									{
 										if(ya_write_aliyun_cert(pcmd_buffer, pos, YA_LICENSE_ALIYUUN) != 0)
 										{
-											ya_printf(C_LOG_ERROR,"ya_write_aliyun_cert error\n");
+											ya_printf(C_AT_CMD,"ya_write_aliyun_cert error\n");
 											at_cmd_ret = ya_CMD_RET_FAILURE;
 											pos = 0;
 										}
@@ -551,7 +665,7 @@ int ya_data_atcmd_handler(void)
 								}
 								else
 								{
-									ya_printf(C_LOG_ERROR,"get product_key obj error\n");
+									ya_printf(C_AT_CMD,"get product_key obj error\n");
 									at_cmd_ret = ya_CMD_RET_FAILURE;
 									goto END;
 								}
@@ -564,7 +678,7 @@ int ya_data_atcmd_handler(void)
 							license_ojb = cJSON_GetObjectItem(JSObject, "license");
 							if (NULL == license_ojb)
 							{
-								ya_printf(C_LOG_ERROR,"get license obj error\n");
+								ya_printf(C_AT_CMD,"get license obj error\n");
 								at_cmd_ret = ya_CMD_RET_FAILURE;
 								goto END;
 							}
@@ -573,14 +687,14 @@ int ya_data_atcmd_handler(void)
 							{
 								if(0 != ya_write_check_aws_para_device_cert(sub_object->valuestring, strlen(sub_object->valuestring), YA_LICENSE_DEVICE_CERT_ADDR))
 								{
-									ya_printf(C_LOG_ERROR,"ya_write_check_aws_para_device_cert error\n");
+									ya_printf(C_AT_CMD,"ya_write_check_aws_para_device_cert error\n");
 									at_cmd_ret = ya_CMD_RET_FAILURE;
 									goto END;
 								}							
 							}
 							else
 							{
-								ya_printf(C_LOG_ERROR,"get client_cert obj error\n");
+								ya_printf(C_AT_CMD,"get client_cert obj error\n");
 								at_cmd_ret = ya_CMD_RET_FAILURE;
 								goto END;
 							}								
@@ -595,7 +709,7 @@ int ya_data_atcmd_handler(void)
 							}
 							else
 							{
-								ya_printf(C_LOG_ERROR,"get client_id obj error\n");
+								ya_printf(C_AT_CMD,"get client_id obj error\n");
 								at_cmd_ret = ya_CMD_RET_FAILURE;
 								goto END;
 							}	
@@ -604,14 +718,14 @@ int ya_data_atcmd_handler(void)
 							{
 								if(0 != ya_write_check_aws_para_device_rsa_private_key(sub_object->valuestring, strlen(sub_object->valuestring), YA_LICENSE_DEVICE_RSA_PRIVATE_KEY_ADDR))
 								{
-									ya_printf(C_LOG_ERROR,"ya_write_check_aws_para_device_rsa_private_key error\n");
+									ya_printf(C_AT_CMD,"ya_write_check_aws_para_device_rsa_private_key error\n");
 									at_cmd_ret = ya_CMD_RET_FAILURE;
 									goto END;
 								}							
 							}
 							else
 							{
-								ya_printf(C_LOG_ERROR,"get private_key obj error\n");
+								ya_printf(C_AT_CMD,"get private_key obj error\n");
 								at_cmd_ret = ya_CMD_RET_FAILURE;
 								goto END;
 							}						
@@ -620,14 +734,14 @@ int ya_data_atcmd_handler(void)
 							{
 								if(0 != ya_write_check_aws_para_thing_type(sub_object->valuestring, strlen(sub_object->valuestring), YA_LICENSE_THING_TYPE_ADDR))
 								{
-									ya_printf(C_LOG_ERROR,"ya_write_check_aws_para_thing_type error\n");
+									ya_printf(C_AT_CMD,"ya_write_check_aws_para_thing_type error\n");
 									at_cmd_ret = ya_CMD_RET_FAILURE;
 									goto END;
 								}							
 							}
 							else
 							{
-								ya_printf(C_LOG_ERROR,"get thing_type obj error\n");
+								ya_printf(C_AT_CMD,"get thing_type obj error\n");
 								at_cmd_ret = ya_CMD_RET_FAILURE;
 								goto END;
 							}	
@@ -636,28 +750,28 @@ int ya_data_atcmd_handler(void)
 						}
 						else
 						{
-							ya_printf(C_LOG_ERROR,"cert_type error \r\n");
+							ya_printf(C_AT_CMD,"cert_type error \r\n");
 							at_cmd_ret = ya_CMD_RET_FAILURE;
 							goto END;
 						}	
 					}
 					else
 					{
-						ya_printf(C_LOG_ERROR,"crc16 format error \r\n");
+						ya_printf(C_AT_CMD,"crc16 format error \r\n");
 						at_cmd_ret = ya_CMD_RET_FAILURE;
 						goto END;
 					}	
 				}
 				else
 				{
-					ya_printf(C_LOG_ERROR,"json_len format error \r\n");
+					ya_printf(C_AT_CMD,"json_len format error \r\n");
 					at_cmd_ret = ya_CMD_RET_FAILURE;
 					goto END;
 				}	
 			}
 			else
 			{
-				ya_printf(C_LOG_ERROR,"cmd format error \r\n");
+				ya_printf(C_AT_CMD,"cmd format error \r\n");
 				at_cmd_ret = ya_CMD_RET_FAILURE;
 				goto END;
 			}			
@@ -667,13 +781,13 @@ int ya_data_atcmd_handler(void)
 			token = mystrtok(NULL, " ");
 			if(token != NULL)
 			{
-				ya_printf(C_LOG_INFO,"\r\n");
+				ya_printf(C_AT_CMD,"\r\n");
 				for (i=0; i<6; i++)
 				{
 					mac[i] = at_cmd_hex2num(token[i*2]) * 0x10 + at_cmd_hex2num(token[i*2+1]);
-					ya_printf(C_LOG_INFO,"%02x ",mac[i]);
+					ya_printf(C_AT_CMD,"%02x ",mac[i]);
 				}
-				ya_printf(C_LOG_INFO,"\r\n");
+				ya_printf(C_AT_CMD,"\r\n");
 				crc16_cal = crc_check(mac, 6);
 				if(crc16_cal)
 				{
@@ -682,18 +796,18 @@ int ya_data_atcmd_handler(void)
 						sscanf(token,"%x",&crc16_arg);
 					else
 					{
-						ya_printf(C_LOG_ERROR,"get crc16_cal error \r\n");
+						ya_printf(C_AT_CMD,"get crc16_cal error \r\n");
 						at_cmd_ret = ya_CMD_RET_FAILURE;
 						goto END;
 					}	
 				}
 				else
 				{
-					ya_printf(C_LOG_ERROR,"cal crc16 error \r\n");
+					ya_printf(C_AT_CMD,"cal crc16 error \r\n");
 					at_cmd_ret = ya_CMD_RET_FAILURE;
 					goto END;
 				}	
-				ya_printf(C_LOG_INFO,"crc16_arg===%x, crc16_cal===%x\r\n",crc16_arg,crc16_cal);
+				ya_printf(C_AT_CMD,"crc16_arg===%x, crc16_cal===%x\r\n",crc16_arg,crc16_cal);
 				if (crc16_arg != crc16_cal)
 				{
 					at_cmd_ret = ya_CMD_RET_FAILURE;
@@ -705,14 +819,14 @@ int ya_data_atcmd_handler(void)
 					at_cmd_ret = ya_CMD_RET_SUCCESS;
 				} else
 				{
-					ya_printf(C_LOG_ERROR,"ya_hal_wlan_set_mac_address error \r\n");
+					ya_printf(C_AT_CMD,"ya_hal_wlan_set_mac_address error \r\n");
 					at_cmd_ret = ya_CMD_RET_FAILURE;
 					goto END;
 				}	
 			}
 			else
 			{
-				ya_printf(C_LOG_ERROR,"cmd format error \r\n");
+				ya_printf(C_AT_CMD,"cmd format error \r\n");
 				at_cmd_ret = ya_CMD_RET_FAILURE;
 				goto END;
 			}	
@@ -763,7 +877,7 @@ void at_cmd_thread_create(void)
 	ret = ya_hal_os_thread_create(NULL, "at_cmd_thread", at_cmd_thread, 0, (2*1024), 5);
 	if(ret != C_OK)
 	{
-		ya_printf(C_LOG_ERROR, "create at_cmd_thread error\n");
+		ya_printf(C_AT_CMD, "create at_cmd_thread error\n");
 	}			
 }
 
@@ -791,7 +905,7 @@ int ya_atcmd_handler(char *cmd)
 		pcmd_buffer_index = 0;
 		if (!pcmd_buffer)
 		{
-			ya_printf(C_LOG_ERROR,"pcmd_buffer malloc fail\r\n");
+			ya_printf(C_AT_CMD,"pcmd_buffer malloc fail\r\n");
 			return CMD_RET_DATA_ERROR;
 		}
 	}

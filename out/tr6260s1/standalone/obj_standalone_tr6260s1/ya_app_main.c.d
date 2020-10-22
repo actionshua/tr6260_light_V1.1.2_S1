@@ -74,4 +74,5 @@
  ../apps/akeeta_tr6260/./akeeta/app/src/internal_include/ya_ota.h \
  ../apps/akeeta_tr6260/./akeeta/app/src/internal_include/ya_uart_app.h \
  ../apps/akeeta_tr6260/./akeeta/app/src/internal_include/ya_hardware_app.h \
- ../apps/akeeta_tr6260/./akeeta/app/src/internal_include/ya_aliyun_cloud.h
+ ../apps/akeeta_tr6260/./akeeta/app/src/internal_include/ya_aliyun_cloud.h \
+ ../apps/akeeta_tr6260/./at/ya_atcmd.h

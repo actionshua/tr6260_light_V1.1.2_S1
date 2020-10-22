@@ -73,4 +73,5 @@
  ../apps/akeeta_tr6260/./akeeta/app/src/internal_include/ya_common_func.h \
  ../apps/akeeta_tr6260/./akeeta/csdk3.0.1/eng/include/infra_defs.h \
  ../apps/akeeta_tr6260/./akeeta/csdk3.0.1/eng/include/infra_types.h \
- ../apps/akeeta_tr6260/./akeeta/csdk3.0.1/eng/include/infra_config.h
+ ../apps/akeeta_tr6260/./akeeta/csdk3.0.1/eng/include/infra_config.h \
+ ../apps/akeeta_tr6260/./akeeta/app/src/internal_include/cloud.h

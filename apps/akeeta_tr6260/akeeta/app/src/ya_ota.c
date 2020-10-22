@@ -134,6 +134,11 @@ ya_hal_os_thread_t ya_ota_app = NULL;
 ya_hal_os_queue_t ya_ota_queue = NULL;
 
 char new_ota_version[VERSION_LEN + 1];
+extern int32_t ya_check_enter_ota_test_mode(void);
+extern int32_t ya_trigger_aly_cloud_event_listener(uint8_t event_type, uint8_t *data, uint16_t data_len);
+extern int32_t ya_trigger_aws_cloud_event_listener(uint8_t event_type, uint8_t *data, uint16_t data_len);
+extern uint32_t ya_get_connect_cloud_type(void);
+extern int8_t *ya_get_ota_test_mode_url(void);
 
 int ya_parser_url(ya_http_ota_url_para_t *ya_http_connect_para)
 {
@@ -338,7 +343,8 @@ int ya_http_body_handle(http_file_para_t *ya_http_file, int socket_id, uint8_t *
 
 			ya_http_file->header_len = 0;
 			printf("h-r-l: %d\n ", ya_http_file->body_flie_header_cur_len);
-		}else 
+		}
+		else 
 		{
 			pos = buf + ya_http_file->header_len;
 			ya_http_file->header_len = 0;
@@ -610,10 +616,25 @@ void ya_ota_handle_onoffline(uint8_t *data, uint16_t data_len)
 			{
 				ya_report_ota_result(YA_HTTP_SUCCESS);
 				ota_result_upload_enable = 0;
+				if(1 == ya_check_enter_ota_test_mode())
+					ya_cal_ota_test_num(1);
 			}else if(ota_result_upload_enable == YA_NORMAL_WITH_OTA_FAILE)
 			{
 				ya_report_ota_result(YA_HTTP_OTA_FAILED);
 				ota_result_upload_enable = 0;
+				if(1 == ya_check_enter_ota_test_mode())
+					ya_cal_ota_test_num(0);
+			}
+			if(1 == ya_check_enter_ota_test_mode())
+			{
+				ya_delay(2000);
+				ya_printf(C_LOG_INFO,"\r\nenter ota test mode again !!\r\n");
+				uint8_t *ota_url = ya_get_ota_test_mode_url();
+				ya_printf(C_LOG_INFO,"\r\nota_url==%s\r\n",ota_url);
+				if(0 == ya_get_connect_cloud_type())
+					ya_trigger_aly_cloud_event_listener(CLOUD_UPGRADE_EVENT,ota_url,strlen(ota_url));
+				else
+					ya_trigger_aws_cloud_event_listener(CLOUD_UPGRADE_EVENT,ota_url,strlen(ota_url));				
 			}
 		}
 	}
@@ -726,18 +747,20 @@ int32_t ya_ota_require_handle(ya_ota_type_t ota_type, ya_http_ota_url_para_t *ya
 				goto err;
 			}
 		}
-
-		new_ver = atoi(ver_pre);
-		cur_ver = atoi(cur_pre);
-		if(new_ver < cur_ver)
-			goto err;
-		else if(new_ver == cur_ver)
+		if(0 == ya_check_enter_ota_test_mode())
 		{
-			if(cmd)
-				cJSON_Delete(cmd);
+			new_ver = atoi(ver_pre);
+			cur_ver = atoi(cur_pre);
+			if(new_ver < cur_ver)
+				goto err;
+			else if(new_ver == cur_ver)
+			{
+				if(cmd)
+					cJSON_Delete(cmd);
 
-			eror_code = YA_HTTP_SUCCESS;
-			return eror_code;
+				eror_code = YA_HTTP_SUCCESS;
+				return eror_code;
+			}			
 		}
 	}else 
 	{
@@ -1129,6 +1152,8 @@ void ya_wifi_ota_download(void)
 				
 				if(ya_wifi_ota_para.eror_code < 0)
 					ya_report_ota_result(ya_wifi_ota_para.eror_code);
+				if(1 == ya_check_enter_ota_test_mode())
+					ya_cal_ota_test_num(0);
 			}
 		break;
 

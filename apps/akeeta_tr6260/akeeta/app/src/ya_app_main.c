@@ -28,6 +28,7 @@
 #include "ya_uart_app.h"
 #include "ya_hardware_app.h"
 #include "ya_aliyun_cloud.h"
+#include "ya_atcmd.h"
 
 #define TEST_WIFI_1_SSID 	"akeeta_mdev_test1"
 #define TEST_WIFI_2_SSID 	"akeeta_mdev_test2"
@@ -50,7 +51,7 @@ typedef enum
 
 	YA_CHANGE_IDLE_NEXT_REBOOT,
 	YA_SET_SCAN_RSSI,
-	
+	YA_SET_OTA_TEST,
 	YA_FACTORY_MODE,
 }ya_app_main_queue_type_t;
 
@@ -66,6 +67,13 @@ typedef struct{
 	uint8_t server_ip[6];
 	uint8_t factory_get_rssi_flag;
 	uint8_t factory_get_rssi_name[33];
+	uint8_t download_license_mode;
+	uint8_t license_mode_in;
+	uint8_t check_license_mode;
+	uint8_t reboot_check_license_mode_tick;
+	uint8_t ota_test_url[400];
+	uint32_t ota_test_all_num;
+	uint32_t ota_test_success_num;
 }ya_user_data_t;
 
 typedef enum{
@@ -237,6 +245,78 @@ int32_t ya_read_user_data(void)
 
 	return 0;
 }
+int32_t ya_set_enter_ota_test_mode(uint8_t *ota_test_url)
+{
+
+	int32_t ret = -1;
+	msg_t msg;
+	uint8_t *pbuf = NULL;
+	memset(&msg, 0, sizeof(msg_t));
+	msg.type = YA_SET_OTA_TEST;
+	pbuf = ya_hal_os_memory_alloc(strlen(ota_test_url) + 1);
+	memset(pbuf, 0, strlen(ota_test_url) + 1);
+	strcpy(pbuf, ota_test_url);
+	msg.addr = pbuf;
+	msg.len = strlen(ota_test_url) + 1;
+	ret = ya_hal_os_queue_send(&ya_main_msg_queue, &msg, 100);
+	
+	if(ret != C_OK)
+	{
+		ya_printf(C_LOG_ERROR,"ya_set_enter_ota_test_mode error\n");
+		return C_ERROR;
+	}
+
+	return C_OK;
+}
+
+int32_t ya_set_enter_ota_test_mode_internal(uint8_t *ota_test_url)
+{
+	ya_printf(C_LOG_INFO, "ota_test_url==%s\r\n",ota_test_url);
+	memset(ya_user_data.ota_test_url, 0, 400);
+	memcpy(ya_user_data.ota_test_url,ota_test_url,strlen(ota_test_url));
+	ya_save_user_data();
+	ya_printf(C_LOG_INFO, "reboot to enter ota test mode\r\n");
+	ya_delay(50);
+	ya_hal_sys_reboot();
+}
+int32_t ya_check_enter_ota_test_mode(void)
+{
+	if(strlen(ya_user_data.ota_test_url))
+		return 1;
+	else
+		return 0;
+}
+void ya_cal_ota_test_num(uint8_t ota_flag)
+{
+	ya_user_data.ota_test_all_num++;
+	if(ota_flag == 1)
+		ya_user_data.ota_test_success_num++;
+	ya_printf(C_LOG_INFO, "ota test total num ===%d,success num ===%d\r\n",ya_user_data.ota_test_all_num,ya_user_data.ota_test_success_num);
+	ya_save_user_data();
+}
+int32_t ya_set_exit_ota_test_mode(void)
+{
+	ya_read_user_data();
+	if(strlen(ya_user_data.ota_test_url))
+	{
+		memset(ya_user_data.ota_test_url,0,400);
+		ya_user_data.ota_test_all_num = 0;
+		ya_user_data.ota_test_success_num = 0;
+		ya_save_user_data();
+		ya_printf(C_LOG_INFO, "reboot to exit ota test mode\r\n");
+		ya_delay(50);
+		ya_hal_sys_reboot();
+	}
+}
+
+int8_t *ya_get_ota_test_mode_url(void)
+{
+	if(strlen(ya_user_data.ota_test_url))
+		return ya_user_data.ota_test_url;
+	else
+		return NULL;
+}
+
 int32_t ya_set_factory_rssi_info(uint8_t *rssi_name)
 {
 
@@ -254,7 +334,7 @@ int32_t ya_set_factory_rssi_info(uint8_t *rssi_name)
 	
 	if(ret != C_OK)
 	{
-		ya_printf(C_LOG_ERROR,"ya_hardware_set_toggle_mode error\n");
+		ya_printf(C_LOG_ERROR,"ya_set_factory_rssi_info error\n");
 		return C_ERROR;
 	}
 
@@ -348,6 +428,10 @@ int32_t ya_wifi_cloud_support(void)
 uint32_t ya_get_wifi_cloud_support(void)
 {
 	return ya_wifiCloud;
+}
+uint32_t ya_get_connect_cloud_type(void)
+{
+	return ya_app_main_para_obj.cloud_type;
 }
 
 void ya_start_cloud_apps(uint8_t cloud_type)
@@ -1153,6 +1237,10 @@ void ya_app_main(void *arg)
 
 				case YA_SET_SCAN_RSSI:
 					ya_set_factory_rssi_info_internal(ms_msg.addr);
+				break;
+
+				case YA_SET_OTA_TEST:
+					ya_set_enter_ota_test_mode_internal(ms_msg.addr);
 				break;
 
 				default:
