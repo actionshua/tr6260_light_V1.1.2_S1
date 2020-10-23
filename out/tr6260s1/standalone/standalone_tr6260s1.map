@@ -12896,7 +12896,7 @@ LOAD ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_sniffer.c.o
                 0x00248200                PROVIDE (__BUF_END, .)
                 0x40c07010                . = 0x40c07010
 
-.xip            0x40c07010    0x82684 load address 0x40a20558
+.xip            0x40c07010    0x82688 load address 0x40a20558
                 0x40c07010                __stext1 = .
  *(.xip)
  *(.text .text.*)
@@ -22989,162 +22989,162 @@ LOAD ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_sniffer.c.o
  .rodata.ya_init_light_io.str1.4
                 0x40c80a20       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_example.c.o
  .rodata.ya_light_task.str1.4
-                0x40c80a34       0x45 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_example.c.o
-                                 0x4c (size before relaxing)
- *fill*         0x40c80a79        0x3 
+                0x40c80a34       0x49 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_example.c.o
+                                 0x50 (size before relaxing)
+ *fill*         0x40c80a7d        0x3 
  .rodata.ya_light_example.str1.4
-                0x40c80a7c       0x65 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_example.c.o
+                0x40c80a80       0x65 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_example.c.o
                                  0x68 (size before relaxing)
- *fill*         0x40c80ae1        0x3 
+ *fill*         0x40c80ae5        0x3 
  .rodata.ya_write_light_para.str1.4
-                0x40c80ae4       0x1b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_io.c.o
+                0x40c80ae8       0x1b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_io.c.o
                                  0x1c (size before relaxing)
- *fill*         0x40c80aff        0x1 
+ *fill*         0x40c80b03        0x1 
  .rodata.ya_aging_rgbcw_test.str1.4
-                0x40c80b00       0x45 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_product_test.c.o
+                0x40c80b04       0x45 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_product_test.c.o
                                  0x48 (size before relaxing)
- *fill*         0x40c80b45        0x3 
+ *fill*         0x40c80b49        0x3 
  .rodata.ya_light_factory_test.str1.4
-                0x40c80b48       0x7b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_product_test.c.o
+                0x40c80b4c       0x7b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_light_product_test.c.o
                                  0x7c (size before relaxing)
- *fill*         0x40c80bc3        0x1 
+ *fill*         0x40c80bc7        0x1 
  .rodata.ya_udp_server.str1.4
-                0x40c80bc4       0x46 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_net.c.o
+                0x40c80bc8       0x46 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_net.c.o
                                  0x48 (size before relaxing)
- *fill*         0x40c80c0a        0x2 
+ *fill*         0x40c80c0e        0x2 
  .rodata.ya_printf_remain_heap.str1.4
-                0x40c80c0c       0x11 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_os.c.o
+                0x40c80c10       0x11 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_os.c.o
                                  0x14 (size before relaxing)
  .rodata.ya_hal_wdt_start.str1.4
                 0x00000000        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wdt.c.o
- *fill*         0x40c80c1d        0x3 
+ *fill*         0x40c80c21        0x3 
  .rodata.tr_wifi_event_handler.str1.4
-                0x40c80c20       0x6f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
+                0x40c80c24       0x6f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
                                  0x70 (size before relaxing)
- *fill*         0x40c80c8f        0x1 
+ *fill*         0x40c80c93        0x1 
  .rodata.ya_hal_wlan_start_ap.str1.4
-                0x40c80c90       0x17 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
+                0x40c80c94       0x17 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c80ca7        0x1 
+ *fill*         0x40c80cab        0x1 
  .rodata.ya_hal_wlan_set_mac_address.str1.4
-                0x40c80ca8        0x6 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
+                0x40c80cac        0x6 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
                                  0x2c (size before relaxing)
- *fill*         0x40c80cae        0x2 
+ *fill*         0x40c80cb2        0x2 
  .rodata.ya_hal_wlan_start.str1.4
-                0x40c80cb0       0x9e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
+                0x40c80cb4       0x9e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
                                  0xa0 (size before relaxing)
- *fill*         0x40c80d4e        0x2 
+ *fill*         0x40c80d52        0x2 
  .rodata.ya_hal_wlan_get_ip_address_with_string.str1.4
-                0x40c80d50        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
+                0x40c80d54        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
  .rodata.ya_hal_wlan_scan_obj_ssid.str1.4
-                0x40c80d5c       0x6b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
+                0x40c80d60       0x6b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
                                  0x6c (size before relaxing)
- *fill*         0x40c80dc7        0x1 
+ *fill*         0x40c80dcb        0x1 
  .rodata.ya_hal_wlan_connect_ap.str1.4
-                0x40c80dc8       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
+                0x40c80dcc       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hal_wlan.c.o
  .rodata.str1.4
-                0x40c80dd8      0x501 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/root_ca.c.o
+                0x40c80ddc      0x501 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/root_ca.c.o
                                 0x504 (size before relaxing)
  .rodata._sign_get_clientid.str1.4
                 0x00000000      0x501 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/dev_sign_mqtt.c.o
                                   0x8 (size before relaxing)
- *fill*         0x40c812d9        0x3 
+ *fill*         0x40c812dd        0x3 
  .rodata._iotx_generate_sign_string.str1.4
-                0x40c812dc       0x45 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/dev_sign_mqtt.c.o
+                0x40c812e0       0x45 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/dev_sign_mqtt.c.o
                                  0x54 (size before relaxing)
- *fill*         0x40c81321        0x3 
+ *fill*         0x40c81325        0x3 
  .rodata.str1.4
-                0x40c81324       0x40 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/dev_sign_mqtt.c.o
+                0x40c81328       0x40 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/dev_sign_mqtt.c.o
                                  0x48 (size before relaxing)
  .rodata.str1.4
-                0x40c81364      0x17a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_defs.c.o
+                0x40c81368      0x17a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_defs.c.o
                                 0x17c (size before relaxing)
- *fill*         0x40c814de        0x2 
+ *fill*         0x40c814e2        0x2 
  .rodata.aos_get_version_hex.str1.4
-                0x40c814e0        0x6 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_report.c.o
+                0x40c814e4        0x6 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_report.c.o
                                   0x8 (size before relaxing)
- *fill*         0x40c814e6        0x2 
+ *fill*         0x40c814ea        0x2 
  .rodata.iotx_report_devinfo.str1.4
-                0x40c814e8       0x23 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_report.c.o
+                0x40c814ec       0x23 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_report.c.o
                                  0x24 (size before relaxing)
- *fill*         0x40c8150b        0x1 
+ *fill*         0x40c8150f        0x1 
  .rodata.iotx_report_firmware_version.str1.4
-                0x40c8150c       0x42 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_report.c.o
+                0x40c81510       0x42 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_report.c.o
                                  0x44 (size before relaxing)
- *fill*         0x40c8154e        0x2 
+ *fill*         0x40c81552        0x2 
  .rodata.str1.4
-                0x40c81550       0xcf ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_report.c.o
+                0x40c81554       0xcf ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_report.c.o
                                  0xd0 (size before relaxing)
- *fill*         0x40c8161f        0x1 
+ *fill*         0x40c81623        0x1 
  .rodata.sha256_padding
-                0x40c81620       0x40 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_sha256.c.o
- .rodata.K      0x40c81660      0x100 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_sha256.c.o
+                0x40c81624       0x40 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_sha256.c.o
+ .rodata.K      0x40c81664      0x100 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/infra_sha256.c.o
  .rodata.iotx_mc_read_packet.str1.4
-                0x40c81760       0x1e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
+                0x40c81764       0x1e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
                                  0x20 (size before relaxing)
  .rodata.iotx_mc_check_topic.str1.4
                 0x00000000       0x1e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
                                   0x4 (size before relaxing)
- *fill*         0x40c8177e        0x2 
+ *fill*         0x40c81782        0x2 
  .rodata._mqtt_cycle.str1.4
-                0x40c81780       0x19 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
+                0x40c81784       0x19 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
                                  0x1c (size before relaxing)
- *fill*         0x40c81799        0x3 
- .rodata        0x40c8179c       0x58 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
+ *fill*         0x40c8179d        0x3 
+ .rodata        0x40c817a0       0x58 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
  .rodata.wrapper_mqtt_yield.str1.4
-                0x40c817f4       0x41 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
+                0x40c817f8       0x41 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
                                  0x44 (size before relaxing)
- *fill*         0x40c81835        0x3 
+ *fill*         0x40c81839        0x3 
  .rodata.CSWTCH.76
-                0x40c81838        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
+                0x40c8183c        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iotx_mqtt_client.c.o
  .rodata.IOT_MQTT_Construct.str1.4
-                0x40c81840        0xd ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_api.c.o
+                0x40c81844        0xd ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_api.c.o
                                  0x10 (size before relaxing)
- *fill*         0x40c8184d        0x3 
+ *fill*         0x40c81851        0x3 
  .rodata.MQTTSerialize_connect.str1.4
-                0x40c81850        0x7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/MQTTConnectClient.c.o
+                0x40c81854        0x7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/MQTTConnectClient.c.o
                                  0x10 (size before relaxing)
- *fill*         0x40c81857        0x1 
+ *fill*         0x40c8185b        0x1 
  .rodata._SSLFree_wrapper.str1.4
-                0x40c81858       0x29 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
+                0x40c8185c       0x29 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
                                  0x2c (size before relaxing)
  .rodata._ssl_debug.str1.4
                 0x00000000        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
- *fill*         0x40c81881        0x3 
+ *fill*         0x40c81885        0x3 
  .rodata._network_ssl_disconnect.str1.4
-                0x40c81884       0x30 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
+                0x40c81888       0x30 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
  .rodata.HAL_SSL_Read.str1.4
-                0x40c818b4       0x2b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
+                0x40c818b8       0x2b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
                                  0x2c (size before relaxing)
- *fill*         0x40c818df        0x1 
+ *fill*         0x40c818e3        0x1 
  .rodata.HAL_SSL_Write.str1.4
-                0x40c818e0       0x38 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
+                0x40c818e4       0x38 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
  .rodata.HAL_SSL_Destroy.str1.4
-                0x40c81918       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
+                0x40c8191c       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
  .rodata.HAL_SSL_Establish.str1.4
-                0x40c81928      0x18a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
+                0x40c8192c      0x18a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/HAL_TLS_mbedtls.c.o
                                 0x18c (size before relaxing)
- *fill*         0x40c81ab2        0x2 
+ *fill*         0x40c81ab6        0x2 
  .rodata.HAL_GetFirmwareVersion.str1.4
-                0x40c81ab4       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wrapper.c.o
+                0x40c81ab8       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wrapper.c.o
  .rodata.cloud_request_server_timer.str1.4
-                0x40c81acc       0x31 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/cloud.c.o
+                0x40c81ad0       0x31 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/cloud.c.o
                                  0x44 (size before relaxing)
- *fill*         0x40c81afd        0x3 
+ *fill*         0x40c81b01        0x3 
  .rodata.ya_cloud_unregister.str1.4
-                0x40c81b00       0x27 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/cloud.c.o
+                0x40c81b04       0x27 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/cloud.c.o
                                  0x50 (size before relaxing)
- *fill*         0x40c81b27        0x1 
+ *fill*         0x40c81b2b        0x1 
  .rodata.ya_factory_response_device_para.str1.4
-                0x40c81b28        0x5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
+                0x40c81b2c        0x5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
                                  0x38 (size before relaxing)
- *fill*         0x40c81b2d        0x3 
+ *fill*         0x40c81b31        0x3 
  .rodata.ya_response_aliyun_cert.str1.4
-                0x40c81b30       0x2e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
+                0x40c81b34       0x2e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
                                  0x34 (size before relaxing)
- *fill*         0x40c81b5e        0x2 
+ *fill*         0x40c81b62        0x2 
  .rodata.ya_softap_factory_license_parse.str1.4
-                0x40c81b60       0x59 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
+                0x40c81b64       0x59 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
                                  0x68 (size before relaxing)
  .rodata.ya_hal_debug_array.str1.4
                 0x00000000       0x59 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
@@ -23152,670 +23152,670 @@ LOAD ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_sniffer.c.o
  .rodata.create_aes_key_and_iv.str1.4
                 0x00000000       0x59 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
                                   0xc (size before relaxing)
- *fill*         0x40c81bb9        0x3 
+ *fill*         0x40c81bbd        0x3 
  .rodata.ya_softap_random_cmd.str1.4
-                0x40c81bbc       0x1f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
+                0x40c81bc0       0x1f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
                                  0x20 (size before relaxing)
- *fill*         0x40c81bdb        0x1 
+ *fill*         0x40c81bdf        0x1 
  .rodata.ya_softap_get_cmd.str1.4
-                0x40c81bdc       0x5c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
+                0x40c81be0       0x5c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
                                  0x6c (size before relaxing)
  .rodata.ya_softap_apconfig_cmd.str1.4
-                0x40c81c38       0x35 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
+                0x40c81c3c       0x35 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
                                  0x38 (size before relaxing)
- *fill*         0x40c81c6d        0x3 
+ *fill*         0x40c81c71        0x3 
  .rodata.ya_softap_comm_parse.str1.4
-                0x40c81c70      0x11e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
+                0x40c81c74      0x11e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
                                 0x120 (size before relaxing)
- *fill*         0x40c81d8e        0x2 
+ *fill*         0x40c81d92        0x2 
  .rodata.ya_softap_update.str1.4
-                0x40c81d90       0xc9 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
+                0x40c81d94       0xc9 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
                                  0xcc (size before relaxing)
- *fill*         0x40c81e59        0x3 
+ *fill*         0x40c81e5d        0x3 
  .rodata.ya_start_softap.str1.4
-                0x40c81e5c       0x2f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
+                0x40c81e60       0x2f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_softap_update.c.o
                                  0x30 (size before relaxing)
- *fill*         0x40c81e8b        0x1 
+ *fill*         0x40c81e8f        0x1 
  .rodata.AES_CBC_PKCS5Padding_decrypt.str1.4
-                0x40c81e8c       0x22 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aes_md5.c.o
+                0x40c81e90       0x22 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aes_md5.c.o
                                  0x24 (size before relaxing)
- *fill*         0x40c81eae        0x2 
+ *fill*         0x40c81eb2        0x2 
  .rodata.ya_add_aly_cloud_event_listener.str1.4
-                0x40c81eb0       0x21 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c81eb4       0x21 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
                                  0x24 (size before relaxing)
- *fill*         0x40c81ed1        0x3 
+ *fill*         0x40c81ed5        0x3 
  .rodata.ya_remove_aly_cloud_event_listener.str1.4
-                0x40c81ed4       0x19 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c81ed8       0x19 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
                                  0x1c (size before relaxing)
- *fill*         0x40c81eed        0x3 
+ *fill*         0x40c81ef1        0x3 
  .rodata.ya_report_msg_to_aly_cloud.str1.4
-                0x40c81ef0       0x58 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c81ef4       0x58 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
  .rodata.ya_start_cloud_aly_app.str1.4
-                0x40c81f48       0x57 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c81f4c       0x57 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
                                  0x78 (size before relaxing)
- *fill*         0x40c81f9f        0x1 
+ *fill*         0x40c81fa3        0x1 
  .rodata.ya_aly_topic_subscribe.str1.4
-                0x40c81fa0       0x57 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c81fa4       0x57 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
                                  0x58 (size before relaxing)
- *fill*         0x40c81ff7        0x1 
+ *fill*         0x40c81ffb        0x1 
  .rodata.ya_aly_cloud_event_handle.str1.4
-                0x40c81ff8       0x3a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c81ffc       0x3a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
                                  0x3c (size before relaxing)
- *fill*         0x40c82032        0x2 
+ *fill*         0x40c82036        0x2 
  .rodata.ya_aly_subscribe_event_transfer.str1.4
-                0x40c82034        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c82038        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
                                  0x20 (size before relaxing)
  .rodata.ya_subscribe_callback_handler.str1.4
-                0x40c8203c       0xb1 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c82040       0xb1 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
                                  0xb8 (size before relaxing)
- *fill*         0x40c820ed        0x3 
+ *fill*         0x40c820f1        0x3 
  .rodata.ya_aly_report.str1.4
-                0x40c820f0       0x32 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c820f4       0x32 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
                                  0x34 (size before relaxing)
- *fill*         0x40c82122        0x2 
+ *fill*         0x40c82126        0x2 
  .rodata.ya_updata_device_version.str1.4
-                0x40c82124       0x45 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c82128       0x45 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
                                  0x6c (size before relaxing)
- *fill*         0x40c82169        0x3 
+ *fill*         0x40c8216d        0x3 
  .rodata.ya_cloud_app.str1.4
-                0x40c8216c      0x102 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
+                0x40c82170      0x102 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aliyun_cloud.c.o
                                 0x128 (size before relaxing)
- *fill*         0x40c8226e        0x2 
+ *fill*         0x40c82272        0x2 
  .rodata.ya_softap_callback.str1.4
-                0x40c82270       0x65 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82274       0x65 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x68 (size before relaxing)
- *fill*         0x40c822d5        0x3 
+ *fill*         0x40c822d9        0x3 
  .rodata.ya_smart_config_result_callback.str1.4
-                0x40c822d8       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c822dc       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
  .rodata.ya_app_wlan_event_callback.str1.4
-                0x40c822f4       0x9d ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c822f8       0x9d ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0xa0 (size before relaxing)
- *fill*         0x40c82391        0x3 
+ *fill*         0x40c82395        0x3 
  .rodata.ya_printf_verion.str1.4
-                0x40c82394       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82398       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
  .rodata.ya_printf_mac.str1.4
                 0x00000000       0x30 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
  .rodata.ya_get_mac_addr_string.str1.4
-                0x40c823a4       0x19 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c823a8       0x19 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x1c (size before relaxing)
- *fill*         0x40c823bd        0x3 
+ *fill*         0x40c823c1        0x3 
  .rodata.ya_save_user_data.str1.4
-                0x40c823c0       0x37 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c823c4       0x37 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x38 (size before relaxing)
- *fill*         0x40c823f7        0x1 
+ *fill*         0x40c823fb        0x1 
  .rodata.ya_read_user_data.str1.4
-                0x40c823f8       0xa7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c823fc       0xa7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0xa8 (size before relaxing)
- *fill*         0x40c8249f        0x1 
+ *fill*         0x40c824a3        0x1 
  .rodata.ya_set_enter_ota_test_mode.str1.4
-                0x40c824a0       0x2b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c824a4       0x2b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x2c (size before relaxing)
- *fill*         0x40c824cb        0x1 
+ *fill*         0x40c824cf        0x1 
  .rodata.ya_set_enter_ota_test_mode_internal.str1.4
-                0x40c824cc       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c824d0       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
  .rodata.ya_cal_ota_test_num.str1.4
-                0x40c82500       0x2d ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82504       0x2d ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x30 (size before relaxing)
- *fill*         0x40c8252d        0x3 
+ *fill*         0x40c82531        0x3 
  .rodata.ya_set_exit_ota_test_mode.str1.4
-                0x40c82530       0x1f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82534       0x1f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x20 (size before relaxing)
- *fill*         0x40c8254f        0x1 
+ *fill*         0x40c82553        0x1 
  .rodata.ya_set_factory_rssi_info.str1.4
-                0x40c82550       0x29 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82554       0x29 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x2c (size before relaxing)
- *fill*         0x40c82579        0x3 
+ *fill*         0x40c8257d        0x3 
  .rodata.ya_set_factory_rssi_info_internal.str1.4
-                0x40c8257c       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82580       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
  .rodata.ya_check_cloud_support.str1.4
-                0x40c82598       0x7c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c8259c       0x7c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
  .rodata.ya_start_cloud_apps.str1.4
-                0x40c82614       0x56 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82618       0x56 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x58 (size before relaxing)
- *fill*         0x40c8266a        0x2 
+ *fill*         0x40c8266e        0x2 
  .rodata.ya_start_other_apps.str1.4
-                0x40c8266c       0x4a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82670       0x4a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x4c (size before relaxing)
- *fill*         0x40c826b6        0x2 
+ *fill*         0x40c826ba        0x2 
  .rodata.ya_app_ap_start_para_init.str1.4
-                0x40c826b8       0x13 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c826bc       0x13 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x14 (size before relaxing)
- *fill*         0x40c826cb        0x1 
+ *fill*         0x40c826cf        0x1 
  .rodata.ya_erase_all_user_data.str1.4
-                0x40c826cc       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c826d0       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
  .rodata.ya_set_mode_internal.str1.4
-                0x40c826e4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c826e8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
  .rodata.ya_set_ap_mode.str1.4
-                0x40c826f8       0x2c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c826fc       0x2c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
  .rodata.ya_reset_module_to_factory.str1.4
-                0x40c82724       0x31 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82728       0x31 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x34 (size before relaxing)
- *fill*         0x40c82755        0x3 
+ *fill*         0x40c82759        0x3 
  .rodata.ya_enter_scan_specific_ssid_rssi_mode.str1.4
-                0x40c82758        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c8275c        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x14 (size before relaxing)
  .rodata.ya_check_enter_factory_mode.str1.4
-                0x40c82764       0x26 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82768       0x26 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0x28 (size before relaxing)
- *fill*         0x40c8278a        0x2 
+ *fill*         0x40c8278e        0x2 
  .rodata.ya_app_main.str1.4
-                0x40c8278c      0x15e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c82790      0x15e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                 0x160 (size before relaxing)
- *fill*         0x40c828ea        0x2 
+ *fill*         0x40c828ee        0x2 
  .rodata.ya_start_app_main.str1.4
-                0x40c828ec       0x83 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
+                0x40c828f0       0x83 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_app_main.c.o
                                  0xc8 (size before relaxing)
- *fill*         0x40c8296f        0x1 
+ *fill*         0x40c82973        0x1 
  .rodata.ya_add_aws_cloud_event_listener.str1.4
-                0x40c82970       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c82974       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                  0x28 (size before relaxing)
  .rodata.ya_report_msg_to_aws_cloud.str1.4
                 0x00000000       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
  .rodata.ya_remove_aws_cloud_event_listener.str1.4
                 0x00000000       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
- *fill*         0x40c82995        0x3 
+ *fill*         0x40c82999        0x3 
  .rodata.ya_start_cloud_aws_app.str1.4
-                0x40c82998       0x57 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c8299c       0x57 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                  0x78 (size before relaxing)
  .rodata.ya_aws_subscribe_event_transfer.str1.4
                 0x00000000       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
- *fill*         0x40c829ef        0x1 
+ *fill*         0x40c829f3        0x1 
  .rodata.ya_subscribe_callback_handler.str1.4
-                0x40c829f0       0x42 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c829f4       0x42 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                  0x44 (size before relaxing)
- *fill*         0x40c82a32        0x2 
+ *fill*         0x40c82a36        0x2 
  .rodata.ya_get_subscribe_topic.str1.4
-                0x40c82a34       0x32 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c82a38       0x32 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                  0x34 (size before relaxing)
- *fill*         0x40c82a66        0x2 
+ *fill*         0x40c82a6a        0x2 
  .rodata.ya_aws_subscribe.str1.4
-                0x40c82a68       0x39 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c82a6c       0x39 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                  0x3c (size before relaxing)
- *fill*         0x40c82aa1        0x3 
+ *fill*         0x40c82aa5        0x3 
  .rodata.ya_aws_publish_ack.str1.4
-                0x40c82aa4       0x65 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c82aa8       0x65 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                  0x68 (size before relaxing)
- *fill*         0x40c82b09        0x3 
+ *fill*         0x40c82b0d        0x3 
  .rodata.ya_aws_report.str1.4
-                0x40c82b0c       0x35 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c82b10       0x35 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                  0x48 (size before relaxing)
- *fill*         0x40c82b41        0x3 
+ *fill*         0x40c82b45        0x3 
  .rodata.ya_aws_gen_ack_publish_and_send.str1.4
-                0x40c82b44       0x23 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c82b48       0x23 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                  0x3c (size before relaxing)
- *fill*         0x40c82b67        0x1 
+ *fill*         0x40c82b6b        0x1 
  .rodata.ya_aws_cloud_connect.str1.4
-                0x40c82b68      0x16b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c82b6c      0x16b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                 0x170 (size before relaxing)
- *fill*         0x40c82cd3        0x1 
+ *fill*         0x40c82cd7        0x1 
  .rodata.ya_cloud_app.str1.4
-                0x40c82cd4      0x10e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c82cd8      0x10e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                 0x1f4 (size before relaxing)
- *fill*         0x40c82de2        0x2 
+ *fill*         0x40c82de6        0x2 
  .rodata.__func__.15308
-                0x40c82de4       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c82de8       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
  .rodata.str1.4
-                0x40c82dfc      0x4a5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
+                0x40c82e00      0x4a5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_aws_cloud.c.o
                                 0x4a8 (size before relaxing)
- *fill*         0x40c832a1        0x3 
+ *fill*         0x40c832a5        0x3 
  .rodata.ya_write_check_aws_para_device_cert.str1.4
-                0x40c832a4       0x50 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_cert_flash_api.c.o
+                0x40c832a8       0x50 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_cert_flash_api.c.o
  .rodata.ya_write_check_aws_para_device_rsa_private_key.str1.4
-                0x40c832f4       0x4f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_cert_flash_api.c.o
+                0x40c832f8       0x4f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_cert_flash_api.c.o
                                  0x54 (size before relaxing)
- *fill*         0x40c83343        0x1 
+ *fill*         0x40c83347        0x1 
  .rodata.ya_write_check_aws_para_device_id.str1.4
-                0x40c83344       0x1f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_cert_flash_api.c.o
+                0x40c83348       0x1f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_cert_flash_api.c.o
                                  0x20 (size before relaxing)
- *fill*         0x40c83363        0x1 
+ *fill*         0x40c83367        0x1 
  .rodata.ya_aws_para_init.str1.4
-                0x40c83364       0xdb ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_cert_flash_api.c.o
+                0x40c83368       0xdb ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_cert_flash_api.c.o
                                  0xdc (size before relaxing)
- *fill*         0x40c8343f        0x1 
+ *fill*         0x40c83443        0x1 
  .rodata.ya_read_parse_aliyun_cert.str1.4
-                0x40c83440       0x44 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_cert_flash_api.c.o
+                0x40c83444       0x44 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_cert_flash_api.c.o
                                  0x4c (size before relaxing)
  .rodata.ya_write_flash.str1.4
-                0x40c83484       0x39 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_flash.c.o
+                0x40c83488       0x39 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_flash.c.o
                                  0x3c (size before relaxing)
- *fill*         0x40c834bd        0x3 
+ *fill*         0x40c834c1        0x3 
  .rodata.ya_read_flash_with_fix_len.str1.4
-                0x40c834c0       0xaa ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_flash.c.o
+                0x40c834c4       0xaa ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_flash.c.o
                                  0xac (size before relaxing)
- *fill*         0x40c8356a        0x2 
+ *fill*         0x40c8356e        0x2 
  .rodata.ya_read_flash_with_var_len.str1.4
-                0x40c8356c       0x42 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_flash.c.o
+                0x40c83570       0x42 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_flash.c.o
                                  0x44 (size before relaxing)
- *fill*         0x40c835ae        0x2 
+ *fill*         0x40c835b2        0x2 
  .rodata.ya_put_cloud_data_into_queue.str1.4
-                0x40c835b0       0x1f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
+                0x40c835b4       0x1f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
                                  0x20 (size before relaxing)
- *fill*         0x40c835cf        0x1 
+ *fill*         0x40c835d3        0x1 
  .rodata.ya_hardware_app.str1.4
-                0x40c835d0       0x3e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
+                0x40c835d4       0x3e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
                                  0x40 (size before relaxing)
- *fill*         0x40c8360e        0x2 
+ *fill*         0x40c83612        0x2 
  .rodata.ya_hardware_handle_cloud_onff_event.str1.4
-                0x40c83610       0x3d ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
+                0x40c83614       0x3d ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
                                  0x40 (size before relaxing)
- *fill*         0x40c8364d        0x3 
+ *fill*         0x40c83651        0x3 
  .rodata.ya_put_timer_action_into_queue.str1.4
-                0x40c83650       0x1b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
+                0x40c83654       0x1b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
                                  0x1c (size before relaxing)
- *fill*         0x40c8366b        0x1 
+ *fill*         0x40c8366f        0x1 
  .rodata.ya_add_hareware_listen_event_from_cloud.str1.4
-                0x40c8366c       0x17 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
+                0x40c83670       0x17 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c83683        0x1 
+ *fill*         0x40c83687        0x1 
  .rodata.ya_start_hardware_app.str1.4
-                0x40c83684       0x27 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
+                0x40c83688       0x27 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_app.c.o
                                  0x60 (size before relaxing)
- *fill*         0x40c836ab        0x1 
+ *fill*         0x40c836af        0x1 
  .rodata.sys_timer_printf.str1.4
-                0x40c836ac       0x2a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
+                0x40c836b0       0x2a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
                                  0x2c (size before relaxing)
- *fill*         0x40c836d6        0x2 
+ *fill*         0x40c836da        0x2 
  .rodata.device_delete_list_timer.str1.4
-                0x40c836d8       0x31 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
+                0x40c836dc       0x31 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
                                  0x34 (size before relaxing)
- *fill*         0x40c83709        0x3 
+ *fill*         0x40c8370d        0x3 
  .rodata.device_add_list_timer.str1.4
-                0x40c8370c       0x3b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
+                0x40c83710       0x3b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
                                  0x3c (size before relaxing)
  .rodata.device_save_timer_into_flash.str1.4
                 0x00000000       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
- *fill*         0x40c83747        0x1 
+ *fill*         0x40c8374b        0x1 
  .rodata.device_read_timer_into_flash.str1.4
-                0x40c83748       0x51 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
+                0x40c8374c       0x51 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
                                  0x54 (size before relaxing)
- *fill*         0x40c83799        0x3 
+ *fill*         0x40c8379d        0x3 
  .rodata.device_handle_cloud_timer.str1.4
-                0x40c8379c      0x16b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
+                0x40c837a0      0x16b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
                                 0x184 (size before relaxing)
- *fill*         0x40c83907        0x1 
+ *fill*         0x40c8390b        0x1 
  .rodata.device_check_cloud_timer.str1.4
-                0x40c83908       0x3a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
+                0x40c8390c       0x3a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
                                  0x3c (size before relaxing)
- *fill*         0x40c83942        0x2 
+ *fill*         0x40c83946        0x2 
  .rodata.device_handle_severtime_set.str1.4
-                0x40c83944       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
+                0x40c83948       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_timer.c.o
                                  0x1c (size before relaxing)
  .rodata.ya_thing_report_to_cloud.str1.4
-                0x40c83958       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_translate.c.o
+                0x40c8395c       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_translate.c.o
                                  0x3c (size before relaxing)
  .rodata.ya_thing_request_server_timer.str1.4
                 0x00000000       0x30 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_translate.c.o
- *fill*         0x40c8397d        0x3 
+ *fill*         0x40c83981        0x3 
  .rodata.ya_handle_cloud_data.str1.4
-                0x40c83980       0x67 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_translate.c.o
+                0x40c83984       0x67 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_hardware_translate.c.o
                                  0x68 (size before relaxing)
- *fill*         0x40c839e7        0x1 
+ *fill*         0x40c839eb        0x1 
  .rodata.ya_ota_handle_command.str1.4
-                0x40c839e8       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c839ec       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                  0x3c (size before relaxing)
  .rodata.update_ota_buffer_md5.str1.4
-                0x40c83a04       0x5b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83a08       0x5b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                  0x68 (size before relaxing)
- *fill*         0x40c83a5f        0x1 
+ *fill*         0x40c83a63        0x1 
  .rodata.ya_parser_url.str1.4
-                0x40c83a60       0x33 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83a64       0x33 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                  0x34 (size before relaxing)
- *fill*         0x40c83a93        0x1 
+ *fill*         0x40c83a97        0x1 
  .rodata.ya_parse_http_header_response.str1.4
-                0x40c83a94       0x6f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83a98       0x6f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                  0x70 (size before relaxing)
- *fill*         0x40c83b03        0x1 
+ *fill*         0x40c83b07        0x1 
  .rodata.ya_http_body_handle.str1.4
-                0x40c83b04       0x3d ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83b08       0x3d ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                  0x40 (size before relaxing)
- *fill*         0x40c83b41        0x3 
+ *fill*         0x40c83b45        0x3 
  .rodata.ya_http_connect_server.str1.4
-                0x40c83b44       0x44 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83b48       0x44 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
  .rodata.ya_report_ota_result.str1.4
-                0x40c83b88       0x4f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83b8c       0x4f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                  0x5c (size before relaxing)
- *fill*         0x40c83bd7        0x1 
+ *fill*         0x40c83bdb        0x1 
  .rodata.ya_ota_handle_onoffline.str1.4
-                0x40c83bd8       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83bdc       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
  .rodata.ya_write_ota_enable_into_flash.str1.4
-                0x40c83c0c        0xf ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83c10        0xf ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                  0x10 (size before relaxing)
- *fill*         0x40c83c1b        0x1 
+ *fill*         0x40c83c1f        0x1 
  .rodata.ya_ota_require_handle.str1.4
-                0x40c83c1c       0xb2 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83c20       0xb2 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                  0xc4 (size before relaxing)
- *fill*         0x40c83cce        0x2 
+ *fill*         0x40c83cd2        0x2 
  .rodata.ya_wifi_ota_download.str1.4
-                0x40c83cd0      0x166 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83cd4      0x166 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                 0x16c (size before relaxing)
- *fill*         0x40c83e36        0x2 
+ *fill*         0x40c83e3a        0x2 
  .rodata.ya_http_ota_app.str1.4
-                0x40c83e38       0x41 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83e3c       0x41 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                  0x44 (size before relaxing)
- *fill*         0x40c83e79        0x3 
+ *fill*         0x40c83e7d        0x3 
  .rodata.ya_start_ota_app.str1.4
-                0x40c83e7c       0x6b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83e80       0x6b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
                                  0x8c (size before relaxing)
- *fill*         0x40c83ee7        0x1 
+ *fill*         0x40c83eeb        0x1 
  .rodata.__FUNCTION__.12721
-                0x40c83ee8       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
+                0x40c83eec       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota.c.o
  .rodata.ya_verify_mcu_file_checksum.str1.4
-                0x40c83f08       0x2e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota_hal.c.o
+                0x40c83f0c       0x2e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_ota_hal.c.o
                                  0x54 (size before relaxing)
- *fill*         0x40c83f36        0x2 
+ *fill*         0x40c83f3a        0x2 
  .rodata.ya_sniffer_broadcast_content.str1.4
-                0x40c83f38       0x29 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_sniffer_broadcast.c.o
+                0x40c83f3c       0x29 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_sniffer_broadcast.c.o
                                  0x6c (size before relaxing)
- *fill*         0x40c83f61        0x3 
+ *fill*         0x40c83f65        0x3 
  .rodata.ya_parse_listen_data.str1.4
-                0x40c83f64        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_sniffer_broadcast.c.o
+                0x40c83f68        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_sniffer_broadcast.c.o
                                  0x14 (size before relaxing)
  .rodata.ya_snifer_broadcast_task.str1.4
-                0x40c83f70       0xe7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_sniffer_broadcast.c.o
+                0x40c83f74       0xe7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_sniffer_broadcast.c.o
                                  0xec (size before relaxing)
- *fill*         0x40c84057        0x1 
+ *fill*         0x40c8405b        0x1 
  .rodata.ya_start_sniffer_broadcast.str1.4
-                0x40c84058       0x4e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_sniffer_broadcast.c.o
+                0x40c8405c       0x4e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_sniffer_broadcast.c.o
                                  0x50 (size before relaxing)
- *fill*         0x40c840a6        0x2 
+ *fill*         0x40c840aa        0x2 
  .rodata.write_certificate.str1.4
-                0x40c840a8       0x65 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
+                0x40c840ac       0x65 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
                                  0x68 (size before relaxing)
- *fill*         0x40c8410d        0x3 
+ *fill*         0x40c84111        0x3 
  .rodata.read_certificate.str1.4
-                0x40c84110       0x12 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
+                0x40c84114       0x12 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
                                  0x14 (size before relaxing)
- *fill*         0x40c84122        0x2 
+ *fill*         0x40c84126        0x2 
  .rodata.ya_handle_uart_data.str1.4
-                0x40c84124       0x2a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
+                0x40c84128       0x2a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
                                  0x2c (size before relaxing)
- *fill*         0x40c8414e        0x2 
+ *fill*         0x40c84152        0x2 
  .rodata.ya_uart_app.str1.4
-                0x40c84150       0x85 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
+                0x40c84154       0x85 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
                                  0x88 (size before relaxing)
- *fill*         0x40c841d5        0x3 
+ *fill*         0x40c841d9        0x3 
  .rodata.ya_add_uart_listen_event_from_cloud.str1.4
-                0x40c841d8        0xf ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
+                0x40c841dc        0xf ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
                                  0x10 (size before relaxing)
- *fill*         0x40c841e7        0x1 
+ *fill*         0x40c841eb        0x1 
  .rodata.ya_start_uart_app.str1.4
-                0x40c841e8       0x3f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
+                0x40c841ec       0x3f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_uart_app.c.o
                                  0x60 (size before relaxing)
- *fill*         0x40c84227        0x1 
+ *fill*         0x40c8422b        0x1 
  .rodata.cipher_privacy_string.str1.4
-                0x40c84228       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c8422c       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
                                  0x2c (size before relaxing)
  .rodata.ya_parse_broadcast.isra.0.str1.4
-                0x40c84244       0xa5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c84248       0xa5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
                                  0xa8 (size before relaxing)
- *fill*         0x40c842e9        0x3 
+ *fill*         0x40c842ed        0x3 
  .rodata.ya_parse_multicast.str1.4
-                0x40c842ec       0x35 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c842f0       0x35 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
                                  0x38 (size before relaxing)
- *fill*         0x40c84321        0x3 
+ *fill*         0x40c84325        0x3 
  .rodata.easyjoin_callback.str1.4
-                0x40c84324       0x6c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c84328       0x6c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
                                  0x7c (size before relaxing)
  .rodata.ya_smartconfig_decode.str1.4
-                0x40c84390       0x50 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c84394       0x50 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
                                  0x54 (size before relaxing)
  .rodata.smartconfig_task.str1.4
-                0x40c843e0       0x2c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c843e4       0x2c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
  .rodata.start_smnt.str1.4
-                0x40c8440c       0x46 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c84410       0x46 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
                                  0x48 (size before relaxing)
- *fill*         0x40c84452        0x2 
+ *fill*         0x40c84456        0x2 
  .rodata.__FUNCTION__.12599
-                0x40c84454        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c84458        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
  .rodata.len_fixed_offset
-                0x40c84460        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c84464        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
  .rodata.channel_list
-                0x40c8446c       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c84470       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
  .rodata.multicast_mac
-                0x40c8447c        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c84480        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
  .rodata.broadcast_mac
-                0x40c84480        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
+                0x40c84484        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_smartconfig.c.o
  .rodata.map_cipher_to_encry.str1.4
                 0x00000000       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_80211.c.o
  .rodata.RSN_CIPHER_SUITE_WEP10423A
-                0x40c84488        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_80211.c.o
- .rodata.RSN_CIPHER_SUITE_CCMP23A
                 0x40c8448c        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_80211.c.o
- .rodata.RSN_CIPHER_SUITE_TKIP23A
+ .rodata.RSN_CIPHER_SUITE_CCMP23A
                 0x40c84490        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_80211.c.o
- .rodata.RSN_CIPHER_SUITE_WEP4023A
+ .rodata.RSN_CIPHER_SUITE_TKIP23A
                 0x40c84494        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_80211.c.o
- .rodata.RSN_CIPHER_SUITE_NONE23A
+ .rodata.RSN_CIPHER_SUITE_WEP4023A
                 0x40c84498        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_80211.c.o
- .rodata.RSN_SUITE_1X
+ .rodata.RSN_CIPHER_SUITE_NONE23A
                 0x40c8449c        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_80211.c.o
+ .rodata.RSN_SUITE_1X
+                0x40c844a0        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_80211.c.o
  .rodata.ya_int_to_string.str1.4
                 0x00000000        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_common_func.c.o
  .rodata.Num2CharTable
-                0x40c844a0       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_common_func.c.o
-                0x40c844a0                Num2CharTable
+                0x40c844a4       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_common_func.c.o
+                0x40c844a4                Num2CharTable
  .rodata.license_md5_string.str1.4
-                0x40c844b0      0x186 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_atcmd.c.o
+                0x40c844b4      0x186 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_atcmd.c.o
                                 0x1c0 (size before relaxing)
  .rodata.at_response.str1.4
                 0x00000000        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_atcmd.c.o
- *fill*         0x40c84636        0x2 
+ *fill*         0x40c8463a        0x2 
  .rodata.ya_data_atcmd_handler.str1.4
-                0x40c84638      0x552 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_atcmd.c.o
+                0x40c8463c      0x552 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_atcmd.c.o
                                 0x614 (size before relaxing)
- *fill*         0x40c84b8a        0x2 
- .rodata        0x40c84b8c        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_atcmd.c.o
+ *fill*         0x40c84b8e        0x2 
+ .rodata        0x40c84b90        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_atcmd.c.o
  .rodata.__FUNCTION__.12893
-                0x40c84b90       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_atcmd.c.o
+                0x40c84b94       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ya_atcmd.c.o
  .rodata.aws_iot_mqtt_set_connect_params.str1.4
-                0x40c84ba8       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client.c.o
- .rodata        0x40c84bc0       0x3c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client.c.o
+                0x40c84bac       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client.c.o
+ .rodata        0x40c84bc4       0x3c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client.c.o
  .rodata.iotClientConnectParamsDefault
-                0x40c84bfc       0x3c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client.c.o
-                0x40c84bfc                iotClientConnectParamsDefault
+                0x40c84c00       0x3c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client.c.o
+                0x40c84c00                iotClientConnectParamsDefault
  .rodata.iotClientInitParamsDefault
-                0x40c84c38       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client.c.o
-                0x40c84c38                iotClientInitParamsDefault
+                0x40c84c3c       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client.c.o
+                0x40c84c3c                iotClientInitParamsDefault
  .rodata.aws_iot_mqtt_internal_cycle_read.str1.4
-                0x40c84c6c       0x26 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client_common_internal.c.o
+                0x40c84c70       0x26 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client_common_internal.c.o
                                  0x28 (size before relaxing)
- *fill*         0x40c84c92        0x2 
+ *fill*         0x40c84c96        0x2 
  .rodata.CSWTCH.27
-                0x40c84c94       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client_common_internal.c.o
+                0x40c84c98       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client_common_internal.c.o
  .rodata.aws_iot_mqtt_connect.str1.4
-                0x40c84ca4       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client_connect.c.o
+                0x40c84ca8       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client_connect.c.o
                                  0x30 (size before relaxing)
- *fill*         0x40c84cc9        0x3 
+ *fill*         0x40c84ccd        0x3 
  .rodata.aws_iot_mqtt_yield.str1.4
-                0x40c84ccc       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client_yield.c.o
+                0x40c84cd0       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aws_iot_mqtt_client_yield.c.o
  .rodata.iot_tls_connect.str1.4
-                0x40c84cec      0x77a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
+                0x40c84cf0      0x77a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
                                 0x7c0 (size before relaxing)
- *fill*         0x40c85466        0x2 
+ *fill*         0x40c8546a        0x2 
  .rodata.iot_tls_write.str1.4
-                0x40c85468       0x2e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
+                0x40c8546c       0x2e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
                                  0x30 (size before relaxing)
- *fill*         0x40c85496        0x2 
+ *fill*         0x40c8549a        0x2 
  .rodata._iot_tls_verify_cert.str1.4
-                0x40c85498       0x71 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
+                0x40c8549c       0x71 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
                                  0x7c (size before relaxing)
- *fill*         0x40c85509        0x3 
+ *fill*         0x40c8550d        0x3 
  .rodata.__func__.15098
-                0x40c8550c       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
+                0x40c85510       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
  .rodata.__func__.15024
-                0x40c8551c       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
+                0x40c85520       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
  .rodata.__func__.15078
-                0x40c85534       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
+                0x40c85538       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/network_mbedtls_wrapper.c.o
  .rodata.cmd_show_stack.str1.4
-                0x40c85544       0xf3 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace_stack.c.o
+                0x40c85548       0xf3 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace_stack.c.o
                                 0x100 (size before relaxing)
- *fill*         0x40c85637        0x1 
+ *fill*         0x40c8563b        0x1 
  .rodata.util_trace_stack_add_task.str1.4
-                0x40c85638       0x7a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace_stack.c.o
+                0x40c8563c       0x7a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace_stack.c.o
                                  0x7c (size before relaxing)
- *fill*         0x40c856b2        0x2 
+ *fill*         0x40c856b6        0x2 
  .rodata.str1.4
-                0x40c856b4       0x2b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace_stack.c.o
+                0x40c856b8       0x2b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace_stack.c.o
                                  0x2c (size before relaxing)
- *fill*         0x40c856df        0x1 
+ *fill*         0x40c856e3        0x1 
  .rodata.print_prompt.str1.4
-                0x40c856e0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cli_freertos.c.o
+                0x40c856e4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cli_freertos.c.o
  .rodata.util_cli_callback.str1.4
-                0x40c856f4       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cli_freertos.c.o
+                0x40c856f8       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cli_freertos.c.o
                                  0x40 (size before relaxing)
  .rodata.__FUNCTION__.11140
-                0x40c85728       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cli_freertos.c.o
+                0x40c8572c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cli_freertos.c.o
  .rodata.system_printf.str1.4
-                0x40c8573c       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
+                0x40c85740       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c85752        0x2 
+ *fill*         0x40c85756        0x2 
  .rodata.sys_task.str1.4
-                0x40c85754       0x23 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
+                0x40c85758       0x23 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
                                  0x24 (size before relaxing)
- *fill*         0x40c85777        0x1 
+ *fill*         0x40c8577b        0x1 
  .rodata.system_task_init.str1.4
-                0x40c85778        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
+                0x40c8577c        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
                                  0x5c (size before relaxing)
  .rodata.system_schedule_work_queue_from_isr.str1.4
-                0x40c85784       0x69 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
+                0x40c85788       0x69 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
                                  0x6c (size before relaxing)
- *fill*         0x40c857ed        0x3 
+ *fill*         0x40c857f1        0x3 
  .rodata.show_assert.str1.4
-                0x40c857f0       0x23 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
+                0x40c857f4       0x23 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
                                  0x24 (size before relaxing)
- *fill*         0x40c85813        0x1 
+ *fill*         0x40c85817        0x1 
  .rodata.system_vprintf.str1.4
-                0x40c85814        0x7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
+                0x40c85818        0x7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
                                   0x8 (size before relaxing)
- *fill*         0x40c8581b        0x1 
+ *fill*         0x40c8581f        0x1 
  .rodata.system_set_startup_type.str1.4
-                0x40c8581c        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
+                0x40c85820        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
                                  0x10 (size before relaxing)
  .rodata.__func__.11319
-                0x40c85828       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
+                0x40c8582c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_common.c.o
  .rodata.cmd_show_log.str1.4
-                0x40c8583c       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
+                0x40c85840       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
                                  0x34 (size before relaxing)
  .rodata.cmd_set_log_level.str1.4
-                0x40c85854       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
+                0x40c85858       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c8586a        0x2 
+ *fill*         0x40c8586e        0x2 
  .rodata.str1.4
-                0x40c8586c       0xcf ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
+                0x40c85870       0xcf ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
                                 0x110 (size before relaxing)
- *fill*         0x40c8593b        0x1 
+ *fill*         0x40c8593f        0x1 
  .rodata.g_tlevel
-                0x40c8593c       0x28 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
+                0x40c85940       0x28 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
  .rodata.cmd_show_version.str1.4
-                0x40c85964       0x8c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c85968       0x8c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
  .rodata.cmd_read.str1.4
-                0x40c859f0        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c859f4        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
  .rodata.cmd_ifconfig.str1.4
                 0x00000000        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
  .rodata.cmd_reBoot.str1.4
-                0x40c859fc        0xd ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c85a00        0xd ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
                                  0x10 (size before relaxing)
- *fill*         0x40c85a09        0x3 
+ *fill*         0x40c85a0d        0x3 
  .rodata.cmd_reSystem.str1.4
-                0x40c85a0c        0xf ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c85a10        0xf ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
                                  0x10 (size before relaxing)
- *fill*         0x40c85a1b        0x1 
+ *fill*         0x40c85a1f        0x1 
  .rodata.cmd_help.str1.4
-                0x40c85a1c       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c85a20       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
                                  0x2c (size before relaxing)
- *fill*         0x40c85a41        0x3 
+ *fill*         0x40c85a45        0x3 
  .rodata.cmd_NVDel.str1.4
-                0x40c85a44       0x48 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c85a48       0x48 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
  .rodata.cmd_NVSet.str1.4
-                0x40c85a8c       0x2f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c85a90       0x2f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
                                  0x30 (size before relaxing)
- *fill*         0x40c85abb        0x1 
+ *fill*         0x40c85abf        0x1 
  .rodata.cmd_NVGet.str1.4
-                0x40c85abc       0x5f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c85ac0       0x5f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
                                  0x68 (size before relaxing)
- *fill*         0x40c85b1b        0x1 
+ *fill*         0x40c85b1f        0x1 
  .rodata.util_cmd_run_command.str1.4
-                0x40c85b1c       0x83 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c85b20       0x83 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
                                  0x94 (size before relaxing)
- *fill*         0x40c85b9f        0x1 
+ *fill*         0x40c85ba3        0x1 
  .rodata.str1.4
-                0x40c85ba0      0x31b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c85ba4      0x31b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
                                 0x364 (size before relaxing)
- *fill*         0x40c85ebb        0x1 
+ *fill*         0x40c85ebf        0x1 
  .rodata.wpa_config_parse_key_mgmt.str1.4
-                0x40c85ebc       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
+                0x40c85ec0       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
                                  0x30 (size before relaxing)
- *fill*         0x40c85ee1        0x3 
+ *fill*         0x40c85ee5        0x3 
  .rodata.wpa_config_parse_proto.str1.4
-                0x40c85ee4       0x15 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
+                0x40c85ee8       0x15 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
                                  0x18 (size before relaxing)
  .rodata.wpa_config_parse_str.str1.4
                 0x00000000       0x15 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
                                   0x8 (size before relaxing)
- *fill*         0x40c85ef9        0x3 
+ *fill*         0x40c85efd        0x3 
  .rodata.wpa_config_parse_wep_key.isra.0.str1.4
-                0x40c85efc        0xa ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
+                0x40c85f00        0xa ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
                                   0xc (size before relaxing)
- *fill*         0x40c85f06        0x2 
+ *fill*         0x40c85f0a        0x2 
  .rodata.wpa_config_parse_bssid.str1.4
-                0x40c85f08        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
+                0x40c85f0c        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
                                   0x8 (size before relaxing)
  .rodata.str1.4
-                0x40c85f0c      0x17b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
+                0x40c85f10      0x17b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
                                 0x184 (size before relaxing)
- *fill*         0x40c86087        0x1 
+ *fill*         0x40c8608b        0x1 
  .rodata.ssid_fields
-                0x40c86088      0x2d8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
+                0x40c8608c      0x2d8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/config.c.o
  .rodata.wpa_bss_update_pending_connect.str1.4
-                0x40c86360        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
+                0x40c86364        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
                                  0x14 (size before relaxing)
  .rodata.wpa_bss_update_end.str1.4
-                0x40c8636c       0x11 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
+                0x40c86370       0x11 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
                                  0x14 (size before relaxing)
- *fill*         0x40c8637d        0x3 
+ *fill*         0x40c86381        0x3 
  .rodata.__func__.8774
-                0x40c86380       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
+                0x40c86384       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
  .rodata.__func__.8761
-                0x40c86390       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
+                0x40c86394       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
  .rodata.__func__.8647
-                0x40c863a8       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
+                0x40c863ac       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
  .rodata.__func__.8655
-                0x40c863c8       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
+                0x40c863cc       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/bss.c.o
  .rodata.printf_encode.str1.4
-                0x40c863e0        0x7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/common.c.o
+                0x40c863e4        0x7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/common.c.o
                                   0x8 (size before relaxing)
  .rodata.wpa_printf.str1.4
                 0x00000000        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/eloop_freeRTOS.c.o
- *fill*         0x40c863e7        0x1 
+ *fill*         0x40c863eb        0x1 
  .rodata.eloop_init.str1.4
-                0x40c863e8       0x3c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/eloop_freeRTOS.c.o
+                0x40c863ec       0x3c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/eloop_freeRTOS.c.o
  .rodata.eloop_register_timeout.str1.4
-                0x40c86424       0x46 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/eloop_freeRTOS.c.o
+                0x40c86428       0x46 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/eloop_freeRTOS.c.o
                                  0x48 (size before relaxing)
- *fill*         0x40c8646a        0x2 
+ *fill*         0x40c8646e        0x2 
  .rodata.wpa_supplicant_install_gtk.str1.4
-                0x40c8646c        0x7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa.c.o
+                0x40c86470        0x7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa.c.o
                                   0x8 (size before relaxing)
- *fill*         0x40c86473        0x1 
+ *fill*         0x40c86477        0x1 
  .rodata.wpa_sm_rx_eapol.str1.4
-                0x40c86474       0x17 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa.c.o
+                0x40c86478       0x17 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c8648b        0x1 
+ *fill*         0x40c8648f        0x1 
  .rodata.wpa_sm_get_status.str1.4
-                0x40c8648c       0x38 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa.c.o
+                0x40c86490       0x38 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa.c.o
  .rodata.null_rsc
-                0x40c864c4        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa.c.o
+                0x40c864c8        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa.c.o
  .rodata.rsn_pmkid.str1.4
-                0x40c864cc        0x9 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
+                0x40c864d0        0x9 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
                                   0xc (size before relaxing)
- *fill*         0x40c864d5        0x3 
- .rodata        0x40c864d8        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
+ *fill*         0x40c864d9        0x3 
+ .rodata        0x40c864dc        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
  .rodata.wpa_cipher_txt.str1.4
-                0x40c864e4       0x39 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
+                0x40c864e8       0x39 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
                                  0x6c (size before relaxing)
- *fill*         0x40c8651d        0x3 
+ *fill*         0x40c86521        0x3 
  .rodata.wpa_key_mgmt_txt.str1.4
-                0x40c86520       0xbc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
+                0x40c86524       0xbc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
                                  0xd8 (size before relaxing)
  .rodata.wpa_parse_cipher.str1.4
                 0x00000000       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_common.c.o
@@ -23830,759 +23830,759 @@ LOAD ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wifi_sniffer.c.o
  .rodata.ap_sta_set_authorized.str1.4
                 0x00000000       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sta_info.c.o
  .rodata.hostapd_drv_none.str1.4
-                0x40c865dc        0x5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ap_drv_ops.c.o
+                0x40c865e0        0x5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ap_drv_ops.c.o
                                   0x8 (size before relaxing)
- *fill*         0x40c865e1        0x3 
+ *fill*         0x40c865e5        0x3 
  .rodata.hostapd_ctrl_iface_sta.str1.4
-                0x40c865e4       0x69 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_ap.c.o
+                0x40c865e8       0x69 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_ap.c.o
                                  0x6c (size before relaxing)
- *fill*         0x40c8664d        0x3 
- .rodata        0x40c86650       0x30 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hw_features.c.o
+ *fill*         0x40c86651        0x3 
+ .rodata        0x40c86654       0x30 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hw_features.c.o
  .rodata.wpa_group_init_gmk_and_counter.str1.4
-                0x40c86680        0xd ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c86684        0xd ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x10 (size before relaxing)
- *fill*         0x40c8668d        0x3 
+ *fill*         0x40c86691        0x3 
  .rodata.wpa_gtk_update.str1.4
-                0x40c86690       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c86694       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
  .rodata.wpa_group_config_group_keys.str1.4
                 0x00000000        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
  .rodata.wpa_rekey_gtk.str1.4
-                0x40c866a4        0xd ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c866a8        0xd ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x10 (size before relaxing)
- *fill*         0x40c866b1        0x3 
+ *fill*         0x40c866b5        0x3 
  .rodata.wpa_rekey_gmk.str1.4
-                0x40c866b4        0xb ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c866b8        0xb ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                   0xc (size before relaxing)
- *fill*         0x40c866bf        0x1 
+ *fill*         0x40c866c3        0x1 
  .rodata.sm_WPA_PTK_PTKCALCNEGOTIATING_Enter.constprop.21.str1.4
-                0x40c866c0       0x2a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c866c4       0x2a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x44 (size before relaxing)
- *fill*         0x40c866ea        0x2 
+ *fill*         0x40c866ee        0x2 
  .rodata.wpa_auth_sta_deinit.str1.4
-                0x40c866ec       0x37 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c866f0       0x37 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x38 (size before relaxing)
- *fill*         0x40c86723        0x1 
+ *fill*         0x40c86727        0x1 
  .rodata.__wpa_send_eapol.str1.4
-                0x40c86724       0x2b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c86728       0x2b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x2c (size before relaxing)
- *fill*         0x40c8674f        0x1 
+ *fill*         0x40c86753        0x1 
  .rodata.sm_WPA_PTK_PTKSTART_Enter.constprop.20.str1.4
-                0x40c86750       0x23 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c86754       0x23 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x24 (size before relaxing)
- *fill*         0x40c86773        0x1 
+ *fill*         0x40c86777        0x1 
  .rodata.sm_WPA_PTK_GROUP_REKEYNEGOTIATING_Enter.constprop.13.str1.4
-                0x40c86774       0x27 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c86778       0x27 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x28 (size before relaxing)
- *fill*         0x40c8679b        0x1 
+ *fill*         0x40c8679f        0x1 
  .rodata.sm_WPA_PTK_PTKINITNEGOTIATING_Enter.constprop.24.str1.4
-                0x40c8679c       0x6a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c867a0       0x6a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x6c (size before relaxing)
- *fill*         0x40c86806        0x2 
+ *fill*         0x40c8680a        0x2 
  .rodata.wpa_sm_step.str1.4
-                0x40c86808       0xf3 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c8680c       0xf3 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0xfc (size before relaxing)
- *fill*         0x40c868fb        0x1 
+ *fill*         0x40c868ff        0x1 
  .rodata.wpa_group_update_sta.str1.4
-                0x40c868fc       0x75 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c86900       0x75 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x78 (size before relaxing)
- *fill*         0x40c86971        0x3 
+ *fill*         0x40c86975        0x3 
  .rodata.wpa_send_eapol_timeout.str1.4
-                0x40c86974       0x12 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c86978       0x12 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x14 (size before relaxing)
- *fill*         0x40c86986        0x2 
+ *fill*         0x40c8698a        0x2 
  .rodata.wpa_rekey_ptk.str1.4
-                0x40c86988        0xd ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c8698c        0xd ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x10 (size before relaxing)
- *fill*         0x40c86995        0x3 
+ *fill*         0x40c86999        0x3 
  .rodata.wpa_auth_sta_associated.str1.4
-                0x40c86998       0x15 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c8699c       0x15 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c869ad        0x3 
+ *fill*         0x40c869b1        0x3 
  .rodata.wpa_receive.str1.4
-                0x40c869b0      0x544 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c869b4      0x544 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
  .rodata.wpa_auth_sm_event.str1.4
-                0x40c86ef4       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
+                0x40c86ef8       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_auth.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c86f0a        0x2 
- .rodata.rcons  0x40c86f0c        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal.c.o
-                0x40c86f0c                rcons
- .rodata.Td4s   0x40c86f18      0x100 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal.c.o
-                0x40c86f18                Td4s
- .rodata.Td0    0x40c87018      0x400 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal.c.o
-                0x40c87018                Td0
- .rodata.Te0    0x40c87418      0x400 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal.c.o
-                0x40c87418                Te0
+ *fill*         0x40c86f0e        0x2 
+ .rodata.rcons  0x40c86f10        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal.c.o
+                0x40c86f10                rcons
+ .rodata.Td4s   0x40c86f1c      0x100 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal.c.o
+                0x40c86f1c                Td4s
+ .rodata.Td0    0x40c8701c      0x400 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal.c.o
+                0x40c8701c                Td0
+ .rodata.Te0    0x40c8741c      0x400 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/aes-internal.c.o
+                0x40c8741c                Te0
  .rodata.wpas_ctrl_scan.constprop.7.str1.4
-                0x40c87818       0x62 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface.c.o
+                0x40c8781c       0x62 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface.c.o
                                  0x6c (size before relaxing)
- *fill*         0x40c8787a        0x2 
+ *fill*         0x40c8787e        0x2 
  .rodata.wpa_supplicant_ctrl_iface_process.str1.4
-                0x40c8787c      0x2c1 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface.c.o
+                0x40c87880      0x2c1 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface.c.o
                                 0x30c (size before relaxing)
  .rodata.wpa_printf.str1.4
                 0x00000000        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
- *fill*         0x40c87b3d        0x3 
+ *fill*         0x40c87b41        0x3 
  .rodata.ctrl_iface_receive.str1.4
-                0x40c87b40        0x5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
+                0x40c87b44        0x5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
                                  0x14 (size before relaxing)
- *fill*         0x40c87b45        0x3 
+ *fill*         0x40c87b49        0x3 
  .rodata.wpa_supplicant_ctrl_iface_init.str1.4
-                0x40c87b48       0x5a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
+                0x40c87b4c       0x5a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
                                  0x6c (size before relaxing)
- *fill*         0x40c87ba2        0x2 
+ *fill*         0x40c87ba6        0x2 
  .rodata.wpa_supplicant_global_ctrl_iface_init.str1.4
-                0x40c87ba4       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
+                0x40c87ba8       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
                                  0x28 (size before relaxing)
- *fill*         0x40c87bc9        0x3 
+ *fill*         0x40c87bcd        0x3 
  .rodata.__func__.15984
-                0x40c87bcc       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
+                0x40c87bd0       0x20 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/ctrl_iface_freeRTOS.c.o
  .rodata.sme_authenticate.str1.4
                 0x00000000        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sme.c.o
  .rodata.SHA1Final.str1.4
-                0x40c87bec        0x2 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1-internal.c.o
+                0x40c87bf0        0x2 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1-internal.c.o
                                   0x4 (size before relaxing)
- *fill*         0x40c87bee        0x2 
- .rodata        0x40c87bf0        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1-internal.c.o
+ *fill*         0x40c87bf2        0x2 
+ .rodata        0x40c87bf4        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/sha1-internal.c.o
  .rodata.wpa_supplicant_state_txt.str1.4
                 0x00000000        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
  .rodata.radio_start_next_work.str1.4
                 0x00000000       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
  .rodata.wpa_supplicant_set_state.str1.4
-                0x40c87bf4       0x13 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
+                0x40c87bf8       0x13 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
                                  0x14 (size before relaxing)
  .rodata.wpa_supplicant_add_iface.str1.4
                 0x00000000        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
- *fill*         0x40c87c07        0x1 
+ *fill*         0x40c87c0b        0x1 
  .rodata.str1.4
-                0x40c87c08       0x52 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
+                0x40c87c0c       0x52 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
                                  0x5c (size before relaxing)
- *fill*         0x40c87c5a        0x2 
+ *fill*         0x40c87c5e        0x2 
  .rodata.CSWTCH.59
-                0x40c87c5c       0x28 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
+                0x40c87c60       0x28 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wpa_supplicant.c.o
  .rodata.wpa_supplicant_event_disassoc_finish.str1.4
-                0x40c87c84       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/events.c.o
+                0x40c87c88       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/events.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c87c9a        0x2 
- .rodata        0x40c87c9c        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/events.c.o
+ *fill*         0x40c87c9e        0x2 
+ .rodata        0x40c87ca0        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/events.c.o
  .rodata.wpa_supplicant_event.str1.4
-                0x40c87ca4        0x5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/events.c.o
+                0x40c87ca8        0x5 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/events.c.o
                                   0x8 (size before relaxing)
  .rodata.wpa_supplicant_trigger_scan.str1.4
                 0x00000000        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/scan.c.o
- *fill*         0x40c87ca9        0x3 
+ *fill*         0x40c87cad        0x3 
  .rodata.wpas_task_main.str1.4
-                0x40c87cac       0x65 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/main_freeRTOS.c.o
+                0x40c87cb0       0x65 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/main_freeRTOS.c.o
                                  0x68 (size before relaxing)
- *fill*         0x40c87d11        0x3 
+ *fill*         0x40c87d15        0x3 
  .rodata.wpa_drivers
-                0x40c87d14        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/drivers.c.o
-                0x40c87d14                wpa_drivers
+                0x40c87d18        0x8 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/drivers.c.o
+                0x40c87d18                wpa_drivers
  .rodata.Wifi_Init.str1.4
                 0x00000000        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/main.c.o
  .rodata.standalone_main.str1.4
                 0x00000000       0x60 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/standalone.c.o
  .rodata.__func__.12930
-                0x40c87d1c       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/standalone.c.o
+                0x40c87d20       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/standalone.c.o
  .rodata.mqtt_start.str1.4
-                0x40c87d2c       0x84 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c87d30       0x84 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
                                  0x98 (size before relaxing)
  .rodata.mqtt_stop.str1.4
-                0x40c87db0       0x11 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c87db4       0x11 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c87dc1        0x3 
+ *fill*         0x40c87dc5        0x3 
  .rodata.mqtt_query.str1.4
-                0x40c87dc4       0x1f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c87dc8       0x1f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
                                  0x20 (size before relaxing)
- *fill*         0x40c87de3        0x1 
+ *fill*         0x40c87de7        0x1 
  .rodata.mqtt_sub.str1.4
-                0x40c87de4       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c87de8       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
  .rodata.default_mqtt_handle.str1.4
-                0x40c87e00       0xe2 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c87e04       0xe2 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
                                  0xe4 (size before relaxing)
- *fill*         0x40c87ee2        0x2 
+ *fill*         0x40c87ee6        0x2 
  .rodata.mqtt_pub.str1.4
-                0x40c87ee4        0x7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c87ee8        0x7 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
                                  0x10 (size before relaxing)
  .rodata.test_mqtt_create_sta.str1.4
                 0x00000000       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
- *fill*         0x40c87eeb        0x1 
+ *fill*         0x40c87eef        0x1 
  .rodata.str1.4
-                0x40c87eec       0x5e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c87ef0       0x5e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
                                  0x64 (size before relaxing)
- *fill*         0x40c87f4a        0x2 
+ *fill*         0x40c87f4e        0x2 
  .rodata.ap_config_func.str1.4
-                0x40c87f4c       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
+                0x40c87f50       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
  .rodata.sc_callback.str1.4
-                0x40c87f5c       0x5f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
+                0x40c87f60       0x5f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
                                  0xa8 (size before relaxing)
- *fill*         0x40c87fbb        0x1 
+ *fill*         0x40c87fbf        0x1 
  .rodata.ap_parse_data.str1.4
-                0x40c87fbc       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
+                0x40c87fc0       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
                                  0x3c (size before relaxing)
  .rodata.tcp_server_start.str1.4
-                0x40c87ff0      0x10e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
+                0x40c87ff4      0x10e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
                                 0x11c (size before relaxing)
- *fill*         0x40c880fe        0x2 
+ *fill*         0x40c88102        0x2 
  .rodata.ap_config_start.str1.4
-                0x40c88100       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
+                0x40c88104       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
                                  0x70 (size before relaxing)
  .rodata.str1.4
-                0x40c88134       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
+                0x40c88138       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
                                  0x18 (size before relaxing)
  .rodata.read_mac_addr.str1.4
-                0x40c88148       0x12 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c8814c       0x12 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c8815a        0x2 
+ *fill*         0x40c8815e        0x2 
  .rodata.get_netif_by_index.str1.4
-                0x40c8815c       0x21 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c88160       0x21 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                  0x24 (size before relaxing)
  .rodata.wifi_handle_ap_staipassigned_event.str1.4
                 0x00000000       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
- *fill*         0x40c8817d        0x3 
+ *fill*         0x40c88181        0x3 
  .rodata.wifi_remove_config_all.str1.4
-                0x40c88180       0x13 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c88184       0x13 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                  0x14 (size before relaxing)
- *fill*         0x40c88193        0x1 
+ *fill*         0x40c88197        0x1 
  .rodata.wifi_add_config.str1.4
-                0x40c88194        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c88198        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
  .rodata.wifi_config_ssid.str1.4
-                0x40c881a0       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c881a4       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
  .rodata.wifi_config_hidden_ssid.str1.4
-                0x40c881b8       0x28 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c881bc       0x28 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
  .rodata.wifi_config_ap_mode.str1.4
-                0x40c881e0       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c881e4       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c881f6        0x2 
+ *fill*         0x40c881fa        0x2 
  .rodata.wifi_config_channel.str1.4
-                0x40c881f8       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c881fc       0x1c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
  .rodata.wifi_config_commit.str1.4
-                0x40c88214       0x12 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c88218       0x12 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                  0x14 (size before relaxing)
- *fill*         0x40c88226        0x2 
+ *fill*         0x40c8822a        0x2 
  .rodata.wifi_sta_auto_conn_conf.str1.4
-                0x40c88228        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c8822c        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
  .rodata.wifi_set_password.str1.4
-                0x40c88234       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c88238       0x34 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
  .rodata.wifi_config_encrypt.str1.4
-                0x40c88268       0x6f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c8826c       0x6f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                  0xa0 (size before relaxing)
- *fill*         0x40c882d7        0x1 
+ *fill*         0x40c882db        0x1 
  .rodata.wifi_set_bssid.str1.4
-                0x40c882d8       0x32 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c882dc       0x32 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                  0x34 (size before relaxing)
- *fill*         0x40c8830a        0x2 
+ *fill*         0x40c8830e        0x2 
  .rodata.wifi_scan_start.str1.4
-                0x40c8830c       0x7a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c88310       0x7a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                  0x88 (size before relaxing)
- *fill*         0x40c88386        0x2 
+ *fill*         0x40c8838a        0x2 
  .rodata.wifi_load_mac_addr.str1.4
-                0x40c88388       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c8838c       0x16 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c8839e        0x2 
+ *fill*         0x40c883a2        0x2 
  .rodata.wifi_load_nv_info.str1.4
-                0x40c883a0       0x89 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c883a4       0x89 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                  0x8c (size before relaxing)
- *fill*         0x40c88429        0x3 
+ *fill*         0x40c8842d        0x3 
  .rodata.wifi_load_nv_cfg.str1.4
-                0x40c8842c        0x9 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c88430        0x9 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
                                   0xc (size before relaxing)
- *fill*         0x40c88435        0x3 
+ *fill*         0x40c88439        0x3 
  .rodata.wifi_update_nv_sta_connected.str1.4
-                0x40c88438       0x50 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
+                0x40c8843c       0x50 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_wifi.c.o
  .rodata.lwip_netif_ext_callback.str1.4
-                0x40c88488       0x15 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_lwip.c.o
+                0x40c8848c       0x15 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_lwip.c.o
                                  0x18 (size before relaxing)
- *fill*         0x40c8849d        0x3 
+ *fill*         0x40c884a1        0x3 
  .rodata.wlif_init.str1.4
-                0x40c884a0       0x29 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_lwip.c.o
+                0x40c884a4       0x29 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_lwip.c.o
                                  0x64 (size before relaxing)
- *fill*         0x40c884c9        0x3 
+ *fill*         0x40c884cd        0x3 
  .rodata.__func__.13029
-                0x40c884cc       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_lwip.c.o
+                0x40c884d0       0x18 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_lwip.c.o
  .rodata.ping_run.str1.4
-                0x40c884e4      0x109 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+                0x40c884e8      0x109 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
                                 0x124 (size before relaxing)
- *fill*         0x40c885ed        0x3 
+ *fill*         0x40c885f1        0x3 
  .rodata.wifi_station_dhcpc_stop.str1.4
-                0x40c885f0       0x12 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+                0x40c885f4       0x12 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
                                  0x14 (size before relaxing)
- *fill*         0x40c88602        0x2 
+ *fill*         0x40c88606        0x2 
  .rodata.wifi_ifconfig_help_display.str1.4
-                0x40c88604       0x54 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+                0x40c88608       0x54 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
  .rodata.wifi_ifconfig_display.str1.4
-                0x40c88658       0x6b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+                0x40c8865c       0x6b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
                                  0x80 (size before relaxing)
- *fill*         0x40c886c3        0x1 
+ *fill*         0x40c886c7        0x1 
  .rodata.wifi_ifconfig.str1.4
-                0x40c886c4       0x28 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+                0x40c886c8       0x28 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
                                  0x38 (size before relaxing)
  .rodata.wifi_station_dhcpc_start.str1.4
-                0x40c886ec       0x15 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+                0x40c886f0       0x15 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
                                  0x20 (size before relaxing)
- *fill*         0x40c88701        0x3 
+ *fill*         0x40c88705        0x3 
  .rodata.wifi_softap_dhcps_start.str1.4
-                0x40c88704       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+                0x40c88708       0x25 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
                                  0x28 (size before relaxing)
- *fill*         0x40c88729        0x3 
+ *fill*         0x40c8872d        0x3 
  .rodata.wifi_softap_dhcps_stop.str1.4
-                0x40c8872c       0x24 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+                0x40c88730       0x24 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
  .rodata.__func__.12936
-                0x40c88750        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+                0x40c88754        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
  .rodata.ping_usage_str
-                0x40c8875c       0xac ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
-                0x40c8875c                ping_usage_str
+                0x40c88760       0xac ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_network.c.o
+                0x40c88760                ping_usage_str
  .rodata.sys_event_loop_task.str1.4
-                0x40c88808       0x3a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_loop.c.o
+                0x40c8880c       0x3a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_loop.c.o
                                  0x3c (size before relaxing)
- *fill*         0x40c88842        0x2 
+ *fill*         0x40c88846        0x2 
  .rodata.sys_event_send.str1.4
-                0x40c88844       0x60 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_loop.c.o
+                0x40c88848       0x60 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_loop.c.o
  .rodata.sys_event_loop_init.str1.4
-                0x40c888a4       0x2f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_loop.c.o
+                0x40c888a8       0x2f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_loop.c.o
                                  0x30 (size before relaxing)
- *fill*         0x40c888d3        0x1 
+ *fill*         0x40c888d7        0x1 
  .rodata.system_event_sta_got_ip_default.str1.4
-                0x40c888d4       0x39 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_default_handlers.c.o
+                0x40c888d8       0x39 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_default_handlers.c.o
                                  0x3c (size before relaxing)
- *fill*         0x40c8890d        0x3 
+ *fill*         0x40c88911        0x3 
  .rodata.sys_event_process_default.str1.4
-                0x40c88910       0x6a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_default_handlers.c.o
+                0x40c88914       0x6a ../out/tr6260s1/standalone/obj_standalone_tr6260s1/event_default_handlers.c.o
                                  0x6c (size before relaxing)
- *fill*         0x40c8897a        0x2 
+ *fill*         0x40c8897e        0x2 
  .rodata.dump_frame_config.str1.4
-                0x40c8897c       0x54 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_debug.c.o
+                0x40c88980       0x54 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_debug.c.o
                                  0x6c (size before relaxing)
  .rodata.str1.4
-                0x40c889d0       0x58 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_debug.c.o
+                0x40c889d4       0x58 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_debug.c.o
                                  0x60 (size before relaxing)
  .rodata.get_wifi_opmode.str1.4
-                0x40c88a28        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88a2c        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
                                  0x10 (size before relaxing)
  .rodata.show_sf_fun.str1.4
-                0x40c88a34       0x3e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88a38       0x3e ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
                                  0x40 (size before relaxing)
- *fill*         0x40c88a72        0x2 
+ *fill*         0x40c88a76        0x2 
  .rodata.set_ipinfo.str1.4
-                0x40c88a74       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88a78       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
                                  0x24 (size before relaxing)
  .rodata.cmd_dhcp.str1.4
-                0x40c88a84       0x2f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88a88       0x2f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
                                  0x30 (size before relaxing)
- *fill*         0x40c88ab3        0x1 
+ *fill*         0x40c88ab7        0x1 
  .rodata.get_ap_rssi.str1.4
-                0x40c88ab4       0x2f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88ab8       0x2f ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
                                  0x30 (size before relaxing)
- *fill*         0x40c88ae3        0x1 
+ *fill*         0x40c88ae7        0x1 
  .rodata.set_wifi_opmode.str1.4
-                0x40c88ae4        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88ae8        0x4 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
                                  0x10 (size before relaxing)
  .rodata.sf_callback.str1.4
-                0x40c88ae8        0xb ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88aec        0xb ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
                                   0xc (size before relaxing)
- *fill*         0x40c88af3        0x1 
+ *fill*         0x40c88af7        0x1 
  .rodata.set_sf_fun.str1.4
-                0x40c88af4       0x1b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88af8       0x1b ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
                                  0x44 (size before relaxing)
- *fill*         0x40c88b0f        0x1 
+ *fill*         0x40c88b13        0x1 
  .rodata.str1.4
-                0x40c88b10      0x11c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88b14      0x11c ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
                                 0x130 (size before relaxing)
  .rodata.CSWTCH.32
-                0x40c88c2c        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88c30        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
  .rodata.__func__.13189
-                0x40c88c38        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88c3c        0xc ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
  .rodata.run_cmd
-                0x40c88c44       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88c48       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
  .rodata.get_cmd
-                0x40c88c54       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88c58       0x10 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
  .rodata.set_cmd
-                0x40c88c64       0x30 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88c68       0x30 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
  *(SORT(.nrc_cmd*))
- .nrc_cmd_1     0x40c88c94        0x0 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+ .nrc_cmd_1     0x40c88c98        0x0 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
  .nrc_cmd_2_assert
-                0x40c88c94       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88c94                _nrc_cmd_2_assert
+                0x40c88c98       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88c98                _nrc_cmd_2_assert
  .nrc_cmd_2_buffer
-                0x40c88ca8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_uart.c.o
-                0x40c88ca8                _nrc_cmd_2_buffer
+                0x40c88cac       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_uart.c.o
+                0x40c88cac                _nrc_cmd_2_buffer
  .nrc_cmd_2_cmd_pow_test
-                0x40c88cbc       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88cbc                _nrc_cmd_2_cmd_pow_test
+                0x40c88cc0       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88cc0                _nrc_cmd_2_cmd_pow_test
  .nrc_cmd_2_cmd_round_test
-                0x40c88cd0       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88cd0                _nrc_cmd_2_cmd_round_test
+                0x40c88cd4       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88cd4                _nrc_cmd_2_cmd_round_test
  .nrc_cmd_2_debug
-                0x40c88ce4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_debug.c.o
-                0x40c88ce4                _nrc_cmd_2_debug
+                0x40c88ce8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_debug.c.o
+                0x40c88ce8                _nrc_cmd_2_debug
  .nrc_cmd_2_debug_2_dump_frame
-                0x40c88cf8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_debug.c.o
-                0x40c88cf8                _nrc_cmd_2_debug_2_dump_frame
+                0x40c88cfc       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_debug.c.o
+                0x40c88cfc                _nrc_cmd_2_debug_2_dump_frame
  .nrc_cmd_2_dhcp
-                0x40c88d0c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
-                0x40c88d0c                _nrc_cmd_2_dhcp
+                0x40c88d10       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88d10                _nrc_cmd_2_dhcp
  .nrc_cmd_2_dhcps
-                0x40c88d20       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
-                0x40c88d20                _nrc_cmd_2_dhcps
+                0x40c88d24       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88d24                _nrc_cmd_2_dhcps
  .nrc_cmd_2_get_rssi
-                0x40c88d34       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
-                0x40c88d34                _nrc_cmd_2_get_rssi
+                0x40c88d38       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c88d38                _nrc_cmd_2_get_rssi
  .nrc_cmd_2_help
-                0x40c88d48       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88d48                _nrc_cmd_2_help
+                0x40c88d4c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88d4c                _nrc_cmd_2_help
  .nrc_cmd_2_ifconfig
-                0x40c88d5c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88d5c                _nrc_cmd_2_ifconfig
+                0x40c88d60       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88d60                _nrc_cmd_2_ifconfig
  .nrc_cmd_2_iperf
-                0x40c88d70       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iperf.c.o
-                0x40c88d70                _nrc_cmd_2_iperf
+                0x40c88d74       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/iperf.c.o
+                0x40c88d74                _nrc_cmd_2_iperf
  .nrc_cmd_2_nvd
-                0x40c88d84       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88d84                _nrc_cmd_2_nvd
+                0x40c88d88       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88d88                _nrc_cmd_2_nvd
  .nrc_cmd_2_nve
-                0x40c88d98       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
-                0x40c88d98                _nrc_cmd_2_nve
+                0x40c88d9c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
+                0x40c88d9c                _nrc_cmd_2_nve
  .nrc_cmd_2_nvg
-                0x40c88dac       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88dac                _nrc_cmd_2_nvg
+                0x40c88db0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88db0                _nrc_cmd_2_nvg
  .nrc_cmd_2_nvgamt
-                0x40c88dc0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/amtNv.c.o
-                0x40c88dc0                _nrc_cmd_2_nvgamt
+                0x40c88dc4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/amtNv.c.o
+                0x40c88dc4                _nrc_cmd_2_nvgamt
  .nrc_cmd_2_nvs
-                0x40c88dd4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88dd4                _nrc_cmd_2_nvs
+                0x40c88dd8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88dd8                _nrc_cmd_2_nvs
  .nrc_cmd_2_nvsamt
-                0x40c88de8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/amtNv.c.o
-                0x40c88de8                _nrc_cmd_2_nvsamt
+                0x40c88dec       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/amtNv.c.o
+                0x40c88dec                _nrc_cmd_2_nvsamt
  .nrc_cmd_2_otp_lock
-                0x40c88dfc       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
-                0x40c88dfc                _nrc_cmd_2_otp_lock
+                0x40c88e00       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
+                0x40c88e00                _nrc_cmd_2_otp_lock
  .nrc_cmd_2_otp_read
-                0x40c88e10       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
-                0x40c88e10                _nrc_cmd_2_otp_read
+                0x40c88e14       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
+                0x40c88e14                _nrc_cmd_2_otp_read
  .nrc_cmd_2_otp_se
-                0x40c88e24       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
-                0x40c88e24                _nrc_cmd_2_otp_se
+                0x40c88e28       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
+                0x40c88e28                _nrc_cmd_2_otp_se
  .nrc_cmd_2_otp_write
-                0x40c88e38       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
-                0x40c88e38                _nrc_cmd_2_otp_write
+                0x40c88e3c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
+                0x40c88e3c                _nrc_cmd_2_otp_write
  .nrc_cmd_2_phy
-                0x40c88e4c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88e4c                _nrc_cmd_2_phy
+                0x40c88e50       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88e50                _nrc_cmd_2_phy
  .nrc_cmd_2_ping
-                0x40c88e60       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88e60                _nrc_cmd_2_ping
+                0x40c88e64       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88e64                _nrc_cmd_2_ping
  .nrc_cmd_2_psm
-                0x40c88e74       0x14 ../lib/libpsm.a(system_psm.c.o)
-                0x40c88e74                _nrc_cmd_2_psm
+                0x40c88e78       0x14 ../lib/libpsm.a(system_psm.c.o)
+                0x40c88e78                _nrc_cmd_2_psm
  .nrc_cmd_2_pwm
-                0x40c88e88       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88e88                _nrc_cmd_2_pwm
+                0x40c88e8c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88e8c                _nrc_cmd_2_pwm
  .nrc_cmd_2_ramread
-                0x40c88e9c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
-                0x40c88e9c                _nrc_cmd_2_ramread
+                0x40c88ea0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
+                0x40c88ea0                _nrc_cmd_2_ramread
  .nrc_cmd_2_read
-                0x40c88eb0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88eb0                _nrc_cmd_2_read
+                0x40c88eb4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88eb4                _nrc_cmd_2_read
  .nrc_cmd_2_reboot
-                0x40c88ec4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88ec4                _nrc_cmd_2_reboot
+                0x40c88ec8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88ec8                _nrc_cmd_2_reboot
  .nrc_cmd_2_reset
-                0x40c88ed8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88ed8                _nrc_cmd_2_reset
+                0x40c88edc       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88edc                _nrc_cmd_2_reset
  .nrc_cmd_2_reset_2_mac
-                0x40c88eec       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
-                0x40c88eec                _nrc_cmd_2_reset_2_mac
+                0x40c88ef0       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
+                0x40c88ef0                _nrc_cmd_2_reset_2_mac
  .nrc_cmd_2_reset_2_phy
-                0x40c88f00       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
-                0x40c88f00                _nrc_cmd_2_reset_2_phy
+                0x40c88f04       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
+                0x40c88f04                _nrc_cmd_2_reset_2_phy
  .nrc_cmd_2_resystem
-                0x40c88f14       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c88f14                _nrc_cmd_2_resystem
- .nrc_cmd_2_rf  0x40c88f28       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88f28                _nrc_cmd_2_rf
+                0x40c88f18       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c88f18                _nrc_cmd_2_resystem
+ .nrc_cmd_2_rf  0x40c88f2c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88f2c                _nrc_cmd_2_rf
  .nrc_cmd_2_rf_2_analog_init
-                0x40c88f3c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88f3c                _nrc_cmd_2_rf_2_analog_init
+                0x40c88f40       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88f40                _nrc_cmd_2_rf_2_analog_init
  .nrc_cmd_2_rf_2_cfo_cal
-                0x40c88f50       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88f50                _nrc_cmd_2_rf_2_cfo_cal
+                0x40c88f54       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88f54                _nrc_cmd_2_rf_2_cfo_cal
  .nrc_cmd_2_rf_2_ch
-                0x40c88f64       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88f64                _nrc_cmd_2_rf_2_ch
+                0x40c88f68       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88f68                _nrc_cmd_2_rf_2_ch
  .nrc_cmd_2_rf_2_cturn
-                0x40c88f78       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88f78                _nrc_cmd_2_rf_2_cturn
+                0x40c88f7c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88f7c                _nrc_cmd_2_rf_2_cturn
  .nrc_cmd_2_rf_2_dfe_reset
-                0x40c88f8c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88f8c                _nrc_cmd_2_rf_2_dfe_reset
+                0x40c88f90       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88f90                _nrc_cmd_2_rf_2_dfe_reset
  .nrc_cmd_2_rf_2_gain
-                0x40c88fa0       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88fa0                _nrc_cmd_2_rf_2_gain
+                0x40c88fa4       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88fa4                _nrc_cmd_2_rf_2_gain
  .nrc_cmd_2_rf_2_gain_cal
-                0x40c88fb4       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88fb4                _nrc_cmd_2_rf_2_gain_cal
+                0x40c88fb8       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88fb8                _nrc_cmd_2_rf_2_gain_cal
  .nrc_cmd_2_rf_2_init
-                0x40c88fc8       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88fc8                _nrc_cmd_2_rf_2_init
+                0x40c88fcc       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88fcc                _nrc_cmd_2_rf_2_init
  .nrc_cmd_2_rf_2_power_off
-                0x40c88fdc       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88fdc                _nrc_cmd_2_rf_2_power_off
+                0x40c88fe0       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88fe0                _nrc_cmd_2_rf_2_power_off
  .nrc_cmd_2_rf_2_power_on
-                0x40c88ff0       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c88ff0                _nrc_cmd_2_rf_2_power_on
+                0x40c88ff4       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c88ff4                _nrc_cmd_2_rf_2_power_on
  .nrc_cmd_2_rf_2_reg
-                0x40c89004       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89004                _nrc_cmd_2_rf_2_reg
+                0x40c89008       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c89008                _nrc_cmd_2_rf_2_reg
  .nrc_cmd_2_rf_2_reg_read
-                0x40c89018       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89018                _nrc_cmd_2_rf_2_reg_read
+                0x40c8901c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c8901c                _nrc_cmd_2_rf_2_reg_read
  .nrc_cmd_2_rf_2_reg_write
-                0x40c8902c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c8902c                _nrc_cmd_2_rf_2_reg_write
+                0x40c89030       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c89030                _nrc_cmd_2_rf_2_reg_write
  .nrc_cmd_2_rf_2_rf_bandwidth_set
-                0x40c89040       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89040                _nrc_cmd_2_rf_2_rf_bandwidth_set
+                0x40c89044       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c89044                _nrc_cmd_2_rf_2_rf_bandwidth_set
  .nrc_cmd_2_rf_2_rx
-                0x40c89054       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89054                _nrc_cmd_2_rf_2_rx
+                0x40c89058       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c89058                _nrc_cmd_2_rf_2_rx
  .nrc_cmd_2_rf_2_rxgain
-                0x40c89068       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89068                _nrc_cmd_2_rf_2_rxgain
+                0x40c8906c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c8906c                _nrc_cmd_2_rf_2_rxgain
  .nrc_cmd_2_rf_2_show
-                0x40c8907c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c8907c                _nrc_cmd_2_rf_2_show
+                0x40c89080       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c89080                _nrc_cmd_2_rf_2_show
  .nrc_cmd_2_rf_2_trx
-                0x40c89090       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89090                _nrc_cmd_2_rf_2_trx
+                0x40c89094       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c89094                _nrc_cmd_2_rf_2_trx
  .nrc_cmd_2_rf_2_tssi
-                0x40c890a4       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c890a4                _nrc_cmd_2_rf_2_tssi
+                0x40c890a8       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c890a8                _nrc_cmd_2_rf_2_tssi
  .nrc_cmd_2_rf_2_tx
-                0x40c890b8       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c890b8                _nrc_cmd_2_rf_2_tx
+                0x40c890bc       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c890bc                _nrc_cmd_2_rf_2_tx
  .nrc_cmd_2_rf_2_tx_singletone
-                0x40c890cc       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c890cc                _nrc_cmd_2_rf_2_tx_singletone
+                0x40c890d0       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c890d0                _nrc_cmd_2_rf_2_tx_singletone
  .nrc_cmd_2_rf_2_tx_singletone_stop
-                0x40c890e0       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c890e0                _nrc_cmd_2_rf_2_tx_singletone_stop
+                0x40c890e4       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c890e4                _nrc_cmd_2_rf_2_tx_singletone_stop
  .nrc_cmd_2_rf_2_txcal_param
-                0x40c890f4       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c890f4                _nrc_cmd_2_rf_2_txcal_param
+                0x40c890f8       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c890f8                _nrc_cmd_2_rf_2_txcal_param
  .nrc_cmd_2_rf_2_txgain
-                0x40c89108       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89108                _nrc_cmd_2_rf_2_txgain
+                0x40c8910c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c8910c                _nrc_cmd_2_rf_2_txgain
  .nrc_cmd_2_set
-                0x40c8911c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c8911c                _nrc_cmd_2_set
+                0x40c89120       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c89120                _nrc_cmd_2_set
  .nrc_cmd_2_set_2_bss_max_idle_period
-                0x40c89130       0x14 ../lib/libwifi.a(umac_info.c.o)
-                0x40c89130                _nrc_cmd_2_set_2_bss_max_idle_period
+                0x40c89134       0x14 ../lib/libwifi.a(umac_info.c.o)
+                0x40c89134                _nrc_cmd_2_set_2_bss_max_idle_period
  .nrc_cmd_2_set_2_cfo
-                0x40c89144       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
-                0x40c89144                _nrc_cmd_2_set_2_cfo
+                0x40c89148       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
+                0x40c89148                _nrc_cmd_2_set_2_cfo
  .nrc_cmd_2_set_2_entry
-                0x40c89158       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
-                0x40c89158                _nrc_cmd_2_set_2_entry
+                0x40c8915c       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
+                0x40c8915c                _nrc_cmd_2_set_2_entry
  .nrc_cmd_2_set_2_fixedmode
-                0x40c8916c       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
-                0x40c8916c                _nrc_cmd_2_set_2_fixedmode
+                0x40c89170       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
+                0x40c89170                _nrc_cmd_2_set_2_fixedmode
  .nrc_cmd_2_set_2_listen_interval
-                0x40c89180       0x14 ../lib/libwifi.a(umac_info.c.o)
-                0x40c89180                _nrc_cmd_2_set_2_listen_interval
+                0x40c89184       0x14 ../lib/libwifi.a(umac_info.c.o)
+                0x40c89184                _nrc_cmd_2_set_2_listen_interval
  .nrc_cmd_2_set_2_log
-                0x40c89194       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
-                0x40c89194                _nrc_cmd_2_set_2_log
+                0x40c89198       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
+                0x40c89198                _nrc_cmd_2_set_2_log
  .nrc_cmd_2_set_2_lsf
-                0x40c891a8       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
-                0x40c891a8                _nrc_cmd_2_set_2_lsf
+                0x40c891ac       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
+                0x40c891ac                _nrc_cmd_2_set_2_lsf
  .nrc_cmd_2_set_2_lsf_beacon
-                0x40c891bc       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
-                0x40c891bc                _nrc_cmd_2_set_2_lsf_beacon
+                0x40c891c0       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
+                0x40c891c0                _nrc_cmd_2_set_2_lsf_beacon
  .nrc_cmd_2_set_2_mac
-                0x40c891d0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
-                0x40c891d0                _nrc_cmd_2_set_2_mac
+                0x40c891d4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c891d4                _nrc_cmd_2_set_2_mac
  .nrc_cmd_2_set_2_ps
-                0x40c891e4       0x14 ../lib/libwifi.a(hal_lmac_ps_common.c.o)
-                0x40c891e4                _nrc_cmd_2_set_2_ps
+                0x40c891e8       0x14 ../lib/libwifi.a(hal_lmac_ps_common.c.o)
+                0x40c891e8                _nrc_cmd_2_set_2_ps
  .nrc_cmd_2_set_2_rc
-                0x40c891f8       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
-                0x40c891f8                _nrc_cmd_2_set_2_rc
+                0x40c891fc       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
+                0x40c891fc                _nrc_cmd_2_set_2_rc
  .nrc_cmd_2_set_2_rc1
-                0x40c8920c       0x14 ../lib/libwifi.a(hal_lmac_util.c.o)
-                0x40c8920c                _nrc_cmd_2_set_2_rc1
+                0x40c89210       0x14 ../lib/libwifi.a(hal_lmac_util.c.o)
+                0x40c89210                _nrc_cmd_2_set_2_rc1
  .nrc_cmd_2_set_2_report
-                0x40c89220       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
-                0x40c89220                _nrc_cmd_2_set_2_report
+                0x40c89224       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
+                0x40c89224                _nrc_cmd_2_set_2_report
  .nrc_cmd_2_set_2_rssimode
-                0x40c89234       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89234                _nrc_cmd_2_set_2_rssimode
+                0x40c89238       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c89238                _nrc_cmd_2_set_2_rssimode
  .nrc_cmd_2_set_2_rts
-                0x40c89248       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
-                0x40c89248                _nrc_cmd_2_set_2_rts
+                0x40c8924c       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
+                0x40c8924c                _nrc_cmd_2_set_2_rts
  .nrc_cmd_2_set_2_sf
-                0x40c8925c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
-                0x40c8925c                _nrc_cmd_2_set_2_sf
+                0x40c89260       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c89260                _nrc_cmd_2_set_2_sf
  .nrc_cmd_2_sferase
-                0x40c89270       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
-                0x40c89270                _nrc_cmd_2_sferase
+                0x40c89274       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spiflash.c.o
+                0x40c89274                _nrc_cmd_2_sferase
  .nrc_cmd_2_show
-                0x40c89284       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c89284                _nrc_cmd_2_show
+                0x40c89288       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c89288                _nrc_cmd_2_show
  .nrc_cmd_2_show_2_cal
-                0x40c89298       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89298                _nrc_cmd_2_show_2_cal
+                0x40c8929c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c8929c                _nrc_cmd_2_show_2_cal
  .nrc_cmd_2_show_2_cfo_avg
-                0x40c892ac       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
-                0x40c892ac                _nrc_cmd_2_show_2_cfo_avg
+                0x40c892b0       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
+                0x40c892b0                _nrc_cmd_2_show_2_cfo_avg
  .nrc_cmd_2_show_2_config
-                0x40c892c0       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
-                0x40c892c0                _nrc_cmd_2_show_2_config
+                0x40c892c4       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
+                0x40c892c4                _nrc_cmd_2_show_2_config
  .nrc_cmd_2_show_2_edca
-                0x40c892d4       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
-                0x40c892d4                _nrc_cmd_2_show_2_edca
+                0x40c892d8       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
+                0x40c892d8                _nrc_cmd_2_show_2_edca
  .nrc_cmd_2_show_2_log
-                0x40c892e8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
-                0x40c892e8                _nrc_cmd_2_show_2_log
+                0x40c892ec       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace.c.o
+                0x40c892ec                _nrc_cmd_2_show_2_log
  .nrc_cmd_2_show_2_pow
-                0x40c892fc       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c892fc                _nrc_cmd_2_show_2_pow
+                0x40c89300       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c89300                _nrc_cmd_2_show_2_pow
  .nrc_cmd_2_show_2_pwr
-                0x40c89310       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89310                _nrc_cmd_2_show_2_pwr
+                0x40c89314       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c89314                _nrc_cmd_2_show_2_pwr
  .nrc_cmd_2_show_2_rc
-                0x40c89324       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
-                0x40c89324                _nrc_cmd_2_show_2_rc
+                0x40c89328       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
+                0x40c89328                _nrc_cmd_2_show_2_rc
  .nrc_cmd_2_show_2_rnd
-                0x40c89338       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c89338                _nrc_cmd_2_show_2_rnd
+                0x40c8933c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c8933c                _nrc_cmd_2_show_2_rnd
  .nrc_cmd_2_show_2_rssi
-                0x40c8934c       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
-                0x40c8934c                _nrc_cmd_2_show_2_rssi
+                0x40c89350       0x14 ../lib/libwifi.a(hal_test_tr6260.c.o)
+                0x40c89350                _nrc_cmd_2_show_2_rssi
  .nrc_cmd_2_show_2_sf
-                0x40c89360       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
-                0x40c89360                _nrc_cmd_2_show_2_sf
+                0x40c89364       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c89364                _nrc_cmd_2_show_2_sf
  .nrc_cmd_2_show_2_stack
-                0x40c89374       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace_stack.c.o
-                0x40c89374                _nrc_cmd_2_show_2_stack
+                0x40c89378       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_trace_stack.c.o
+                0x40c89378                _nrc_cmd_2_show_2_stack
  .nrc_cmd_2_show_2_stats
-                0x40c89388       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
-                0x40c89388                _nrc_cmd_2_show_2_stats
+                0x40c8938c       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
+                0x40c8938c                _nrc_cmd_2_show_2_stats
  .nrc_cmd_2_show_2_testpool
-                0x40c8939c       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
-                0x40c8939c                _nrc_cmd_2_show_2_testpool
+                0x40c893a0       0x14 ../lib/libwifi.a(util_cmd_lmac.c.o)
+                0x40c893a0                _nrc_cmd_2_show_2_testpool
  .nrc_cmd_2_show_2_uinfo
-                0x40c893b0       0x14 ../lib/libwifi.a(umac_info.c.o)
-                0x40c893b0                _nrc_cmd_2_show_2_uinfo
+                0x40c893b4       0x14 ../lib/libwifi.a(umac_info.c.o)
+                0x40c893b4                _nrc_cmd_2_show_2_uinfo
  .nrc_cmd_2_show_2_version
-                0x40c893c4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c893c4                _nrc_cmd_2_show_2_version
+                0x40c893c8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c893c8                _nrc_cmd_2_show_2_version
  .nrc_cmd_2_spi_init
-                0x40c893d8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
-                0x40c893d8                _nrc_cmd_2_spi_init
+                0x40c893dc       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
+                0x40c893dc                _nrc_cmd_2_spi_init
  .nrc_cmd_2_spi_init_slave
-                0x40c893ec       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_slave.c.o
-                0x40c893ec                _nrc_cmd_2_spi_init_slave
+                0x40c893f0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_slave.c.o
+                0x40c893f0                _nrc_cmd_2_spi_init_slave
  .nrc_cmd_2_spi_master_buffer
-                0x40c89400       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
-                0x40c89400                _nrc_cmd_2_spi_master_buffer
+                0x40c89404       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
+                0x40c89404                _nrc_cmd_2_spi_master_buffer
  .nrc_cmd_2_spi_read
-                0x40c89414       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
-                0x40c89414                _nrc_cmd_2_spi_read
+                0x40c89418       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
+                0x40c89418                _nrc_cmd_2_spi_read
  .nrc_cmd_2_spi_read_slave
-                0x40c89428       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_slave.c.o
-                0x40c89428                _nrc_cmd_2_spi_read_slave
+                0x40c8942c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_slave.c.o
+                0x40c8942c                _nrc_cmd_2_spi_read_slave
  .nrc_cmd_2_spi_slave_buffer
-                0x40c8943c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_slave.c.o
-                0x40c8943c                _nrc_cmd_2_spi_slave_buffer
+                0x40c89440       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_slave.c.o
+                0x40c89440                _nrc_cmd_2_spi_slave_buffer
  .nrc_cmd_2_spi_staus
-                0x40c89450       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
-                0x40c89450                _nrc_cmd_2_spi_staus
+                0x40c89454       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
+                0x40c89454                _nrc_cmd_2_spi_staus
  .nrc_cmd_2_spi_test
-                0x40c89464       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
-                0x40c89464                _nrc_cmd_2_spi_test
+                0x40c89468       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
+                0x40c89468                _nrc_cmd_2_spi_test
  .nrc_cmd_2_spi_write
-                0x40c89478       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
-                0x40c89478                _nrc_cmd_2_spi_write
+                0x40c8947c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_master.c.o
+                0x40c8947c                _nrc_cmd_2_spi_write
  .nrc_cmd_2_spi_write_slave
-                0x40c8948c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_slave.c.o
-                0x40c8948c                _nrc_cmd_2_spi_write_slave
+                0x40c89490       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_spi_slave.c.o
+                0x40c89490                _nrc_cmd_2_spi_write_slave
  .nrc_cmd_2_test
-                0x40c894a0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c894a0                _nrc_cmd_2_test
+                0x40c894a4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c894a4                _nrc_cmd_2_test
  .nrc_cmd_2_test_2_ap_config
-                0x40c894b4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
-                0x40c894b4                _nrc_cmd_2_test_2_ap_config
+                0x40c894b8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
+                0x40c894b8                _nrc_cmd_2_test_2_ap_config
  .nrc_cmd_2_test_2_bw
-                0x40c894c8       0x14 ../lib/libwifi.a(hal_lmac_test.c.o)
-                0x40c894c8                _nrc_cmd_2_test_2_bw
+                0x40c894cc       0x14 ../lib/libwifi.a(hal_lmac_test.c.o)
+                0x40c894cc                _nrc_cmd_2_test_2_bw
  .nrc_cmd_2_test_2_clear_txrx_rcd
-                0x40c894dc       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
-                0x40c894dc                _nrc_cmd_2_test_2_clear_txrx_rcd
+                0x40c894e0       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
+                0x40c894e0                _nrc_cmd_2_test_2_clear_txrx_rcd
  .nrc_cmd_2_test_2_create_sta
-                0x40c894f0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
-                0x40c894f0                _nrc_cmd_2_test_2_create_sta
+                0x40c894f4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c894f4                _nrc_cmd_2_test_2_create_sta
  .nrc_cmd_2_test_2_get
-                0x40c89504       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
-                0x40c89504                _nrc_cmd_2_test_2_get
+                0x40c89508       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c89508                _nrc_cmd_2_test_2_get
  .nrc_cmd_2_test_2_mqtt_pub
-                0x40c89518       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
-                0x40c89518                _nrc_cmd_2_test_2_mqtt_pub
+                0x40c8951c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c8951c                _nrc_cmd_2_test_2_mqtt_pub
  .nrc_cmd_2_test_2_mqtt_query
-                0x40c8952c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
-                0x40c8952c                _nrc_cmd_2_test_2_mqtt_query
+                0x40c89530       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c89530                _nrc_cmd_2_test_2_mqtt_query
  .nrc_cmd_2_test_2_mqtt_start
-                0x40c89540       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
-                0x40c89540                _nrc_cmd_2_test_2_mqtt_start
+                0x40c89544       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c89544                _nrc_cmd_2_test_2_mqtt_start
  .nrc_cmd_2_test_2_mqtt_stop
-                0x40c89554       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
-                0x40c89554                _nrc_cmd_2_test_2_mqtt_stop
+                0x40c89558       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c89558                _nrc_cmd_2_test_2_mqtt_stop
  .nrc_cmd_2_test_2_mqtt_sub
-                0x40c89568       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
-                0x40c89568                _nrc_cmd_2_test_2_mqtt_sub
+                0x40c8956c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c8956c                _nrc_cmd_2_test_2_mqtt_sub
  .nrc_cmd_2_test_2_mqtt_unsub
-                0x40c8957c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
-                0x40c8957c                _nrc_cmd_2_test_2_mqtt_unsub
+                0x40c89580       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/mqtt_test.c.o
+                0x40c89580                _nrc_cmd_2_test_2_mqtt_unsub
  .nrc_cmd_2_test_2_pool
-                0x40c89590       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
-                0x40c89590                _nrc_cmd_2_test_2_pool
+                0x40c89594       0x14 ../lib/libwifi.a(hal_lmac_debug.c.o)
+                0x40c89594                _nrc_cmd_2_test_2_pool
  .nrc_cmd_2_test_2_run
-                0x40c895a4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
-                0x40c895a4                _nrc_cmd_2_test_2_run
+                0x40c895a8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c895a8                _nrc_cmd_2_test_2_run
  .nrc_cmd_2_test_2_sc_test
-                0x40c895b8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
-                0x40c895b8                _nrc_cmd_2_test_2_sc_test
+                0x40c895bc       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/smartconfig_test.c.o
+                0x40c895bc                _nrc_cmd_2_test_2_sc_test
  .nrc_cmd_2_test_2_set
-                0x40c895cc       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
-                0x40c895cc                _nrc_cmd_2_test_2_set
+                0x40c895d0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/system_test.c.o
+                0x40c895d0                _nrc_cmd_2_test_2_set
  .nrc_cmd_2_uartpsm
-                0x40c895e0       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_uart.c.o
-                0x40c895e0                _nrc_cmd_2_uartpsm
+                0x40c895e4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/hal_uart.c.o
+                0x40c895e4                _nrc_cmd_2_uartpsm
  .nrc_cmd_2_werr
-                0x40c895f4       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wdt.c.o
-                0x40c895f4                _nrc_cmd_2_werr
+                0x40c895f8       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wdt.c.o
+                0x40c895f8                _nrc_cmd_2_werr
  .nrc_cmd_2_wpa
-                0x40c89608       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c89608                _nrc_cmd_2_wpa
+                0x40c8960c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c8960c                _nrc_cmd_2_wpa
  .nrc_cmd_2_wpb
-                0x40c8961c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c8961c                _nrc_cmd_2_wpb
+                0x40c89620       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c89620                _nrc_cmd_2_wpb
  .nrc_cmd_2_wprint
-                0x40c89630       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wdt.c.o
-                0x40c89630                _nrc_cmd_2_wprint
+                0x40c89634       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wdt.c.o
+                0x40c89634                _nrc_cmd_2_wprint
  .nrc_cmd_2_wreset
-                0x40c89644       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wdt.c.o
-                0x40c89644                _nrc_cmd_2_wreset
+                0x40c89648       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wdt.c.o
+                0x40c89648                _nrc_cmd_2_wreset
  .nrc_cmd_2_wresume
-                0x40c89658       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wdt.c.o
-                0x40c89658                _nrc_cmd_2_wresume
+                0x40c8965c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wdt.c.o
+                0x40c8965c                _nrc_cmd_2_wresume
  .nrc_cmd_2_write
-                0x40c8966c       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
-                0x40c8966c                _nrc_cmd_2_write
+                0x40c89670       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c89670                _nrc_cmd_2_write
  .nrc_cmd_2_wstop
-                0x40c89680       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wdt.c.o
-                0x40c89680                _nrc_cmd_2_wstop
- .nrc_cmd_3     0x40c89694        0x0 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
+                0x40c89684       0x14 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/wdt.c.o
+                0x40c89684                _nrc_cmd_2_wstop
+ .nrc_cmd_3     0x40c89698        0x0 ../out/tr6260s1/standalone/obj_standalone_tr6260s1/util_cmd.c.o
                 0x00223ff8                PROVIDE (_stack, 0x223ff8)
                 0x00000080                PROVIDE (_stack_size, 0x80)
 
