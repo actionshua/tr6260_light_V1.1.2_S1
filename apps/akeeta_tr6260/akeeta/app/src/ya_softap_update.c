@@ -701,7 +701,9 @@ int32_t ya_softap_apconfig_cmd(cJSON *JSObject)
 	{
 		ya_printf(C_LOG_INFO, "softap_apconfig_cmd: %s\n", buf);	
 		socket_data_len = softap_feedback_encrypt_pack(SOFTAP_CONFIG_CMD_GET_NET_MSG_RESPONSE,strlen(buf),(uint8_t *)buf);
-		ya_hal_socket_sendto(g_softap_socket.fd, ya_softap_decode_buf, socket_data_len, 0, (struct sockaddr*)&g_softap_socket.sock_addr, g_softap_socket.sock_addr_len); 
+		for(uint8_t resend_flag = 0;resend_flag < 3;resend_flag++)
+			ya_hal_socket_sendto(g_softap_socket.fd, ya_softap_decode_buf, socket_data_len, 0, (struct sockaddr*)&g_softap_socket.sock_addr, g_softap_socket.sock_addr_len); 
+
 		ya_hal_os_memory_free(buf);	
 
 		ya_delay(1000);
