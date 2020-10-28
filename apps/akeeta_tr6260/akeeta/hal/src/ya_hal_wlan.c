@@ -63,9 +63,9 @@ int32_t ya_hal_wlan_start(ya_hal_wlan_event_handler_t event_handler)
 	if(device_mac[0] == 0x0 && device_mac[1] == 0x91 && device_mac[2] == 0x19  
 	&& device_mac[3] == 0x10 && device_mac[4] == 0x22 && device_mac[5] == 0x21)	
 	{
-		ya_os_get_random(device_mac,6);
-		ya_hal_wlan_set_mac_address(device_mac);
-		ya_printf(C_LOG_INFO, "radom device mac is: %02x:%02x:%02x:%02x:%02x:%02x\n", device_mac[0],device_mac[1],device_mac[2], device_mac[3],device_mac[4],device_mac[5]);
+		ya_os_get_random(device_mac+3,3);
+		int32_t ret = ya_hal_wlan_set_mac_address(device_mac);
+		ya_printf(C_LOG_INFO, "ret ==%d,radom device mac is: %02x:%02x:%02x:%02x:%02x:%02x\n", ret,device_mac[0],device_mac[1],device_mac[2], device_mac[3],device_mac[4],device_mac[5]);
 	}
 	while (!wifi_is_ready()){
 		system_printf("err! set AP/STA information must after wifi initialized!\n");

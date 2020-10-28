@@ -10,7 +10,7 @@ ELF Header:
   Version:                           0x1
   Entry point address:               0x11400
   Start of program headers:          52 (bytes into file)
-  Start of section headers:          9233416 (bytes into file)
+  Start of section headers:          9233488 (bytes into file)
   Flags:                             0x36000642, AABI, Andes ELF V1.4, Andes Star v3.0, PERF1, PERF2, DSP, ZOL
   Size of this header:               52 (bytes)
   Size of program headers:           32 (bytes)
@@ -39,43 +39,43 @@ Section Headers:
        NOBITS          00240000 00d000 008200 00   0   0  4
        [00000003]: WRITE, ALLOC
   [ 5] .xip
-       PROGBITS        40c07010 00d010 082698 00   0   0  8
+       PROGBITS        40c07010 00d010 0826ac 00   0   0  8
        [00000007]: WRITE, ALLOC, EXEC
   [ 6] .comment
-       PROGBITS        00000000 08f6a8 00005c 01   0   0  1
+       PROGBITS        00000000 08f6bc 00005c 01   0   0  1
        [00000030]: MERGE, STRINGS
   [ 7] .debug_aranges
-       PROGBITS        00000000 08f708 00a680 00   0   0  8
+       PROGBITS        00000000 08f718 00a680 00   0   0  8
        [00000000]: 
   [ 8] .debug_info
-       PROGBITS        00000000 099d88 4be5d2 00   0   0  1
+       PROGBITS        00000000 099d98 4be5e2 00   0   0  1
        [00000000]: 
   [ 9] .debug_abbrev
-       PROGBITS        00000000 55835a 052c6e 00   0   0  1
+       PROGBITS        00000000 55837a 052c6e 00   0   0  1
        [00000000]: 
   [10] .debug_line
-       PROGBITS        00000000 5aafc8 16de27 00   0   0  1
+       PROGBITS        00000000 5aafe8 16de33 00   0   0  1
        [00000000]: 
   [11] .debug_frame
-       PROGBITS        00000000 718df0 035508 00   0   0  4
+       PROGBITS        00000000 718e1c 035508 00   0   0  4
        [00000000]: 
   [12] .debug_str
-       PROGBITS        00000000 74e2f8 04e4de 01   0   0  1
+       PROGBITS        00000000 74e324 04e4de 01   0   0  1
        [00000030]: MERGE, STRINGS
   [13] .debug_loc
-       PROGBITS        00000000 79c7d6 11f4d5 00   0   0  1
+       PROGBITS        00000000 79c802 11f4f3 00   0   0  1
        [00000000]: 
   [14] .debug_ranges
-       PROGBITS        00000000 8bbcb0 0126b0 00   0   0  8
+       PROGBITS        00000000 8bbcf8 0126b0 00   0   0  8
        [00000000]: 
   [15] .shstrtab
-       STRTAB          00000000 8ce360 0000a8 00   0   0  1
+       STRTAB          00000000 8ce3a8 0000a8 00   0   0  1
        [00000000]: 
   [16] .symtab
-       SYMTAB          00000000 8ce6d8 021e40 10  17 5631  4
+       SYMTAB          00000000 8ce720 021e40 10  17 5631  4
        [00000000]: 
   [17] .strtab
-       STRTAB          00000000 8f0518 01501c 00   0   0  1
+       STRTAB          00000000 8f0560 01501c 00   0   0  1
        [00000000]: 
 
 There are no section groups in this file.
@@ -85,7 +85,7 @@ Program Headers:
   LOAD           0x001000 0x00010000 0x00010000 0x09544 0x09544 R E 0x1000
   LOAD           0x00b000 0x00200000 0x00019548 0x01660 0x0cec8 RW  0x1000
   LOAD           0x00d000 0x00240000 0x00059548 0x00000 0x08200 RW  0x1000
-  LOAD           0x00d010 0x40c07010 0x40a20558 0x82698 0x82698 RWE 0x1000
+  LOAD           0x00d010 0x40c07010 0x40a20558 0x826ac 0x826ac RWE 0x1000
 
  Section to Segment mapping:
   Segment Sections...

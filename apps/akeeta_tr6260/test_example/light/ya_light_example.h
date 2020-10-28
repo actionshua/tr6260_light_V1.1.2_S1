@@ -9,7 +9,7 @@
 #define LIGHT_CLOUD				2   //0: CHINA   //1: oversea //2:determine by app
 
 #ifndef MODULE_100
-#define TEST_WIFI_LIGHT_VERSION		"tr6260.light.300.001"
+#define TEST_WIFI_LIGHT_VERSION		"tr6260.light.300.002"
 #else
 #define TEST_WIFI_LIGHT_VERSION		"rt.tr6260.300.001"
 #endif
