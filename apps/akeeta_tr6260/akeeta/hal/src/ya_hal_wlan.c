@@ -310,6 +310,11 @@ int32_t ya_wlan_connect_ap(char *sSsid, char *sPassword, int iSsidLen, int iPass
 		wifi_event_handler(YA_HAL_EVT_LINK_LOST, NULL);
 		return -1;
 	}
+	while (!wifi_is_ready())
+	{
+		ya_printf(C_LOG_INFO,"\r\nSet AP/STA information must after wifi initialized!\n");
+		vTaskDelay(pdMS_TO_TICKS(5));
+	}
 
 	wifi_remove_config_all(vif);
 	wifi_add_config(vif);
