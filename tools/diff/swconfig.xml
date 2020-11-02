@@ -11,7 +11,7 @@
 <partsize>20480</partsize>
 <method>diff</method>
 <compress>lzma</compress>
-<oldname>tr6260s1_0x007000_V003.bin</oldname>
-<newname>tr6260s1_0x007000_V004.bin</newname>
+<oldname>tr6260s1_0x007000_V004.bin</oldname>
+<newname>tr6260s1_0x007000_V005.bin</newname>
 </cpu1>
 </root>

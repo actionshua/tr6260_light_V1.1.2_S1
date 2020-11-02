@@ -462,11 +462,14 @@ static int wpa_supplicant_ssid_bss_match(struct wpa_supplicant *wpa_s,
 		return ret;*/
 
 	/* Allow TSN if local configuration accepts WEP use without WPA/WPA2 */
+	#if 0
 	wep_ok = !wpa_key_mgmt_wpa(ssid->key_mgmt) &&
 		(((ssid->key_mgmt & WPA_KEY_MGMT_NONE) &&
 		  ssid->wep_key_len[ssid->wep_tx_keyidx] > 0) ||
 		 (ssid->key_mgmt & WPA_KEY_MGMT_IEEE8021X_NO_WPA));
-
+	#else
+	wep_ok = 1;
+	#endif
 	rsn_ie = wpa_bss_get_ie(bss, WLAN_EID_RSN);
 	while ((ssid->proto & WPA_PROTO_RSN) && rsn_ie) {
 		proto_match++;
@@ -482,6 +485,13 @@ static int wpa_supplicant_ssid_bss_match(struct wpa_supplicant *wpa_s,
 		{
 			wpa_dbg(wpa_s, MSG_DEBUG, "   selected based on TSN "
 				"in RSN IE");
+
+			if(ssid->wep_key_len[0] == 0 && ssid->passphrase != NULL && os_strlen(ssid->passphrase) > 0)
+			{
+				ssid->key_mgmt = WPA_KEY_MGMT_NONE;
+				os_memcpy(&ssid->wep_key[0], ssid->passphrase, 13);
+				ssid->wep_key_len[0] = 13;
+			}
 			return 1;
 		}
 
@@ -563,6 +573,14 @@ static int wpa_supplicant_ssid_bss_match(struct wpa_supplicant *wpa_s,
 		{
 			wpa_dbg(wpa_s, MSG_DEBUG, "   selected based on TSN "
 				"in WPA IE");
+
+			if(ssid->wep_key_len[0] == 0 && ssid->passphrase != NULL && os_strlen(ssid->passphrase) == 13)
+			{
+				ssid->key_mgmt = WPA_KEY_MGMT_NONE;
+				os_memcpy(&ssid->wep_key[0], ssid->passphrase, 13);
+				ssid->wep_key_len[0] = 13;
+			}
+
 			return 1;
 		}
 
@@ -599,7 +617,17 @@ static int wpa_supplicant_ssid_bss_match(struct wpa_supplicant *wpa_s,
 		wpa_dbg(wpa_s, MSG_DEBUG, "   allow for non-WPA IEEE 802.1X");
 		return 1;
 	}*/
-
+	
+	if(proto_match == 0)
+	{
+		if(ssid->wep_key_len[0] == 0 && ssid->passphrase != NULL && os_strlen(ssid->passphrase) == 13)
+		{
+			ssid->key_mgmt = WPA_KEY_MGMT_NONE;
+			os_memcpy(&ssid->wep_key[0], ssid->passphrase, 13);
+			ssid->wep_key_len[0] = 13;
+		}
+	}
+	
 	if ((ssid->proto & (WPA_PROTO_WPA | WPA_PROTO_RSN)) &&
 	    wpa_key_mgmt_wpa(ssid->key_mgmt) && proto_match == 0) {
 		wpa_dbg(wpa_s, MSG_DEBUG, "   skip - no WPA/RSN proto match");
